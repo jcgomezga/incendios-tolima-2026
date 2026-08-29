@@ -1,0 +1,3 @@
+﻿target_oid,cand_id,agency,pattern,n_events,n_dates,n_hotspots,direct,distance_m,spatial_class
+1,FT_001,ANM,RECURRENTE_ALTA,7,7,8,False,275.3819175452463,PROXIMA_1KM
+2,FT_002,ANM,RECURRENTE_MEDIA,3,3,7,False,2015.7905873841423,PROXIMA_1A5KM

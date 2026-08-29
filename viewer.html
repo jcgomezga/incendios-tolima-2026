@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Visor cartográfico</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="viewer-body">
+  <div class="viewer-shell">
+    <header class="viewer-toolbar">
+      <div class="viewer-title" data-viewer-title>Visor cartográfico</div>
+      <button class="viewer-btn" type="button" data-zoom-in aria-label="Acercar">＋</button>
+      <button class="viewer-btn" type="button" data-zoom-out aria-label="Alejar">−</button>
+      <button class="viewer-btn" type="button" data-home>Inicio</button>
+      <button class="viewer-btn" type="button" data-fullscreen>Pantalla completa</button>
+      <a class="viewer-btn" data-viewer-native>Abrir JPG</a>
+      <a class="viewer-btn" data-viewer-download>Descargar</a>
+    </header>
+    <main id="osd-viewer" aria-label="Visor interactivo de mapa"></main>
+    <div id="viewer-missing" class="viewer-missing" hidden>
+      <div>
+        <strong>Mapa no disponible.</strong>
+        Incorpora el JPEG y revisa la ruta en <code>assets/js/site-config.js</code>.
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/openseadragon@5.0.1/build/openseadragon/openseadragon.min.js"></script>
+  <script src="assets/js/viewer.js"></script>
+</body>
+</html>
