@@ -6,15 +6,17 @@ La Autoridad Nacional de Licencias Ambientales (ANLA) administra información so
 
 La propia ANLA señala que el control y seguimiento se aplica a proyectos sujetos a licencia ambiental o Plan de Manejo Ambiental durante etapas que pueden incluir construcción, operación, desmantelamiento o abandono, y que su finalidad es verificar obligaciones y medidas de manejo ambiental. Esta definición es importante porque impide convertir una geometría de seguimiento en una prueba automática de actividad material o de causalidad.
 
+> **Cómo leer los términos de este capítulo.** Un **expediente ANLA** es el registro administrativo con el que se identifica un proyecto o trámite; puede contener varias formas en el mapa. Una **geometría de área** o polígono representa una superficie; una **línea** puede representar infraestructura como un ducto y un **punto** una localización concreta. La expresión **huella ANLA** se usa aquí para el conjunto de áreas poligonales empleadas en la comparación territorial. **Hotspot** significa detección térmica satelital. Que un episodio tenga **coincidencia directa** significa solamente que una de sus detecciones cae dentro de una de esas áreas.
+
 ## 3.2. Base institucional utilizada
 
-Aplicando el diseño metodológico del Capítulo 1, el paquete académico contiene 192 registros ANLA publicables: 115 geometrías de área, 42 líneas y 35 puntos. Para el análisis normalizado por superficie se utilizan únicamente las áreas poligonales, de acuerdo con la regla metodológica general de no normalizar puntos o líneas como si ocuparan superficie departamental.
+Aplicando el diseño metodológico del Capítulo 1, el paquete académico contiene 192 registros ANLA publicables: 115 geometrías de área, 42 líneas y 35 puntos. Para la comparación por tamaño territorial se utilizan únicamente las áreas poligonales. Los puntos y las líneas no se tratan como si ocuparan una porción del departamento; en esos casos se mide distancia.
 
 El servicio geográfico oficial de ANLA utiliza códigos sectoriales. La verificación contra el Feature Service público permite traducir los códigos presentes en el paquete: 101 corresponde a **Hidrocarburos** y 103 a **Minería**. Entre los 29 expedientes de área que presentan al menos una coincidencia directa con episodios B, 28 corresponden al sector Hidrocarburos y 1 al sector Minería. El expediente minero es LAM1499, asociado en la fuente a explotación de calizas en Payandé–La Esmeralda.
 
 El campo normalizado `source_status` no contiene valores para los 192 registros ANLA del paquete (0 valores no nulos). Por esa razón, este capítulo **no asigna estados actuales como “activo” o “inactivo”**. Algunos registros originales incluyen descripciones administrativas —por ejemplo, `ARCHIVADO`—, pero esas descripciones no se transforman aquí en un estado general del expediente. El estado jurídico o administrativo vigente de un expediente solo puede establecerse mediante una verificación individual en la fuente oficial de la ANLA y no se infiere de las geometrías analizadas.
 
-## 3.3. Patrón general de proximidad
+## 3.3. Cuántos episodios están dentro de las áreas y qué tan cerca están los demás
 
 En el escenario B, 143 de los 409 episodios térmicos presentan coincidencia directa con áreas ANLA. Esto equivale al **34,96 %** del total. Otros 56 episodios (13,69 %) se encuentran a una distancia de hasta un kilómetro, 86 (21,03 %) entre uno y cinco kilómetros y 124 (30,32 %) a más de cinco kilómetros.
 
@@ -24,23 +26,23 @@ La comparación con el escenario A muestra una estabilidad notable: A registra 3
 
 *Figura ANLA-1. Distribución de episodios según proximidad a áreas ANLA. El escenario B se presenta como principal y A como sensibilidad.*
 
-## 3.4. Observados, esperados y enriquecimiento espacial
+## 3.4. Comparación entre episodios observados y tamaño del área
 
-Las áreas ANLA consideradas en la huella exclusiva de coincidencia directa ocupan **3.643,62 km²**, equivalentes al **15,10 %** de la superficie departamental utilizada por el análisis. Si los 409 episodios se distribuyeran de manera proporcional a esa superficie, se esperarían aproximadamente **61,76 episodios** dentro de ella. Se observaron 143.
+El conjunto de áreas ANLA utilizado para la comparación territorial ocupa **3.643,62 km²**, equivalentes al **15,10 %** de la superficie departamental analizada. Si los 409 episodios se distribuyeran de manera proporcional a esa superficie, se esperarían aproximadamente **61,76 episodios** dentro de ella. Se observaron 143.
 
-El índice de enriquecimiento es, por tanto, **2,315**. Esto significa que la proporción de episodios observados dentro de las áreas ANLA es aproximadamente 2,3 veces la proporción territorial que esas áreas representan. El resultado describe una **concentración espacial relativa**; no demuestra que los proyectos licenciados o seguidos hayan originado las señales térmicas.
+El **índice de enriquecimiento** es **2,315**. En lenguaje sencillo: las áreas ANLA cubren 15,10 % del territorio, mientras dentro de ellas aparece 34,96 % de los episodios; 34,96 dividido entre 15,10 da aproximadamente 2,3. La proporción de episodios es, por tanto, unas 2,3 veces la proporción territorial de esas áreas. Esto se denomina **concentración espacial relativa**. No es una prueba estadística de causalidad ni demuestra que los proyectos licenciados o seguidos hayan originado las señales térmicas.
 
 ![Episodios observados frente a superficie disponible para ANLA.](assets/figures/svg/ANLA/anla_02_observado_vs_superficie_publicacion.svg)
 
 *Figura ANLA-2. Comparación entre porcentaje territorial y porcentaje de episodios B en coincidencia directa con áreas ANLA.*
 
-## 3.5. Expedientes y operadores asociados espacialmente
+## 3.5. Expedientes y operadores que coinciden con episodios en el mapa
 
 La consolidación por identificador oficial es indispensable. Un mismo expediente puede contener varias geometrías, subáreas o variantes nominales del proyecto. Contarlas por separado produciría una falsa multiplicación de fuentes. Después de consolidar esas variantes, los 143 episodios directos se relacionan con **29 expedientes diferentes**.
 
 Los diez expedientes con mayor número de episodios únicos son:
 
-| Expediente | Sector | Operador(es) registrados | Proyecto resumido a partir de la fuente | Episodios | Hotspots |
+| Expediente | Sector | Operador(es) registrados | Proyecto resumido a partir de la fuente | Episodios | Detecciones (hotspots) |
 |---|---|---|---|---:|---:|
 | LAM2537 | Hidrocarburos | PETRODORADO SOUTH AMERICA S.A. SUCURSAL COLOMBIA | Bloque exploratorio Buganviles/Bugaviles y prospectos 01–08 | 54 | 251 |
 | LAM4750 | Hidrocarburos | PACIFIC STRATUS ENERGY COLOMBIA CORP | Bloque de desarrollo Buganviles | 33 | 101 |
@@ -53,9 +55,9 @@ Los diez expedientes con mayor número de episodios únicos son:
 | LAM2082 | Hidrocarburos | ECOPETROL S.A. | Áreas de interés de perforación exploratoria Calarma/Calamar | 6 | 25 |
 | LAM2028 | Hidrocarburos | KAPPA RESOURCES COLOMBIA LTDA | Licencia ambiental global Campo Abanico y modificación | 6 | 14 |
 
-El caso más destacado es **LAM2537**, asociado a PETRODORADO SOUTH AMERICA S.A. SUCURSAL COLOMBIA y al Bloque Exploratorio Buganviles/Bugaviles. El inventario contiene el área general y varios prospectos bajo el mismo expediente; consolidados, se relaciona espacialmente con **54 episodios B y 251 hotspots**. La cifra no significa que existan 54 eventos causados por el proyecto, sino que 54 episodios tienen al menos una detección dentro de alguna geometría de ese expediente.
+El caso más destacado es **LAM2537**, asociado a PETRODORADO SOUTH AMERICA S.A. SUCURSAL COLOMBIA y al Bloque Exploratorio Buganviles/Bugaviles. El inventario contiene el área general y varios prospectos bajo el mismo expediente; consolidados, se relaciona espacialmente con **54 episodios B y 251 detecciones**. La cifra no significa que existan 54 eventos causados por el proyecto, sino que 54 episodios tienen al menos una detección dentro de alguna geometría de ese expediente.
 
-Le sigue **LAM4750**, Bloque de Desarrollo Buganviles, con 33 episodios y 101 hotspots. **LAM3796**, Área de Perforación Exploratoria Bloque La Pola, reúne 13 episodios y 48 hotspots. Los expedientes **LAM0140**, vinculado al Pozo de Desarrollo Quimbaya 3 y 4, y **LAM2344**, asociado a planes de manejo ambiental de varios campos, reúnen 12 episodios cada uno.
+Le sigue **LAM4750**, Bloque de Desarrollo Buganviles, con 33 episodios y 101 detecciones. **LAM3796**, Área de Perforación Exploratoria Bloque La Pola, reúne 13 episodios y 48 detecciones. Los expedientes **LAM0140**, vinculado al Pozo de Desarrollo Quimbaya 3 y 4, y **LAM2344**, asociado a planes de manejo ambiental de varios campos, reúnen 12 episodios cada uno.
 
 En LAM0140 el paquete contiene distintas geometrías con operadores y contratos diferentes y fechas administrativas que no son completamente homogéneas; algunas filas incluyen `1899-12-30`, una fecha que se trata como posible valor de sistema o dato no confiable y no se utiliza para construir una cronología. Esta decisión evita convertir un atributo dudoso en una afirmación histórica.
 
@@ -63,17 +65,17 @@ En LAM0140 el paquete contiene distintas geometrías con operadores y contratos 
 
 *Figura ANLA-3. Expedientes ANLA con mayor número de episodios B en coincidencia directa, consolidados por identificador oficial.*
 
-Los operadores se utilizan como atributo descriptivo de las fuentes y tampoco son aditivos: un mismo episodio puede intersectar geometrías correspondientes a más de un expediente y, por tanto, asociarse con más de un operador.
+Los operadores se utilizan como atributo descriptivo de las fuentes y tampoco son aditivos: un mismo episodio puede quedar dentro de áreas correspondientes a más de un expediente y, por tanto, asociarse con más de un operador.
 
 ## 3.6. Procesos y tipos de proyecto que aparecen en las fuentes
 
 Los nombres oficiales de los proyectos permiten reconocer distintos tipos de intervención sin necesidad de inferir una fase operativa actual. Entre los expedientes con mayor asociación espacial aparecen expresiones como **bloque exploratorio**, **bloque de desarrollo**, **área de perforación exploratoria**, **pozo de desarrollo**, **Plan de Manejo Ambiental**, **licencia ambiental global** y **área de interés de perforación exploratoria**.
 
-Esta terminología se conserva porque proviene de los registros ANLA. No se utiliza para afirmar que una perforación, explotación o producción estuviera ejecutándose durante agosto de 2026. Por ejemplo, que el nombre de un expediente contenga “perforación exploratoria” identifica el objeto registrado por la autoridad ambiental, no una observación directa de perforación en la fecha del hotspot.
+Esta terminología se conserva porque proviene de los registros ANLA. No se utiliza para afirmar que una perforación, explotación o producción estuviera ejecutándose durante agosto de 2026. Por ejemplo, que el nombre de un expediente contenga “perforación exploratoria” identifica el objeto registrado por la autoridad ambiental, no una observación directa de perforación en la fecha de la detección.
 
-El único expediente del subconjunto directo clasificado por ANLA en el sector Minería es **LAM1499**, operado en la fuente por CEMEX COLOMBIA S.A. y relacionado con el Plan de Manejo Ambiental y la explotación de calizas en Payandé–La Esmeralda. Presenta 2 episodios B y 12 hotspots en coincidencia directa.
+El único expediente del subconjunto directo clasificado por ANLA en el sector Minería es **LAM1499**, operado en la fuente por CEMEX COLOMBIA S.A. y relacionado con el Plan de Manejo Ambiental y la explotación de calizas en Payandé–La Esmeralda. Presenta 2 episodios B y 12 detecciones en coincidencia directa.
 
-## 3.7. Líneas y puntos: información contextual, no normalización por superficie
+## 3.7. Líneas y puntos: se mide cercanía, no porcentaje del territorio
 
 La información ANLA también incluye 42 registros lineales y 35 puntuales. Estas geometrías no se incorporan al cálculo de superficie esperada. Se estudian mediante distancia.
 
@@ -95,9 +97,9 @@ Los episodios con empate municipal se mantienen separados. Para ANLA existen coi
 
 *Figura ANLA-4. Municipios individuales con mayor número de episodios B en coincidencia directa con áreas ANLA.*
 
-## 3.9. Coberturas del suelo
+## 3.9. Coberturas de la tierra: qué tipo de superficie aparece
 
-La cobertura más frecuente entre los episodios directos ANLA es **arroz**, con 22 episodios. Le siguen **mosaico de pastos con espacios naturales**, con 17; **pastos limpios**, con 15; **arbustal abierto**, con 13; **herbazal abierto rocoso**, con 9; y **vegetación secundaria alta**, también con 9.
+La **cobertura de la tierra** describe el tipo de superficie predominante y se usa aquí como contexto, no como explicación de la señal térmica. Entre los episodios directos ANLA, la categoría más frecuente es **arroz**, con 22 episodios. Le siguen **mosaico de pastos con espacios naturales**, con 17; **pastos limpios**, con 15; **arbustal abierto**, con 13; **herbazal abierto rocoso**, con 9; y **vegetación secundaria alta**, también con 9.
 
 Las categorías principales son: 2.1.2.1. Arroz (22); 2.4.4. Mosaico de pastos con espacios naturales (17); 2.3.1. Pastos limpios (15); 3.2.2.2. Arbustal abierto (13); 3.2.1.2.2. Herbazal abierto rocoso (9); 3.2.3.1. Vegetación secundaria alta (9).
 
@@ -107,15 +109,15 @@ La presencia de arroz como categoría más frecuente diferencia el patrón ANLA 
 
 *Figura ANLA-5. Coberturas IDEAM 2024 más frecuentes entre los episodios B con coincidencia directa ANLA.*
 
-## 3.10. Fuentes térmicas recurrentes
+## 3.10. Lugares con señales térmicas repetidas (recurrencia)
 
-Los dos sitios recurrentes ofrecen una comparación útil. **FT_001**, en Ibagué, no presenta coincidencia directa con ANLA y se encuentra a aproximadamente **610,16 m**, por lo que pertenece a la clase de proximidad de hasta un kilómetro. **FT_002**, en Ambalema, sí presenta **coincidencia directa** con la huella ANLA.
+Los dos sitios recurrentes ofrecen una comparación útil. **FT_001**, en Ibagué, no presenta coincidencia directa con ANLA y se encuentra a aproximadamente **610,16 m**, por lo que pertenece a la clase de proximidad de hasta un kilómetro. **FT_002**, en Ambalema, sí presenta **coincidencia directa** con las áreas ANLA.
 
-Este contraste refuerza la necesidad de separar recurrencia térmica y asociación institucional. Un lugar puede ser recurrente sin intersectar una geometría ANLA, mientras otro puede ser recurrente y, simultáneamente, encontrarse dentro de ella. Ninguna de las dos situaciones identifica por sí sola el origen de la señal.
+Este contraste refuerza la necesidad de separar recurrencia térmica y asociación institucional. Un lugar puede ser recurrente sin quedar dentro de un área ANLA, mientras otro puede ser recurrente y, simultáneamente, encontrarse dentro de ella. Ninguna de las dos situaciones identifica por sí sola el origen de la señal.
 
 ## 3.11. Discusión
 
-El resultado ANLA presenta una concentración espacial clara: 34,96 % de los episodios B aparecen dentro de una huella que representa 15,10 % de la superficie analizada. La estabilidad entre A y B indica que ese patrón no depende de manera importante de la exclusión de Suomi-NPP.
+El resultado ANLA presenta una concentración espacial clara: 34,96 % de los episodios B aparecen dentro de áreas que, en conjunto, representan 15,10 % de la superficie analizada. La estabilidad entre A y B indica que ese patrón no depende de manera importante de la exclusión de Suomi-NPP.
 
 La distribución no es uniforme entre expedientes. LAM2537 y LAM4750 reúnen los mayores conteos de episodios, y varios de los principales registros corresponden, según los nombres y códigos oficiales de ANLA, al sector de hidrocarburos. Al mismo tiempo, la distribución municipal y de coberturas muestra que las coincidencias se insertan en territorios con actividades agropecuarias, infraestructura, vegetación natural y usos diversos.
 
@@ -135,7 +137,7 @@ El capítulo ANLA deja cinco resultados principales:
 
 El A3 se encuentra en `assets/maps/anla_a3.jpg` y el A0 web en `assets/maps/anla_a0_web.jpg`. La página usa `assets/maps/previews/anla_a3_preview.jpg`; el A0 se sirve mediante una pirámide DZI generada durante el despliegue del sitio.
 
-El mapa muestra áreas de licencia/seguimiento extractivo, episodios B, FT_001 y FT_002, coberturas IDEAM 2024, vías, hidrografía y límites municipales. Las líneas y puntos ANLA se representan como contexto de proximidad cuando la escala permite su lectura sin saturar el mapa.
+El mapa muestra áreas de licencia/seguimiento extractivo, episodios B, FT_001 y FT_002, coberturas IDEAM 2024, vías, hidrografía y límites municipales. Las líneas y puntos ANLA se representan como contexto de distancia cuando la escala permite su lectura sin saturar el mapa.
 
 ## Referencias institucionales
 - [Autoridad Nacional de Licencias Ambientales. *Control y Seguimiento*](https://www.anla.gov.co/seguimiento-de-licencias-ambientales/que-hacemos). Consulta: 29 de agosto de 2026.
