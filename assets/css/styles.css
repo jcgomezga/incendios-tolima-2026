@@ -209,6 +209,7 @@ figure { margin: 0; }
 .doc-content h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); }
 .doc-content h2 { margin-top: 2.2em; padding-top: .8em; border-top: 1px solid var(--rule); }
 .doc-content table { width: 100%; border-collapse: collapse; display: block; overflow-x: auto; margin: 20px 0; }
+.doc-content img { display: block; width: 100%; height: auto; margin: 24px 0 10px; }
 .doc-content th, .doc-content td { padding: 8px 10px; border: 1px solid var(--rule); text-align: left; white-space: nowrap; }
 .doc-content th { background: var(--paper-deep); }
 .doc-content pre { overflow: auto; padding: 16px; background: var(--night); color: #fff; }
