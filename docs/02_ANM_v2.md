@@ -80,13 +80,13 @@ Entre los títulos, **FDN-111**, cuyo titular registrado es PRYSER S.A., present
 
 Varios títulos registraron dos episodios cada uno. Entre ellos se encuentran **4205**, de CEMEX COLOMBIA S.A., asociado con roca o piedra caliza en San Luis; **ED3-142**, de SOCIEDAD GREENLAND MINING CORPORATION DE COLOMBIA SAS, asociado con arenas de río, gravas de río y demás concesibles en Coyaima y Ortega; **PI8-10341**, registrado en etapa de exploración y asociado con minerales de cobre, oro, plata y platino en Ataco y Chaparral; e **IHT-10541**, de ROVIRA MINING LIMITED COLOMBIA S.A.S., asociado con cobre, oro, plata, plomo y zinc en Rovira y Valle de San Juan.
 
-Estos ejemplos deben leerse como una priorización de expedientes para investigación posterior. El conteo de episodios no demuestra que los titulares hayan generado las fuentes térmicas.
+Estos ejemplos identifican expedientes con mayor número de coincidencias espaciales y, por tanto, casos potencialmente informativos para una verificación específica. El conteo de episodios no demuestra que los titulares hayan generado las fuentes térmicas.
 
 ![Títulos mineros con mayor número de episodios coincidentes.](assets/figures/svg/ANM/anm_03b_titulos_principales_publicacion.svg)
 
 *Figura ANM-3B. Títulos con mayor número de episodios coincidentes.*
 
-La tabla completa utilizada para estas figuras se conserva como `tablas/ANM_tabla_03_fuentes_curadas.csv`.
+La tabla utilizada para estas figuras se conserva como `data/tables/ANM/ANM_tabla_03_fuentes_curadas.csv`.
 
 ## 2.6. Distribución municipal
 
@@ -122,48 +122,31 @@ Los dos sitios térmicos recurrentes identificados en el escenario B ofrecen una
 
 **FT_002**, en Ambalema, reúne tres episodios en tres fechas y siete hotspots y fue clasificado como recurrencia media. Su cobertura corresponde a “2.4.4. Mosaico de pastos con espacios naturales”. Su distancia mínima a una figura ANM es de aproximadamente **2.015,79 m**, es decir, entre uno y cinco kilómetros.
 
-El resultado es relevante porque demuestra que recurrencia térmica y coincidencia minera no son equivalentes. Los dos sitios que mostraron repetición temporal más clara durante el mes no se localizaron dentro de las geometrías ANM evaluadas.
+El resultado muestra que recurrencia térmica y coincidencia minera no son equivalentes. Los dos sitios que presentaron mayor repetición temporal durante el mes no se localizaron dentro de las geometrías ANM evaluadas.
 
 ## 2.9. Mapa institucional ANM
 
-El mapa definitivo se incorporará después de su ajuste manual en ArcGIS Pro.
+**Mapa ANM-1. Detecciones térmicas y figuras mineras de la ANM en Tolima.**
 
-**Título propuesto:**  
-**Mapa ANM-1. Episodios térmicos de agosto de 2026 y figuras de la Agencia Nacional de Minería en Tolima**
+El producto cartográfico representa los episodios térmicos del escenario B junto con títulos mineros vigentes y solicitudes mineras vigentes, los sitios recurrentes FT_001 y FT_002 y el contexto territorial de coberturas IDEAM 2024, red vial, hidrografía y límites municipales. Incluye áreas de detalle para Ortega y San Luis, los municipios con 35 y 9 episodios ANM directos, respectivamente.
 
-**Contenido mínimo:**
-- episodios térmicos del escenario B;
-- títulos mineros;
-- solicitudes mineras;
-- FT_001 y FT_002;
-- coberturas IDEAM 2024;
-- red vial;
-- hidrografía;
-- límites municipales;
-- límite departamental.
+Los títulos y las solicitudes se diferencian mediante simbología propia porque representan figuras administrativas distintas. Los episodios conservan la misma simbología utilizada en los mapas ANLA y ANH. La superposición cartográfica indica coincidencia espacial y no una gradación de responsabilidad ni evidencia de causalidad.
 
-**Archivos publicados:**
-- A3: `assets/maps/anm_a3.jpg`;
-- A0 web: `assets/maps/anm_a0_web.jpg`;
-- previsualización: `assets/maps/previews/anm_a3_preview.jpg`.
-
-La versión A0 se publica mediante una pirámide DZI generada automáticamente. El original de máxima calidad permanece en GitHub Releases.
-
-La simbología debe permitir distinguir títulos y solicitudes sin sugerir una gradación de “responsabilidad”. Los episodios deben conservar una simbología común con los mapas ANLA y ANH para permitir comparación entre capítulos.
+El mapa se publica en formato A3 (`assets/maps/anm_a3.jpg`), con previsualización web (`assets/maps/previews/anm_a3_preview.jpg`) y una versión A0 de alta resolución servida mediante pirámide DZI a partir de `assets/maps/anm_a0_web.jpg`.
 
 ## 2.10. Discusión
 
 El patrón ANM tiene tres rasgos principales.
 
-Primero, la coincidencia directa de episodios con la huella ANM es superior a la participación territorial de dicha huella: 31,05 % de los episodios frente a 18,63 % de la superficie. Esto produce un índice de enriquecimiento de 1,666 y señala una concentración relativa que merece análisis posterior.
+Primero, la coincidencia directa de episodios con la huella ANM es superior a la participación territorial de dicha huella: 31,05 % de los episodios frente a 18,63 % de la superficie. Esto produce un índice de enriquecimiento de 1,666 y describe una concentración relativa que requiere evidencia adicional para cualquier interpretación causal.
 
-Segundo, títulos y solicitudes muestran comportamientos diferentes. Los títulos ocupan una proporción territorial pequeña pero presentan un enriquecimiento alto, de 3,502. Las solicitudes abarcan una superficie más amplia y reúnen un número mayor de episodios, pero su enriquecimiento es menor, de 1,527. Esta diferencia demuestra por qué no conviene analizar toda la información ANM como una única categoría administrativa.
+Segundo, títulos y solicitudes muestran comportamientos diferentes. Los títulos ocupan una proporción territorial pequeña pero presentan un enriquecimiento alto, de 3,502. Las solicitudes abarcan una superficie más amplia y reúnen un número mayor de episodios, pero su enriquecimiento es menor, de 1,527. Esta diferencia muestra por qué títulos y solicitudes deben analizarse como categorías administrativas diferenciadas.
 
 Tercero, la distribución espacial está territorialmente concentrada, en particular en Ortega, pero también incluye numerosos municipios y una amplia diversidad de coberturas. La heterogeneidad territorial limita interpretaciones simplificadoras.
 
-Estos resultados justifican preguntas de investigación más específicas: ¿los episodios coincidentes con títulos en etapa administrativa de explotación corresponden efectivamente a labores mineras, a quemas agropecuarias, a infraestructura, a fuentes industriales o a incendios de vegetación? ¿La concentración observada persiste en otros meses y años? ¿Cambiaría al controlar por accesibilidad, cobertura, pendiente o actividades agropecuarias? ¿Existen registros oficiales de incendios o imágenes de cicatriz que permitan validar casos individuales?
+La atribución de los episodios a labores mineras, quemas agropecuarias, infraestructura, fuentes industriales o incendios de vegetación queda fuera del alcance de este diseño. Resolver esa atribución exigiría contrastar casos individuales con imágenes de mayor resolución y cicatrices de quema, registros oficiales de incendios y quemas, información operativa y controles territoriales como cobertura, pendiente y accesibilidad. El capítulo tampoco permite establecer si la concentración observada persiste en otros periodos.
 
-Responder estas preguntas requeriría evidencia adicional. Este capítulo no las resuelve y no atribuye responsabilidad a titulares o solicitantes.
+En consecuencia, los resultados no atribuyen responsabilidad a titulares o solicitantes y se limitan a describir asociación espacial.
 
 ## 2.11. Síntesis
 
@@ -173,10 +156,10 @@ Los títulos mineros mostraron la mayor concentración relativa: 40 episodios so
 
 Ortega concentró 35 episodios ANM directos. Las coberturas más frecuentes fueron mosaicos de pastos con espacios naturales y pastos limpios, aunque los episodios se distribuyeron entre numerosas clases IDEAM. Los dos sitios térmicos recurrentes se localizaron cerca de figuras ANM, pero ninguno presentó coincidencia directa.
 
-La evidencia describe un patrón espacial que amerita verificación detallada. No demuestra que un título, una solicitud, un titular o una actividad minera concreta haya causado una detección térmica o un incendio.
+La evidencia describe un patrón espacial cuya interpretación causal requiere verificación independiente. No demuestra que un título, una solicitud, un titular o una actividad minera concreta haya causado una detección térmica o un incendio.
 
 
 ## Referencias institucionales
 
-- [República de Colombia. Ley 685 de 2001](https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=9202), artículo 45.
+- [República de Colombia. Ley 685 de 2001](https://www1.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=9202), artículo 45.
 - [Agencia Nacional de Minería. Sector minero colombiano](https://www.anm.gov.co/index.php/sector-minero-colombiano): información sobre títulos y acceso al derecho de explorar y explotar.
