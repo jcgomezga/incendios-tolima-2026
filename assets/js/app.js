@@ -86,18 +86,31 @@
     const map = cfg.maps[card.dataset.mapCard];
     if (!map) return;
 
+    // La imagen principal y el antiguo botón A3 abren ahora la pirámide DZI A0.
+    // Esto evita descargar y decodificar JPEG de ~55 MB en teléfonos móviles.
     card.querySelectorAll("[data-a3-viewer]").forEach(function (link) {
-      link.href = viewerURL(map.a3, map.titleA3, map.a3);
-    });
-    card.querySelectorAll("[data-a3-download]").forEach(function (link) {
-      link.href = map.a3;
-      link.download = "";
-    });
-    card.querySelectorAll("[data-a0-viewer]").forEach(function (link) {
       link.href = viewerURL(map.a0Dzi, map.titleA0, map.a0Original);
+      link.target = "_blank";
+      link.rel = "noopener";
+      if (link.classList.contains("map-image-link")) {
+        link.setAttribute("aria-label", "Explorar mapa completo en alta resolución");
+      } else {
+        link.textContent = "Explorar mapa completo · alta resolución";
+      }
     });
-    card.querySelectorAll("[data-a0-download]").forEach(function (link) {
+
+    // El antiguo botón de descarga A3 pasa a descargar el original A0.
+    card.querySelectorAll("[data-a3-download]").forEach(function (link) {
       link.href = map.a0Original;
+      link.removeAttribute("download");
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.textContent = "Descargar mapa completo · alta resolución";
+    });
+
+    // Los dos botones A0 antiguos quedan ocultos para evitar acciones duplicadas.
+    card.querySelectorAll("[data-a0-viewer], [data-a0-download]").forEach(function (link) {
+      link.hidden = true;
     });
   });
 
