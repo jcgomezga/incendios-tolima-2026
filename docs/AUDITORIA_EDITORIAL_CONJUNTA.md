@@ -18,7 +18,7 @@ Los capítulos institucionales conservan una secuencia comparable:
 6. municipios;
 7. coberturas;
 8. fuentes térmicas recurrentes;
-9. mapa pendiente;
+9. mapa publicado y navegable;
 10. discusión y síntesis.
 
 No se fuerza una estructura idéntica cuando la naturaleza de la fuente exige algo distinto. ANLA conserva una sección propia de líneas y puntos; ANH conserva secciones específicas de solapamientos, yacimientos y pozos.
@@ -82,13 +82,13 @@ Se separaron contratos de exploración y producción. Los pozos tienen una figur
 
 ## 7. Mapas
 
-Los mapas definitivos no se generan automáticamente en este paquete. Se reservan tres rutas:
+Los mapas definitivos A3 y A0 ya están incorporados a la publicación:
 
-- `03_mapas/finales/ANM/`
-- `03_mapas/finales/ANLA/`
-- `03_mapas/finales/ANH/`
+- `assets/maps/anm_a3.jpg` y `assets/maps/anm_a0_web.jpg`;
+- `assets/maps/anla_a3.jpg` y `assets/maps/anla_a0_web.jpg`;
+- `assets/maps/anh_a3.jpg` y `assets/maps/anh_a0_web.jpg`.
 
-Cada carpeta contiene una ficha con nombre base, título y capas obligatorias.
+La página principal usa previsualizaciones A3 ligeras. Los A0 web generan pirámides DZI durante el despliegue para conservar su resolución sin decodificar un JPEG de 558 millones de píxeles como una sola imagen. Los A0 originales permanecen en GitHub Releases.
 
 ## 8. Estado editorial
 
@@ -100,7 +100,6 @@ Cada carpeta contiene una ficha con nombre base, título y capas obligatorias.
 - reglas de interpretación;
 - nombres y rutas de mapas.
 
-**Pendiente antes del ZIP definitivo de publicación:**
-- insertar los tres mapas finales exportados manualmente;
-- decidir el formato bibliográfico final (APA, Chicago u otro);
-- aplicar una última corrección tipográfica después de insertar mapas y numeración definitiva.
+**Pendiente editorial futuro:**
+- fijar un estilo bibliográfico definitivo si la publicación se integra a una revista o repositorio académico;
+- registrar una licencia explícita para contenido, código y datos cuando se adopte esa decisión.

@@ -1,157 +1,137 @@
-# Detecciones térmicas y zonas de posible intervención extractiva — Tolima, agosto de 2026
+# Detecciones térmicas y territorio — Tolima, agosto de 2026
 
-Sitio estático listo para GitHub Pages.
+Publicación científica, editorial y cartográfica sobre detecciones térmicas y su relación espacial con información institucional de ANM, ANLA y ANH.
 
-## Qué incluye
+- Sitio: <https://jcgomezga.github.io/incendios-tolima-2026/>
+- Mapas A0 originales: <https://github.com/jcgomezga/incendios-tolima-2026/releases/latest>
+- Escenario principal: B, con 1.537 hotspots y 409 episodios.
 
-- publicación científica responsive en `index.html`;
-- visor interactivo de JPEG de alta resolución en `viewer.html`;
-- navegación, tema claro/oscuro, progreso de lectura y diseño adaptable;
-- resultados ANM, ANLA y ANH;
-- 19 figuras científicas en SVG y PNG;
-- tablas CSV del paquete analítico con índice web en `data/index.html`;
-- documentación metodológica y auditoría con visor Markdown en `documento.html`;
-- workflow de GitHub Actions para desplegar Pages;
-- placeholders para seis mapas JPEG que se incorporan manualmente.
+## Arquitectura
 
-## 1. Incorporar los mapas
-
-Copia tus archivos JPEG a:
+El sitio es HTML, CSS y JavaScript sin framework ni proceso de Node. El contenido editorial principal vive en `index.html`, lo que permite corregir textos directamente.
 
 ```text
-assets/maps/
+.
+├── index.html                 publicación principal
+├── viewer.html                visor OpenSeadragon A3 / A0
+├── documento.html             lector de documentos Markdown
+├── assets/
+│   ├── css/styles.css         sistema editorial y responsive
+│   ├── js/
+│   │   ├── app.js             navegación, tema, mapas y copiar cita
+│   │   ├── site-config.js     rutas centralizadas de los mapas
+│   │   └── viewer.js          visor JPEG y DZI
+│   ├── figures/               figuras SVG y PNG
+│   └── maps/
+│       ├── *_a3.jpg           mapas A3 de alta resolución
+│       ├── *_a0_web.jpg       fuentes A0 para generar teselas
+│       └── previews/          vistas A3 ligeras para la página
+├── data/tables/               32 tablas CSV
+├── docs/                      metodología y capítulos analíticos
+├── tools/                     validación y construcción
+└── .github/workflows/pages.yml
 ```
 
-con estos nombres exactos:
+Las pirámides `assets/maps/dzi/` no se guardan en Git. Se generan automáticamente con libvips durante el despliegue y se incorporan al artefacto de GitHub Pages.
+
+## Editar texto
+
+1. Abre `index.html`.
+2. Busca el título o la frase que deseas cambiar.
+3. Conserva las etiquetas HTML que rodean el texto.
+4. No cambies resultados numéricos sin verificarlos en `data/tables/GENERAL/tabla_00_comparacion_institucional_B.csv` y en las tablas institucionales.
+
+Los documentos largos están en `docs/*.md`. `documento.html` los convierte a HTML al abrirlos.
+
+## Actualizar un mapa
+
+Los nombres estables son:
 
 ```text
-anm_a3.jpg
-anm_a0.jpg
-anla_a3.jpg
-anla_a0.jpg
-anh_a3.jpg
-anh_a0.jpg
+assets/maps/anm_a3.jpg
+assets/maps/anla_a3.jpg
+assets/maps/anh_a3.jpg
+assets/maps/anm_a0_web.jpg
+assets/maps/anla_a0_web.jpg
+assets/maps/anh_a0_web.jpg
 ```
 
-Después ejecuta:
+Después de reemplazar un A3, actualiza su previsualización:
+
+```bash
+convert assets/maps/anm_a3.jpg \
+  -resize '2200x2200>' -strip -interlace Plane -quality 84 \
+  assets/maps/previews/anm_a3_preview.jpg
+```
+
+Cambia `anm` por `anla` o `anh`. El A3 completo permanece disponible en el visor y para descarga; la página principal carga únicamente la previsualización de aproximadamente 1 MiB.
+
+Después de reemplazar un A0 web no es necesario crear teselas manualmente. El siguiente despliegue regenera su pirámide DZI. Los originales de máxima calidad permanecen en GitHub Releases y sus rutas se controlan en `assets/js/site-config.js`.
+
+## Generar DZI localmente
+
+Requiere `libvips-tools`:
+
+```bash
+bash tools/generate_dzi.sh assets/maps assets/maps/dzi
+```
+
+Cada A0 produce un descriptor `.dzi` y una carpeta de teselas JPEG de 1.024 px. OpenSeadragon solicita solo las teselas necesarias para el nivel de zoom visible, evitando decodificar 558 millones de píxeles como una sola imagen.
+
+## Verificar
+
+Comprobación de mapas fuente y previsualizaciones:
 
 ```bash
 python tools/check_maps.py
 ```
 
-Más detalle en [`assets/maps/README_MAPAS.md`](assets/maps/README_MAPAS.md).
-
-## 2. Probar localmente
-
-No abras únicamente `index.html` con doble clic si quieres verificar todas las rutas.
-Desde la carpeta del repositorio:
+Prueba local básica:
 
 ```bash
 python -m http.server 8000
 ```
 
-Luego abre:
+Abre <http://localhost:8000/>. Para probar los A0 localmente debes generar primero `assets/maps/dzi/`.
 
-```text
-http://localhost:8000/
+La construcción de producción ejecuta además:
+
+```bash
+python tools/check_site.py _site
 ```
 
-## 3. Subir a GitHub
+Este control verifica rutas internas, cifras principales y presencia de las tres pirámides DZI.
 
-### Repositorio nuevo
-1. Crea un repositorio en GitHub.
-2. Descomprime este ZIP.
-3. Sube **el contenido** de esta carpeta a la raíz del repositorio.
-4. Haz commit en la rama `main`.
+## Publicar
 
-### Repositorio existente
-Copia/combina los archivos respetando las rutas. Haz una copia previa si ya tienes una web activa.
+GitHub Pages debe usar **GitHub Actions** como fuente de publicación. Cada cambio en `main` ejecuta `.github/workflows/pages.yml`, que:
 
-## 4. Activar GitHub Pages
+1. instala libvips;
+2. prepara una carpeta `_site` limpia;
+3. excluye los JPEG A0 web del artefacto final;
+4. genera las tres pirámides DZI;
+5. verifica rutas y cifras;
+6. publica el resultado.
 
-El repositorio ya incluye:
+Los A0 web se conservan en el repositorio únicamente como fuentes de construcción. Los A0 originales no se sobrescriben: continúan alojados en el Release.
 
-```text
-.github/workflows/pages.yml
-```
+## Agregar una referencia
 
-En GitHub:
-1. `Settings`
-2. `Pages`
-3. En **Build and deployment**, selecciona **GitHub Actions**.
-4. Haz push a `main`.
-5. Revisa la pestaña **Actions**.
-6. Al finalizar, GitHub mostrará la URL pública.
-
-## 5. Mapas y zoom
-
-### A3
-Cada mapa A3:
-- se visualiza dentro de la publicación;
-- es clickable;
-- abre el visor en una nueva pestaña;
-- puede descargarse directamente.
-
-### A0
-El A0:
-- no se carga en la página principal;
-- se abre desde “Explorar A0” en una pestaña nueva;
-- usa OpenSeadragon para pan y zoom;
-- tiene descarga directa.
-
-Las rutas se controlan en un único archivo:
-
-```text
-assets/js/site-config.js
-```
-
-Si mantienes los seis nombres previstos, no tienes que editarlo.
-
-## 6. Archivos grandes
-
-GitHub bloquea archivos individuales mayores de 100 MiB y advierte por encima de 50 MiB.
-GitHub Pages recomienda que el sitio publicado completo no supere 1 GB.
-
-Si un A0 pesa más de 100 MiB:
-- preferible: volver a exportarlo/comprimirlo manteniendo dimensiones;
-- alternativa: GitHub Release u otro alojamiento y cambiar la URL en `site-config.js`.
-
-## 7. Estructura
-
-```text
-.
-├── index.html
-├── viewer.html
-├── 404.html
-├── .nojekyll
-├── .github/workflows/pages.yml
-├── assets/
-│   ├── css/styles.css
-│   ├── js/
-│   │   ├── app.js
-│   │   ├── viewer.js
-│   │   └── site-config.js
-│   ├── figures/
-│   └── maps/
-├── data/tables/
-├── docs/
-└── tools/check_maps.py
-```
+1. Añade el enlace en la sección `#fuentes` de `index.html`.
+2. Si sustenta una afirmación del texto, agrega el número correspondiente junto a esa afirmación.
+3. Prefiere la URL oficial y evita referencias que no se utilicen en la publicación.
 
 ## Criterio científico
 
-El sitio usa deliberadamente lenguaje de:
-- coincidencia;
-- proximidad;
-- asociación espacial;
-- concentración relativa.
+La publicación usa deliberadamente lenguaje de coincidencia, proximidad, asociación espacial y concentración relativa. Mantiene explícitos estos límites:
 
-No atribuye causalidad a títulos, solicitudes, expedientes, contratos, yacimientos o pozos.
+- hotspot ≠ incendio confirmado;
+- episodio ≠ hotspot;
+- `scan × track` ≠ área quemada;
+- coincidencia espacial ≠ causalidad;
+- título o solicitud ANM ≠ operación puntual;
+- licencia o seguimiento ANLA ≠ origen térmico;
+- bloque o contrato ANH ≠ actividad puntual;
+- yacimiento ≠ pozo.
 
-## Dependencia del visor
-
-`viewer.html` carga OpenSeadragon desde jsDelivr. Si deseas un sitio 100% autónomo, puedes descargar la librería y reemplazar el `<script>` por una copia local.
-
-## Licencia
-
-No se asigna automáticamente una licencia al contenido o a los datos. Define una licencia antes de publicación definitiva si corresponde.
+No se ha asignado automáticamente una licencia al contenido o a los datos.

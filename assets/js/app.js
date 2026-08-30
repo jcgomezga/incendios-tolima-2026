@@ -1,78 +1,116 @@
-
 (function () {
-  const cfg = window.SITE_CONFIG || { maps: {} };
+  "use strict";
 
   const root = document.documentElement;
-  const saved = localStorage.getItem("theme");
-  if (saved) root.dataset.theme = saved;
+  const themeButton = document.querySelector("[data-theme-toggle]");
+  const navButton = document.querySelector("[data-mobile-nav]");
+  const navigation = document.getElementById("site-navigation");
+  const progress = document.getElementById("reading-progress");
+  const cfg = window.SITE_CONFIG || { maps: {} };
 
-  const themeBtn = document.querySelector("[data-theme-toggle]");
-  if (themeBtn) {
-    themeBtn.addEventListener("click", () => {
-      const next = root.dataset.theme === "dark" ? "light" : "dark";
-      root.dataset.theme = next;
-      localStorage.setItem("theme", next);
-      themeBtn.textContent = next === "dark" ? "☀" : "◐";
-    });
+  function applyTheme(theme) {
+    root.dataset.theme = theme;
+    if (themeButton) {
+      const dark = theme === "dark";
+      themeButton.textContent = dark ? "Claro" : "Oscuro";
+      themeButton.setAttribute("aria-pressed", String(dark));
+    }
   }
 
-  document.querySelectorAll("[data-map-card]").forEach(card => {
-    const key = card.dataset.mapCard;
-    const m = cfg.maps[key];
-    if (!m) return;
+  const savedTheme = localStorage.getItem("theme");
+  const preferredTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  applyTheme(savedTheme || preferredTheme);
 
-    const img = card.querySelector("[data-map-preview]");
-    const missing = card.querySelector("[data-map-missing]");
-    const status = card.querySelector("[data-map-status]");
-    const a3Viewer = card.querySelector("[data-a3-viewer]");
-    const a3Download = card.querySelector("[data-a3-download]");
-    const a0Viewer = card.querySelector("[data-a0-viewer]");
-    const a0Download = card.querySelector("[data-a0-download]");
+  themeButton?.addEventListener("click", function () {
+    const next = root.dataset.theme === "dark" ? "light" : "dark";
+    applyTheme(next);
+    localStorage.setItem("theme", next);
+  });
 
-    const viewerURL = (path, title) =>
-      "viewer.html?image=" + encodeURIComponent(path) +
-      "&title=" + encodeURIComponent(title);
+  function closeNavigation() {
+    navigation?.classList.remove("open");
+    navButton?.setAttribute("aria-expanded", "false");
+  }
 
-    if (img) {
-      img.src = m.a3;
-      img.alt = m.titleA3;
-      img.onload = () => {
-        img.hidden = false;
-        if (missing) missing.hidden = true;
-        if (status) {
-          status.textContent = "Mapa A3 disponible";
-          status.classList.add("ready");
-        }
-      };
-      img.onerror = () => {
-        img.hidden = true;
-        if (missing) missing.hidden = false;
-      };
-      img.addEventListener("click", () =>
-        window.open(viewerURL(m.a3, m.titleA3), "_blank", "noopener")
-      );
-    }
+  navButton?.addEventListener("click", function () {
+    const open = navigation?.classList.toggle("open") || false;
+    navButton.setAttribute("aria-expanded", String(open));
+  });
 
-    if (a3Viewer) a3Viewer.href = viewerURL(m.a3, m.titleA3);
+  navigation?.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", closeNavigation);
+  });
 
-    if (a3Download) {
-      a3Download.href = m.a3;
-      a3Download.download = "";
-      a3Download.textContent = "Descargar A3";
-    }
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") closeNavigation();
+  });
 
-    if (a0Viewer) {
-      a0Viewer.href = viewerURL(m.a0, m.titleA0);
-      a0Viewer.textContent = "Explorar A0 ↗";
-    }
+  function updateProgress() {
+    if (!progress) return;
+    const height = document.documentElement.scrollHeight - window.innerHeight;
+    const value = height > 0 ? Math.min(100, Math.max(0, (window.scrollY / height) * 100)) : 0;
+    progress.style.width = value + "%";
+  }
 
-    if (a0Download) {
-      a0Download.href = m.a0Original || m.a0;
-      a0Download.target = "_blank";
-      a0Download.rel = "noopener noreferrer";
-      a0Download.removeAttribute("download");
-      a0Download.textContent = "Descargar A0 original ↗";
-      a0Download.title = "Archivo original de máxima resolución alojado en GitHub Releases";
+  updateProgress();
+  window.addEventListener("scroll", updateProgress, { passive: true });
+  window.addEventListener("resize", updateProgress);
+
+  const navLinks = Array.from(document.querySelectorAll('.nav-links a[href^="#"]'));
+  const sections = navLinks.map(function (link) {
+    return document.querySelector(link.getAttribute("href"));
+  }).filter(Boolean);
+
+  if ("IntersectionObserver" in window && sections.length) {
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach(function (link) {
+          const active = link.getAttribute("href") === "#" + entry.target.id;
+          link.classList.toggle("active", active);
+          if (active) link.setAttribute("aria-current", "location");
+          else link.removeAttribute("aria-current");
+        });
+      });
+    }, { rootMargin: "-25% 0px -65% 0px", threshold: 0 });
+    sections.forEach(function (section) { observer.observe(section); });
+  }
+
+  function viewerURL(source, title, original) {
+    const params = new URLSearchParams({ source: source, title: title });
+    if (original) params.set("original", original);
+    return "viewer.html?" + params.toString();
+  }
+
+  document.querySelectorAll("[data-map-card]").forEach(function (card) {
+    const map = cfg.maps[card.dataset.mapCard];
+    if (!map) return;
+
+    card.querySelectorAll("[data-a3-viewer]").forEach(function (link) {
+      link.href = viewerURL(map.a3, map.titleA3, map.a3);
+    });
+    card.querySelectorAll("[data-a3-download]").forEach(function (link) {
+      link.href = map.a3;
+      link.download = "";
+    });
+    card.querySelectorAll("[data-a0-viewer]").forEach(function (link) {
+      link.href = viewerURL(map.a0Dzi, map.titleA0, map.a0Original);
+    });
+    card.querySelectorAll("[data-a0-download]").forEach(function (link) {
+      link.href = map.a0Original;
+    });
+  });
+
+  const copyButton = document.querySelector("[data-copy-citation]");
+  const copyStatus = document.querySelector("[data-copy-status]");
+  copyButton?.addEventListener("click", async function () {
+    const text = document.getElementById("citation-text")?.textContent.trim();
+    if (!text) return;
+    try {
+      await navigator.clipboard.writeText(text);
+      if (copyStatus) copyStatus.textContent = "Cita copiada.";
+    } catch (error) {
+      if (copyStatus) copyStatus.textContent = "No fue posible copiarla; selecciónala manualmente.";
     }
   });
 })();

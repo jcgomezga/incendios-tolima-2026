@@ -200,13 +200,11 @@ El capítulo ANH permite resumir siete resultados:
 6. Los principales contratos por número de episodios son 0554 en exploración y 0039, 0038 y 0042 en producción.
 7. FT_001 coincide directamente con una tierra ANH, mientras FT_002 se encuentra a más de cinco kilómetros; ninguna situación prueba el origen del fenómeno térmico.
 
-### Nota cartográfica pendiente
+### Producto cartográfico publicado
 
-El mapa final se exportará manualmente desde ArcGIS Pro y se insertará en:
+El A3 se encuentra en `assets/maps/anh_a3.jpg` y el A0 web en `assets/maps/anh_a0_web.jpg`. La página usa `assets/maps/previews/anh_a3_preview.jpg`; el A0 se sirve mediante una pirámide DZI generada automáticamente.
 
-`03_mapas/finales/ANH/mapa_anh_tierras_yacimientos_pozos_episodios_B_tolima_202608.png`
-
-Debe diferenciar exploración y producción, incorporar yacimientos y pozos cuando la escala permita leerlos, representar episodios B y FT_001/FT_002 y conservar como contexto coberturas IDEAM 2024, vías, hidrografía y límites municipales.
+El mapa diferencia exploración y producción, incorpora yacimientos y pozos cuando la escala permite leerlos, representa episodios B y FT_001/FT_002 y conserva como contexto coberturas IDEAM 2024, vías, hidrografía y límites municipales.
 
 ## Fuentes
 

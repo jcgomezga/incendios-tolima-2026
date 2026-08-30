@@ -142,11 +142,12 @@ El mapa definitivo se incorporará después de su ajuste manual en ArcGIS Pro.
 - límites municipales;
 - límite departamental.
 
-**Ruta reservada para el repositorio:**  
-`03_mapas/finales/ANM/mapa_anm_titulos_solicitudes_episodios_B_tolima_202608.png`
+**Archivos publicados:**
+- A3: `assets/maps/anm_a3.jpg`;
+- A0 web: `assets/maps/anm_a0_web.jpg`;
+- previsualización: `assets/maps/previews/anm_a3_preview.jpg`.
 
-**Versión recomendada adicional:**  
-`03_mapas/finales/ANM/mapa_anm_titulos_solicitudes_episodios_B_tolima_202608.svg` o PDF vectorial, si la exportación desde ArcGIS Pro lo permite.
+La versión A0 se publica mediante una pirámide DZI generada automáticamente. El original de máxima calidad permanece en GitHub Releases.
 
 La simbología debe permitir distinguir títulos y solicitudes sin sugerir una gradación de “responsabilidad”. Los episodios deben conservar una simbología común con los mapas ANLA y ANH para permitir comparación entre capítulos.
 
@@ -189,5 +190,5 @@ La evidencia describe un patrón espacial que amerita verificación detallada. N
 
 ### Referencias institucionales para la versión final
 
-- República de Colombia. Ley 685 de 2001, artículo 45.
-- Agencia Nacional de Minería. *El título minero* y preguntas frecuentes sobre acceso al derecho de explorar y explotar.
+- [República de Colombia. Ley 685 de 2001](https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=9202), artículo 45.
+- [Agencia Nacional de Minería. Sector minero colombiano](https://www.anm.gov.co/index.php/sector-minero-colombiano): información sobre títulos y acceso al derecho de explorar y explotar.

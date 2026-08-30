@@ -162,8 +162,11 @@ No permite determinar por sí solo la causa de un episodio. Una investigación c
 
 ### Referencias institucionales y técnicas para la versión final
 
-- NASA FIRMS. *Active Fire Data* y documentación de detecciones de fuego activo/anomalías térmicas.
-- República de Colombia. Ley 685 de 2001, artículo 45.
-- Agencia Nacional de Minería. Información institucional sobre título y contrato de concesión minera.
-- Autoridad Nacional de Licencias Ambientales. *Control y Seguimiento*.
-- Agencia Nacional de Hidrocarburos. *Mapa de Tierras*, actualización del 6 de agosto de 2026.
+- [NASA FIRMS. *Active Fire Data*](https://firms.modaps.eosdis.nasa.gov/active_fire/) y documentación de detecciones de fuego activo/anomalías térmicas.
+- [República de Colombia. Ley 685 de 2001](https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=9202), artículo 45.
+- [Agencia Nacional de Minería. Sector minero colombiano](https://www.anm.gov.co/index.php/sector-minero-colombiano).
+- [Autoridad Nacional de Licencias Ambientales. *Control y Seguimiento*](https://www.anla.gov.co/seguimiento-de-licencias-ambientales/que-hacemos).
+- [Agencia Nacional de Hidrocarburos. *Mapa de Tierras*](https://www.anh.gov.co/es/hidrocarburos/mapa-de-tierras/), actualización del 6 de agosto de 2026.
+- [IDEAM. Coberturas de la Tierra](https://www.ideam.gov.co/nuestra-entidad/ecosistemas-e-informacion-ambiental/coberturas-de-la-tierra).
+- [IGAC. Datos abiertos geoespaciales](https://www.igac.gov.co/datos-abiertos/datos-abiertos-geoespaciales).
+- [DANE. Marco Geoestadístico Nacional 2025](https://geoportal.dane.gov.co/mparcgis/rest/services/MGN2025/Serv_CapasMGN_2025/FeatureServer).

@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Análisis espacial de detecciones térmicas y su coincidencia con información institucional ANM, ANLA y ANH en Tolima durante agosto de 2026.">
-  <meta name="theme-color" content="#0b2239">
+  <meta name="description" content="Publicación científica y cartográfica sobre 409 episodios térmicos y su relación espacial con información institucional de ANM, ANLA y ANH en Tolima, agosto de 2026.">
+  <meta name="theme-color" content="#f3f0e8">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Detecciones térmicas y zonas de posible intervención extractiva en Tolima">
-  <meta property="og:description" content="Publicación cartográfica y análisis espacial — agosto de 2026.">
-  <title>Detecciones térmicas y zonas de posible intervención extractiva · Tolima 2026</title>
+  <meta property="og:description" content="Análisis espacial y atlas cartográfico · agosto de 2026.">
+  <title>Detecciones térmicas y territorio · Tolima 2026</title>
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -17,433 +17,167 @@
 
   <header class="site-header">
     <div class="nav-wrap">
-      <a class="brand" href="#inicio"><span class="brand-mark" aria-hidden="true"></span><span>Tolima · térmico & territorio</span></a>
-      <nav class="nav-links" aria-label="Navegación principal">
-        <a href="#resumen">Resumen</a>
-        <a href="#metodologia">Método</a>
-        <a href="#anm">ANM</a>
-        <a href="#anla">ANLA</a>
-        <a href="#anh">ANH</a>
-        <a href="#recurrencia">Recurrencia</a>
-        <a href="#datos">Datos</a>
-        <a href="#referencias">Referencias</a>
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <span class="brand-index" aria-hidden="true">TOL·26</span>
+        <span class="brand-name">Térmico &amp; territorio</span>
+      </a>
+      <button class="nav-toggle" type="button" data-mobile-nav aria-expanded="false" aria-controls="site-navigation">Índice</button>
+      <nav class="nav-links" id="site-navigation" aria-label="Índice de la publicación">
+        <a href="#hallazgos">Hallazgos</a><a href="#metodo">Método</a><a href="#anm">ANM</a><a href="#anla">ANLA</a><a href="#anh">ANH</a><a href="#recurrencia">Recurrencia</a><a href="#fuentes">Fuentes</a>
       </nav>
-      <button class="icon-button mobile-nav" type="button" data-mobile-nav aria-label="Abrir navegación">☰</button>
-      <button class="icon-button" type="button" data-theme-toggle aria-label="Cambiar tema">◐</button>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">Oscuro</button>
     </div>
   </header>
 
   <main id="contenido">
-    <section class="hero" id="inicio">
-      <div class="hero-inner">
-        <div>
-          <div class="kicker">Publicación cartográfica · Tolima · agosto 2026</div>
+    <article>
+      <header class="masthead" id="inicio">
+        <div class="masthead-inner">
+          <p class="overline">Atlas analítico · Tolima · agosto de 2026</p>
           <h1>Detecciones térmicas y zonas de posible intervención extractiva</h1>
-          <p>
-            Análisis espacial de <strong>409 episodios térmicos</strong> frente a información institucional de minería,
-            licenciamiento ambiental e hidrocarburos. La lectura identifica coincidencias, proximidades y concentraciones
-            relativas; <strong>no atribuye causalidad</strong>.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#resumen">Explorar resultados</a>
-            <a class="button secondary" href="#metodologia">Leer metodología</a>
-            <a class="button secondary" href="#datos">Descargar datos</a>
-          </div>
+          <p class="standfirst">Un análisis espacial de <strong>409 episodios térmicos</strong> frente a información institucional de minería, licenciamiento ambiental e hidrocarburos. La coincidencia territorial orienta preguntas y verificaciones; <strong>no demuestra causalidad</strong>.</p>
+          <div class="byline"><span>Elaboración cartográfica y publicación: <strong>Juan Carlos Gómez García</strong></span><span>Escenario principal B · EPSG:9377</span></div>
+          <dl class="study-facts" aria-label="Ficha del análisis">
+            <div><dt>Detecciones</dt><dd>1.537</dd><span>hotspots del escenario B</span></div>
+            <div><dt>Episodios</dt><dd>409</dd><span>agrupación 1.000 m / 12 h</span></div>
+            <div><dt>Sensibilidad</dt><dd>432</dd><span>episodios del escenario A</span></div>
+            <div><dt>Periodo</dt><dd>08·2026</dd><span>Tolima, Colombia</span></div>
+          </dl>
         </div>
-        <aside class="hero-panel" aria-label="Resumen del conjunto analítico">
-          <div class="hero-grid">
-            <div><span class="mini-label">Hotspots B</span><strong>1.537</strong><p>Escenario principal</p></div>
-            <div><span class="mini-label">Episodios</span><strong>409</strong><p>1.000 m / 12 h</p></div>
-            <div><span class="mini-label">Recurrentes</span><strong>2</strong><p>FT_001 · FT_002</p></div>
-            <div><span class="mini-label">CRS</span><strong style="font-size:1.8rem">EPSG:9377</strong><p>Origen-Nacional</p></div>
-          </div>
-        </aside>
-      </div>
-    </section>
+      </header>
 
-    <section class="section" id="resumen">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="eyebrow">Resumen ejecutivo</div>
-            <h2>Tres huellas institucionales, una misma unidad térmica</h2>
-          </div>
-          <p>
-            El escenario B reúne 409 episodios. Cada institución se evalúa por separado:
-            un mismo episodio puede coincidir con más de una huella, por lo que los conteos
-            <strong>no son aditivos</strong>.
-          </p>
+      <section class="editorial-section" id="hallazgos" aria-labelledby="hallazgos-title">
+        <div class="reading-grid">
+          <div class="section-label"><span>01</span> Hallazgos</div>
+          <div class="section-copy"><h2 id="hallazgos-title">Tres huellas institucionales, leídas por separado</h2><p class="lede">La proporción de episodios con coincidencia directa es mayor que la proporción de superficie ocupada por cada huella institucional. El índice de enriquecimiento expresa esa concentración relativa. No es una prueba de significancia estadística, actividad puntual ni origen de las señales térmicas.</p></div>
         </div>
+        <div class="result-ledger" role="group" aria-label="Resultados principales del escenario B">
+          <div class="ledger-head"><span>Institución</span><span>Episodios directos</span><span>Superficie</span><span>Enriquecimiento</span></div>
+          <a href="#anm"><strong>ANM</strong><span>127 / 409 <small>31,05 %</small></span><span>18,63 %</span><span>1,666</span></a>
+          <a href="#anla"><strong>ANLA</strong><span>143 / 409 <small>34,96 %</small></span><span>15,10 %</span><span>2,315</span></a>
+          <a href="#anh"><strong>ANH</strong><span>187 / 409 <small>45,72 %</small></span><span>21,93 %</span><span>2,085</span></a>
+        </div>
+        <aside class="margin-note wide-note"><strong>Los conteos no son aditivos.</strong> Un mismo episodio puede coincidir con más de una institución; por eso 127 + 143 + 187 no representa un total territorial válido.</aside>
+        <figure class="publication-figure breakout"><img src="assets/figures/svg/GENERAL/figura_00_comparacion_institucional_B.svg" alt="Comparación del porcentaje de superficie y el porcentaje de episodios observados para ANM, ANLA y ANH en el escenario B." width="1800" height="1000"><figcaption><b>Figura 1.</b> Porcentaje observado frente a superficie disponible. Las instituciones se comparan bajo una misma unidad térmica, pero se analizan de manera independiente.</figcaption></figure>
+      </section>
 
-        <div class="stats-grid">
-          <article class="stat-card"><div class="value">31,05%</div><div class="label">Episodios B con coincidencia directa ANM</div><div class="meta">127 / 409 · E = 1,666</div></article>
-          <article class="stat-card"><div class="value">34,96%</div><div class="label">Episodios B con coincidencia directa ANLA</div><div class="meta">143 / 409 · E = 2,315</div></article>
-          <article class="stat-card"><div class="value">45,72%</div><div class="label">Episodios B con coincidencia directa ANH</div><div class="meta">187 / 409 · E = 2,085</div></article>
-          <article class="stat-card"><div class="value">24.128</div><div class="label">km² de superficie departamental evaluada</div><div class="meta">Cierre espacial auditado</div></article>
+      <section class="editorial-section paper-band" id="metodo" aria-labelledby="metodo-title">
+        <div class="reading-grid">
+          <div class="section-label"><span>02</span> Método</div>
+          <div class="section-copy"><h2 id="metodo-title">De una detección satelital a un episodio espacial</h2><p class="lede">NASA FIRMS distribuye detecciones de fuego activo y anomalías térmicas derivadas de MODIS y VIIRS <a class="citation" href="https://firms.modaps.eosdis.nasa.gov/active_fire/" target="_blank" rel="noopener noreferrer">[1]</a>. Aquí se agrupan y contrastan con huellas institucionales; no se convierten automáticamente en incendios ni en áreas quemadas.</p></div>
         </div>
-
-        <div class="callout">
-          <strong>Cómo leer estos resultados.</strong>
-          El índice de enriquecimiento compara el porcentaje de episodios observados con el porcentaje de superficie disponible.
-          Un valor superior a 1 describe concentración relativa; no es una prueba de causalidad ni de significancia estadística.
-        </div>
-
-        <div class="figure-panel">
-          <img src="assets/figures/svg/GENERAL/figura_00_comparacion_institucional_B.svg" alt="Comparación entre porcentaje de superficie y porcentaje de episodios observados para ANM, ANLA y ANH.">
-          <div class="figcaption">Comparación transversal del escenario B. Las tres instituciones se evalúan por separado y sus conteos no deben sumarse.</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section alt" id="metodologia">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="eyebrow">Metodología</div>
-            <h2>De la anomalía térmica al patrón espacial</h2>
-          </div>
-          <p>
-            NASA FIRMS distribuye detecciones de fuego activo y anomalías térmicas derivadas de sensores como MODIS y VIIRS
-            <a class="citation" href="https://firms.modaps.eosdis.nasa.gov/" target="_blank" rel="noopener noreferrer">[1]</a>.
-            Una detección no equivale automáticamente a un incendio confirmado ni a un área quemada.
-          </p>
-        </div>
-
-        <div class="method-grid">
-          <article class="method-step"><div class="num">1</div><h3>Observación satelital</h3><p>Se parte de hotspots FIRMS correspondientes a agosto de 2026.</p></article>
-          <article class="method-step"><div class="num">2</div><h3>Escenarios A / B</h3><p>B es principal: 1.537 hotspots; A conserva 2.134 como sensibilidad.</p></article>
-          <article class="method-step"><div class="num">3</div><h3>Agrupación en episodios</h3><p>Las detecciones se agrupan con umbral espacial de 1.000 m y temporal de 12 h.</p></article>
-          <article class="method-step"><div class="num">4</div><h3>Coincidencia y proximidad</h3><p>Directa, ≤1 km, 1–5 km y &gt;5 km para cada institución.</p></article>
-          <article class="method-step"><div class="num">5</div><h3>Control por superficie</h3><p>Para polígonos se calcula observado, esperado y enriquecimiento territorial.</p></article>
-          <article class="method-step"><div class="num">6</div><h3>Recurrencia</h3><p>Se identifican sitios con repetición temporal sin confundirlos con episodios individuales.</p></article>
-        </div>
-
-        <div class="callout">
-          <strong>Límite principal.</strong> <code class="inline">scan × track</code> no se interpreta como área quemada.
-          Las cicatrices requerirían validación independiente, por ejemplo con Sentinel-2/Landsat e índices espectrales.
-        </div>
-
-        <a class="button ghost" href="documento.html?file=docs/01_metodologia_general_v2.md&title=Metodolog%C3%ADa%20general">Abrir metodología completa</a>
-      </div>
-    </section>
-
-    <section class="agency" id="anm">
-      <div class="container">
-        <div class="agency-title-row">
-          <div>
-            <div class="eyebrow">Capítulo 2</div>
-            <h2>ANM · títulos y solicitudes mineras</h2>
-          </div>
-          <span class="agency-badge">MINERÍA</span>
-        </div>
-        <p class="lead">
-          El análisis distingue títulos y solicitudes. La ANM señala que el título minero constituye el instrumento jurídico
-          mediante el cual se adquiere el derecho a explorar y explotar, mientras la propuesta constituye un trámite previo
-          <a class="citation" href="https://www.anm.gov.co/index.php/sector-minero-colombiano" target="_blank" rel="noopener noreferrer">[2]</a>.
-          En esta publicación, ninguna de las dos figuras se interpreta como evidencia automática de operación puntual.
-        </p>
-
-        <div class="agency-metrics">
-          <div class="metric"><b>127</b><span>episodios directos</span></div>
-          <div class="metric"><b>31,05%</b><span>del escenario B</span></div>
-          <div class="metric"><b>18,63%</b><span>superficie ANM</span></div>
-          <div class="metric"><b>1,666</b><span>enriquecimiento</span></div>
-        </div>
-
-        
-    <div class="map-card" data-map-card="anm">
-      <div class="map-card-head">
-        <div>
-          <div class="eyebrow">Mapa de publicación · A3</div>
-          <h3>ANM · vista principal</h3>
-        </div>
-        <span class="map-status" data-map-status>Pendiente de incorporar</span>
-      </div>
-      <div class="map-preview">
-        <img hidden data-map-preview loading="lazy" decoding="async" alt="">
-        <div class="map-missing" data-map-missing>
-          <div>
-            <strong>El diseño está listo para tu JPEG A3.</strong>
-            Copia el archivo en <code class="inline">assets/maps/anm_a3.jpg</code>.
-          </div>
-        </div>
-      </div>
-      <div class="map-actions">
-        <a class="button ghost small" data-a3-viewer target="_blank" rel="noopener">Ampliar A3</a>
-        <a class="button ghost small" data-a3-download>Descargar A3</a>
-        <a class="button ghost small" data-a0-viewer target="_blank" rel="noopener">Explorar A0 ↗</a>
-        <a class="button ghost small" data-a0-download>Descargar A0</a>
-        <span class="hint">Clic sobre el mapa A3 para abrir el visor de máxima resolución.</span>
-      </div>
-    </div>
-
-        <div class="fig-grid">
-          <div class="fig-item">
-      <img loading="lazy" decoding="async" src="assets/figures/svg/ANM/anm_01_proximidad_episodios_publicacion.svg" alt="Proximidad de episodios a la huella ANM.">
-      <p>Proximidad de episodios a la huella ANM.</p>
-    </div>
-          <div class="fig-item">
-      <img loading="lazy" decoding="async" src="assets/figures/svg/ANM/anm_02_observado_vs_superficie_publicacion.svg" alt="Episodios observados frente a superficie disponible.">
-      <p>Episodios observados frente a superficie disponible.</p>
-    </div>
-          <div class="fig-item">
-      <img loading="lazy" decoding="async" src="assets/figures/svg/ANM/anm_03a_solicitudes_principales_publicacion.svg" alt="Solicitudes principales por episodios coincidentes.">
-      <p>Solicitudes principales por episodios coincidentes.</p>
-    </div>
-          <div class="fig-item">
-      <img loading="lazy" decoding="async" src="assets/figures/svg/ANM/anm_03b_titulos_principales_publicacion.svg" alt="Títulos principales por episodios coincidentes.">
-      <p>Títulos principales por episodios coincidentes.</p>
-    </div>
-        </div>
-        <details class="gallery-more">
-          <summary>Ver figuras complementarias ANM</summary>
-          <div class="inside fig-grid">
-            <div class="fig-item">
-      <img loading="lazy" decoding="async" src="assets/figures/svg/ANM/anm_04_municipios_directos_publicacion.svg" alt="Municipios con mayor coincidencia directa.">
-      <p>Municipios con mayor coincidencia directa.</p>
-    </div>
-            <div class="fig-item">
-      <img loading="lazy" decoding="async" src="assets/figures/svg/ANM/anm_05_coberturas_directas_publicacion_v2.svg" alt="Coberturas del suelo más frecuentes.">
-      <p>Coberturas del suelo más frecuentes.</p>
-    </div>
-          </div>
-        </details>
-      </div>
-    </section>
-
-    <section class="agency alt" id="anla">
-      <div class="container">
-        <div class="agency-title-row">
-          <div>
-            <div class="eyebrow">Capítulo 3</div>
-            <h2>ANLA · licenciamiento y seguimiento ambiental</h2>
-          </div>
-          <span class="agency-badge">SEGUIMIENTO AMBIENTAL</span>
-        </div>
-        <p class="lead">
-          La ANLA define el seguimiento como la verificación de obligaciones, medidas y comportamiento ambiental de proyectos,
-          obras o actividades sujetos a instrumentos de manejo
-          <a class="citation" href="https://www.anla.gov.co/seguimiento-de-licencias-ambientales/que-hacemos" target="_blank" rel="noopener noreferrer">[3]</a>.
-          La presencia de un expediente o geometría de seguimiento no identifica por sí sola el origen de una fuente térmica.
-        </p>
-
-        <div class="agency-metrics">
-          <div class="metric"><b>143</b><span>episodios directos</span></div>
-          <div class="metric"><b>34,96%</b><span>del escenario B</span></div>
-          <div class="metric"><b>15,10%</b><span>superficie ANLA</span></div>
-          <div class="metric"><b>2,315</b><span>enriquecimiento</span></div>
-        </div>
-
-        
-    <div class="map-card" data-map-card="anla">
-      <div class="map-card-head">
-        <div>
-          <div class="eyebrow">Mapa de publicación · A3</div>
-          <h3>ANLA · vista principal</h3>
-        </div>
-        <span class="map-status" data-map-status>Pendiente de incorporar</span>
-      </div>
-      <div class="map-preview">
-        <img hidden data-map-preview loading="lazy" decoding="async" alt="">
-        <div class="map-missing" data-map-missing>
-          <div>
-            <strong>El diseño está listo para tu JPEG A3.</strong>
-            Copia el archivo en <code class="inline">assets/maps/anla_a3.jpg</code>.
-          </div>
-        </div>
-      </div>
-      <div class="map-actions">
-        <a class="button ghost small" data-a3-viewer target="_blank" rel="noopener">Ampliar A3</a>
-        <a class="button ghost small" data-a3-download>Descargar A3</a>
-        <a class="button ghost small" data-a0-viewer target="_blank" rel="noopener">Explorar A0 ↗</a>
-        <a class="button ghost small" data-a0-download>Descargar A0</a>
-        <span class="hint">Clic sobre el mapa A3 para abrir el visor de máxima resolución.</span>
-      </div>
-    </div>
-
-        <div class="fig-grid">
-          <div class="fig-item">
-      <img loading="lazy" decoding="async" src="assets/figures/svg/ANLA/anla_01_proximidad_episodios_publicacion.svg" alt="Proximidad de episodios a la huella ANLA.">
-      <p>Proximidad de episodios a la huella ANLA.</p>
-    </div>
-          <div class="fig-item">
-      <img loading="lazy" decoding="async" src="assets/figures/svg/ANLA/anla_02_observado_vs_superficie_publicacion.svg" alt="Episodios observados frente a superficie disponible.">
-      <p>Episodios observados frente a superficie disponible.</p>
-    </div>
-          <div class="fig-item">
-      <img loading="lazy" decoding="async" src="assets/figures/svg/ANLA/anla_03_expedientes_principales_publicacion.svg" alt="Expedientes ANLA con mayor número de episodios coincidentes.">
-      <p>Expedientes ANLA con mayor número de episodios coincidentes.</p>
-    </div>
-          <div class="fig-item">
-      <img loading="lazy" decoding="async" src="assets/figures/svg/ANLA/anla_04_municipios_directos_publicacion.svg" alt="Municipios con mayor coincidencia directa.">
-      <p>Municipios con mayor coincidencia directa.</p>
-    </div>
-        </div>
-        <details class="gallery-more">
-          <summary>Ver figura complementaria ANLA</summary>
-          <div class="inside fig-grid">
-            <div class="fig-item">
-      <img loading="lazy" decoding="async" src="assets/figures/svg/ANLA/anla_05_coberturas_directas_publicacion.svg" alt="Coberturas del suelo más frecuentes.">
-      <p>Coberturas del suelo más frecuentes.</p>
-    </div>
-          </div>
-        </details>
-      </div>
-    </section>
-
-    <section class="agency" id="anh">
-      <div class="container">
-        <div class="agency-title-row">
-          <div>
-            <div class="eyebrow">Capítulo 4</div>
-            <h2>ANH · tierras contractuales, yacimientos y pozos</h2>
-          </div>
-          <span class="agency-badge">HIDROCARBUROS</span>
-        </div>
-        <p class="lead">
-          El Mapa de Tierras de la ANH representa la distribución, delimitación y clasificación de áreas hidrocarburíferas
-          para exploración y producción; la actualización usada corresponde al 6 de agosto de 2026
-          <a class="citation" href="https://www.anh.gov.co/es/hidrocarburos/mapa-de-tierras/" target="_blank" rel="noopener noreferrer">[4]</a>.
-          Bloques, yacimientos y pozos son objetos distintos y se interpretan separadamente.
-        </p>
-
-        <div class="agency-metrics">
-          <div class="metric"><b>187</b><span>episodios directos</span></div>
-          <div class="metric"><b>45,72%</b><span>del escenario B</span></div>
-          <div class="metric"><b>21,93%</b><span>superficie contractual</span></div>
-          <div class="metric"><b>2,085</b><span>enriquecimiento</span></div>
-        </div>
-
-        
-    <div class="map-card" data-map-card="anh">
-      <div class="map-card-head">
-        <div>
-          <div class="eyebrow">Mapa de publicación · A3</div>
-          <h3>ANH · vista principal</h3>
-        </div>
-        <span class="map-status" data-map-status>Pendiente de incorporar</span>
-      </div>
-      <div class="map-preview">
-        <img hidden data-map-preview loading="lazy" decoding="async" alt="">
-        <div class="map-missing" data-map-missing>
-          <div>
-            <strong>El diseño está listo para tu JPEG A3.</strong>
-            Copia el archivo en <code class="inline">assets/maps/anh_a3.jpg</code>.
-          </div>
-        </div>
-      </div>
-      <div class="map-actions">
-        <a class="button ghost small" data-a3-viewer target="_blank" rel="noopener">Ampliar A3</a>
-        <a class="button ghost small" data-a3-download>Descargar A3</a>
-        <a class="button ghost small" data-a0-viewer target="_blank" rel="noopener">Explorar A0 ↗</a>
-        <a class="button ghost small" data-a0-download>Descargar A0</a>
-        <span class="hint">Clic sobre el mapa A3 para abrir el visor de máxima resolución.</span>
-      </div>
-    </div>
-
-        <div class="fig-grid">
-          <div class="fig-item">
-      <img loading="lazy" decoding="async" src="assets/figures/svg/ANH/anh_01_proximidad_episodios_publicacion.svg" alt="Proximidad de episodios a la huella ANH.">
-      <p>Proximidad de episodios a la huella ANH.</p>
-    </div>
-          <div class="fig-item">
-      <img loading="lazy" decoding="async" src="assets/figures/svg/ANH/anh_02_observado_vs_superficie_publicacion.svg" alt="Observado frente a superficie: exploración, producción y yacimientos.">
-      <p>Observado frente a superficie: exploración, producción y yacimientos.</p>
-    </div>
-          <div class="fig-item">
-      <img loading="lazy" decoding="async" src="assets/figures/svg/ANH/anh_03a_contratos_exploracion_publicacion.svg" alt="Contratos de exploración con más episodios coincidentes.">
-      <p>Contratos de exploración con más episodios coincidentes.</p>
-    </div>
-          <div class="fig-item">
-      <img loading="lazy" decoding="async" src="assets/figures/svg/ANH/anh_03b_contratos_produccion_publicacion.svg" alt="Contratos de producción con más episodios coincidentes.">
-      <p>Contratos de producción con más episodios coincidentes.</p>
-    </div>
-        </div>
-        <details class="gallery-more">
-          <summary>Ver figuras complementarias ANH</summary>
-          <div class="inside fig-grid">
-            <div class="fig-item">
-      <img loading="lazy" decoding="async" src="assets/figures/svg/ANH/anh_04_municipios_directos_publicacion.svg" alt="Municipios con mayor coincidencia directa.">
-      <p>Municipios con mayor coincidencia directa.</p>
-    </div>
-            <div class="fig-item">
-      <img loading="lazy" decoding="async" src="assets/figures/svg/ANH/anh_05_coberturas_directas_publicacion.svg" alt="Coberturas del suelo más frecuentes.">
-      <p>Coberturas del suelo más frecuentes.</p>
-    </div>
-            <div class="fig-item">
-      <img loading="lazy" decoding="async" src="assets/figures/svg/ANH/anh_06_pozos_proximidad_publicacion.svg" alt="Pozos con mayor número de episodios dentro de 5 km.">
-      <p>Pozos con mayor número de episodios dentro de 5 km.</p>
-    </div>
-          </div>
-        </details>
-      </div>
-    </section>
-
-    <section class="section alt" id="recurrencia">
-      <div class="container">
-        <div class="section-head">
-          <div><div class="eyebrow">Recurrencia térmica</div><h2>Dos sitios que merecen verificación específica</h2></div>
-          <p>La recurrencia se calcula aparte de los episodios individuales y describe repetición temporal de señales; no identifica su causa.</p>
-        </div>
-        <div class="recurrence-grid">
-          <article class="recurrence-card">
-            <div class="tag">Recurrencia alta</div>
-            <h3>FT_001 · Ibagué</h3>
-            <dl><dt>Episodios</dt><dd>7</dd><dt>Fechas</dt><dd>7</dd><dt>Periodo</dt><dd>24 días</dd><dt>Hotspots</dt><dd>8</dd><dt>Cobertura</dt><dd>Zonas industriales o comerciales</dd><dt>ANH</dt><dd>Coincidencia directa</dd></dl>
-          </article>
-          <article class="recurrence-card">
-            <div class="tag">Recurrencia media</div>
-            <h3>FT_002 · Ambalema</h3>
-            <dl><dt>Episodios</dt><dd>3</dd><dt>Fechas</dt><dd>3</dd><dt>Periodo</dt><dd>10 días</dd><dt>Hotspots</dt><dd>7</dd><dt>Cobertura</dt><dd>Mosaico de pastos con espacios naturales</dd><dt>ANLA</dt><dd>Coincidencia directa</dd></dl>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="datos">
-      <div class="container">
-        <div class="section-head">
-          <div><div class="eyebrow">Reproducibilidad</div><h2>Datos, tablas y documentación</h2></div>
-          <p>El repositorio incluye las tablas derivadas, capítulos metodológicos y documentación editorial. Los JPEG cartográficos de alta resolución se incorporan por separado.</p>
-        </div>
-        <div class="download-grid">
-          <article class="download-card"><h3>Tablas de resultados</h3><p>CSV por institución y comparación transversal.</p><a class="button ghost small" href="data/index.html">Abrir carpeta de datos</a></article>
-          <article class="download-card"><h3>Metodología completa</h3><p>Texto consolidado con reglas de análisis y límites interpretativos.</p><a class="button ghost small" href="documento.html?file=docs/01_metodologia_general_v2.md&title=Metodolog%C3%ADa%20general">Abrir documento</a></article>
-          <article class="download-card"><h3>Auditoría editorial</h3><p>Decisiones de estructura, no aditividad y control de calidad.</p><a class="button ghost small" href="documento.html?file=docs/AUDITORIA_EDITORIAL_CONJUNTA.md&title=Auditor%C3%ADa%20editorial%20conjunta">Abrir auditoría</a></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section alt" id="referencias">
-      <div class="container">
-        <div class="section-head">
-          <div><div class="eyebrow">Fuentes enlazadas</div><h2>Referencias institucionales y técnicas</h2></div>
-          <p>Las referencias externas definen sensores y figuras institucionales; los resultados numéricos provienen del paquete analítico auditado del proyecto.</p>
-        </div>
-        <ol class="refs">
-          <li><a href="https://firms.modaps.eosdis.nasa.gov/" target="_blank" rel="noopener noreferrer"><strong>[1] NASA FIRMS — Fire Information for Resource Management System</strong></a><small>Datos de fuego activo y anomalías térmicas.</small></li>
-          <li><a href="https://www.anm.gov.co/index.php/sector-minero-colombiano" target="_blank" rel="noopener noreferrer"><strong>[2] Agencia Nacional de Minería — Sector minero colombiano</strong></a><small>Información institucional sobre títulos y contratos mineros.</small></li>
-          <li><a href="https://www.anla.gov.co/seguimiento-de-licencias-ambientales/que-hacemos" target="_blank" rel="noopener noreferrer"><strong>[3] ANLA — Seguimiento de Licencias Ambientales</strong></a><small>Funciones de control y seguimiento ambiental.</small></li>
-          <li><a href="https://www.anh.gov.co/es/hidrocarburos/mapa-de-tierras/" target="_blank" rel="noopener noreferrer"><strong>[4] Agencia Nacional de Hidrocarburos — Mapa de Tierras</strong></a><small>Actualización 6 de agosto de 2026 y cartografía oficial.</small></li>
-          <li><a href="https://geovisor.anh.gov.co/tierras/" target="_blank" rel="noopener noreferrer"><strong>[5] GeoVisor ANH</strong></a><small>Visualización institucional de tierras, pozos y otras capas hidrocarburíferas.</small></li>
+        <ol class="method-sequence">
+          <li><span>01</span><div><h3>Observación</h3><p>Hotspots FIRMS de agosto de 2026. El escenario B excluye 597 observaciones VIIRS Suomi-NPP por una decisión específica del proyecto; no invalida ese sensor de forma general.</p></div></li>
+          <li><span>02</span><div><h3>Agrupación</h3><p>Las detecciones se reúnen en episodios mediante un umbral de 1.000 metros y 12 horas. El escenario principal contiene 409 episodios.</p></div></li>
+          <li><span>03</span><div><h3>Relación espacial</h3><p>Directa si al menos un hotspot intersecta la huella; próxima hasta 1 km; entre 1 y 5 km; y sin coincidencia hasta 5 km.</p></div></li>
+          <li><span>04</span><div><h3>Control territorial</h3><p>Las huellas poligonales se normalizan por superficie. Los objetos puntuales y lineales se interpretan por proximidad, no mediante un porcentaje de área.</p></div></li>
         </ol>
-      </div>
-    </section>
+        <div class="method-notes">
+          <p><strong>CRS de análisis</strong><br>MAGNA-SIRGAS 2018 / Origen-Nacional, EPSG:9377.</p>
+          <p><strong>Límite cartográfico</strong><br><code>scan × track</code> no equivale a área quemada. Una cicatriz requiere validación independiente con imágenes y criterios espectrales.</p>
+          <p><strong>Lectura causal</strong><br>Coincidencia, proximidad y enriquecimiento describen patrones espaciales; no identifican el origen de una señal térmica.</p>
+        </div>
+        <p class="text-action"><a href="documento.html?file=docs/01_metodologia_general_v2.md&amp;title=Metodolog%C3%ADa%20general">Leer la metodología completa →</a></p>
+      </section>
+
+      <section class="agency-chapter" id="anm" aria-labelledby="anm-title">
+        <div class="chapter-intro"><div class="chapter-number">03</div><div><p class="overline">Agencia Nacional de Minería</p><h2 id="anm-title">Títulos y solicitudes mineras</h2><p class="lede">El análisis distingue títulos y solicitudes. La ANM señala que el título otorga derechos para explorar y explotar bajo las condiciones del contrato, mientras la propuesta corresponde a un trámite previo <a class="citation" href="https://www.anm.gov.co/index.php/sector-minero-colombiano" target="_blank" rel="noopener noreferrer">[2]</a>. Ninguna figura demuestra por sí sola una operación puntual.</p></div><aside class="chapter-aside"><strong>Lectura institucional</strong><span>Título ≠ operación puntual</span><span>Solicitud ≠ explotación</span></aside></div>
+        <dl class="chapter-metrics"><div><dt>Directos</dt><dd>127</dd></div><div><dt>Escenario B</dt><dd>31,05 %</dd></div><div><dt>Superficie</dt><dd>18,63 %</dd></div><div><dt>Enriquecimiento</dt><dd>1,666</dd></div></dl>
+        <figure class="atlas-map" data-map-card="anm">
+          <a class="map-image-link" data-a3-viewer target="_blank" rel="noopener" aria-label="Abrir mapa A3 de ANM en el visor"><img data-map-preview src="assets/maps/previews/anm_a3_preview.jpg" alt="Mapa A3 de Tolima con episodios térmicos, títulos y solicitudes de la Agencia Nacional de Minería, y detalles de Ortega y San Luis." width="2200" height="1556" loading="lazy" decoding="async"><span>Ampliar mapa</span></a>
+          <figcaption><div><b>Mapa 1. ANM.</b> Detecciones térmicas y figuras mineras en Tolima. El mapa integra el marco departamental y dos áreas de detalle; su lectura es espacial y no causal.</div><div class="figure-actions"><a data-a3-viewer target="_blank" rel="noopener">Visor A3</a><a data-a3-download>Descargar A3</a><a data-a0-viewer target="_blank" rel="noopener">Explorar A0</a><a data-a0-download target="_blank" rel="noopener noreferrer">A0 original</a></div></figcaption>
+        </figure>
+        <div class="evidence-grid">
+          <figure class="publication-figure"><img loading="lazy" decoding="async" src="assets/figures/svg/ANM/anm_01_proximidad_episodios_publicacion.svg" alt="Distribución de episodios según proximidad a la huella ANM en los escenarios A y B."><figcaption><b>Figura 2.</b> Proximidad de episodios a la huella ANM.</figcaption></figure>
+          <figure class="publication-figure"><img loading="lazy" decoding="async" src="assets/figures/svg/ANM/anm_02_observado_vs_superficie_publicacion.svg" alt="Comparación de episodios observados y superficie para títulos y solicitudes mineras."><figcaption><b>Figura 3.</b> Observado frente a superficie disponible.</figcaption></figure>
+        </div>
+        <details class="evidence-more"><summary>Ver cuatro figuras complementarias</summary><div class="evidence-grid inside">
+          <figure class="publication-figure"><img loading="lazy" decoding="async" src="assets/figures/svg/ANM/anm_03a_solicitudes_principales_publicacion.svg" alt="Solicitudes mineras con mayor número de episodios coincidentes."><figcaption><b>Figura 4.</b> Solicitudes principales.</figcaption></figure>
+          <figure class="publication-figure"><img loading="lazy" decoding="async" src="assets/figures/svg/ANM/anm_03b_titulos_principales_publicacion.svg" alt="Títulos mineros con mayor número de episodios coincidentes."><figcaption><b>Figura 5.</b> Títulos principales.</figcaption></figure>
+          <figure class="publication-figure"><img loading="lazy" decoding="async" src="assets/figures/svg/ANM/anm_04_municipios_directos_publicacion.svg" alt="Municipios con mayor coincidencia directa con figuras ANM."><figcaption><b>Figura 6.</b> Distribución municipal.</figcaption></figure>
+          <figure class="publication-figure"><img loading="lazy" decoding="async" src="assets/figures/svg/ANM/anm_05_coberturas_directas_publicacion_v2.svg" alt="Coberturas de la tierra más frecuentes entre los episodios directos ANM."><figcaption><b>Figura 7.</b> Coberturas de la tierra.</figcaption></figure>
+        </div></details>
+        <p class="chapter-document"><a href="documento.html?file=docs/02_ANM_v2.md&amp;title=Cap%C3%ADtulo%20ANM">Abrir capítulo analítico ANM →</a></p>
+      </section>
+
+      <section class="agency-chapter chapter-tint" id="anla" aria-labelledby="anla-title">
+        <div class="chapter-intro"><div class="chapter-number">04</div><div><p class="overline">Autoridad Nacional de Licencias Ambientales</p><h2 id="anla-title">Licenciamiento y seguimiento ambiental</h2><p class="lede">La ANLA define el seguimiento como la verificación de obligaciones y medidas aplicables a proyectos, obras o actividades sujetos a instrumentos de manejo <a class="citation" href="https://www.anla.gov.co/seguimiento-de-licencias-ambientales/que-hacemos" target="_blank" rel="noopener noreferrer">[3]</a>. Un expediente o una geometría de seguimiento no identifica el origen de una fuente térmica.</p></div><aside class="chapter-aside"><strong>Lectura institucional</strong><span>Licencia ≠ causalidad</span><span>Seguimiento ≠ origen térmico</span></aside></div>
+        <dl class="chapter-metrics"><div><dt>Directos</dt><dd>143</dd></div><div><dt>Escenario B</dt><dd>34,96 %</dd></div><div><dt>Superficie</dt><dd>15,10 %</dd></div><div><dt>Enriquecimiento</dt><dd>2,315</dd></div></dl>
+        <figure class="atlas-map" data-map-card="anla">
+          <a class="map-image-link" data-a3-viewer target="_blank" rel="noopener" aria-label="Abrir mapa A3 de ANLA en el visor"><img data-map-preview src="assets/maps/previews/anla_a3_preview.jpg" alt="Mapa A3 de Tolima con episodios térmicos y áreas, líneas y puntos de la Autoridad Nacional de Licencias Ambientales, con detalles de Ortega y San Luis." width="2200" height="1556" loading="lazy" decoding="async"><span>Ampliar mapa</span></a>
+          <figcaption><div><b>Mapa 2. ANLA.</b> Detecciones térmicas y huellas de licenciamiento o seguimiento ambiental. Las líneas y puntos se interpretan por proximidad.</div><div class="figure-actions"><a data-a3-viewer target="_blank" rel="noopener">Visor A3</a><a data-a3-download>Descargar A3</a><a data-a0-viewer target="_blank" rel="noopener">Explorar A0</a><a data-a0-download target="_blank" rel="noopener noreferrer">A0 original</a></div></figcaption>
+        </figure>
+        <div class="evidence-grid">
+          <figure class="publication-figure"><img loading="lazy" decoding="async" src="assets/figures/svg/ANLA/anla_01_proximidad_episodios_publicacion.svg" alt="Distribución de episodios según proximidad a áreas ANLA en los escenarios A y B."><figcaption><b>Figura 8.</b> Proximidad a la huella ANLA.</figcaption></figure>
+          <figure class="publication-figure"><img loading="lazy" decoding="async" src="assets/figures/svg/ANLA/anla_02_observado_vs_superficie_publicacion.svg" alt="Comparación del porcentaje de episodios observados y superficie de la huella ANLA."><figcaption><b>Figura 9.</b> Observado frente a superficie disponible.</figcaption></figure>
+        </div>
+        <details class="evidence-more"><summary>Ver tres figuras complementarias</summary><div class="evidence-grid inside">
+          <figure class="publication-figure"><img loading="lazy" decoding="async" src="assets/figures/svg/ANLA/anla_03_expedientes_principales_publicacion.svg" alt="Expedientes ANLA con mayor número de episodios coincidentes."><figcaption><b>Figura 10.</b> Expedientes principales.</figcaption></figure>
+          <figure class="publication-figure"><img loading="lazy" decoding="async" src="assets/figures/svg/ANLA/anla_04_municipios_directos_publicacion.svg" alt="Municipios con mayor coincidencia directa con áreas ANLA."><figcaption><b>Figura 11.</b> Distribución municipal.</figcaption></figure>
+          <figure class="publication-figure"><img loading="lazy" decoding="async" src="assets/figures/svg/ANLA/anla_05_coberturas_directas_publicacion.svg" alt="Coberturas de la tierra más frecuentes entre los episodios directos ANLA."><figcaption><b>Figura 12.</b> Coberturas de la tierra.</figcaption></figure>
+        </div></details>
+        <p class="chapter-document"><a href="documento.html?file=docs/03_ANLA_v2.md&amp;title=Cap%C3%ADtulo%20ANLA">Abrir capítulo analítico ANLA →</a></p>
+      </section>
+
+      <section class="agency-chapter" id="anh" aria-labelledby="anh-title">
+        <div class="chapter-intro"><div class="chapter-number">05</div><div><p class="overline">Agencia Nacional de Hidrocarburos</p><h2 id="anh-title">Tierras contractuales, yacimientos y pozos</h2><p class="lede">El Mapa de Tierras de la ANH representa la distribución, delimitación y clasificación de áreas hidrocarburíferas para exploración y producción; la actualización usada corresponde al 6 de agosto de 2026 <a class="citation" href="https://www.anh.gov.co/es/hidrocarburos/mapa-de-tierras/" target="_blank" rel="noopener noreferrer">[4]</a>. Bloques, yacimientos y pozos son objetos distintos.</p></div><aside class="chapter-aside"><strong>Lectura institucional</strong><span>Bloque ≠ actividad puntual</span><span>Yacimiento ≠ pozo</span></aside></div>
+        <dl class="chapter-metrics"><div><dt>Directos</dt><dd>187</dd></div><div><dt>Escenario B</dt><dd>45,72 %</dd></div><div><dt>Superficie</dt><dd>21,93 %</dd></div><div><dt>Enriquecimiento</dt><dd>2,085</dd></div></dl>
+        <figure class="atlas-map" data-map-card="anh">
+          <a class="map-image-link" data-a3-viewer target="_blank" rel="noopener" aria-label="Abrir mapa A3 de ANH en el visor"><img data-map-preview src="assets/maps/previews/anh_a3_preview.jpg" alt="Mapa A3 de Tolima con episodios térmicos, áreas contractuales, yacimientos y pozos de la Agencia Nacional de Hidrocarburos, con detalles de Ortega y San Luis." width="2200" height="1556" loading="lazy" decoding="async"><span>Ampliar mapa</span></a>
+          <figcaption><div><b>Mapa 3. ANH.</b> Detecciones térmicas, tierras contractuales, yacimientos y pozos. Los puntos de pozo se interpretan por proximidad.</div><div class="figure-actions"><a data-a3-viewer target="_blank" rel="noopener">Visor A3</a><a data-a3-download>Descargar A3</a><a data-a0-viewer target="_blank" rel="noopener">Explorar A0</a><a data-a0-download target="_blank" rel="noopener noreferrer">A0 original</a></div></figcaption>
+        </figure>
+        <div class="evidence-grid">
+          <figure class="publication-figure"><img loading="lazy" decoding="async" src="assets/figures/svg/ANH/anh_01_proximidad_episodios_publicacion.svg" alt="Distribución de episodios según proximidad a la huella ANH en los escenarios A y B."><figcaption><b>Figura 13.</b> Proximidad a la huella ANH.</figcaption></figure>
+          <figure class="publication-figure"><img loading="lazy" decoding="async" src="assets/figures/svg/ANH/anh_02_observado_vs_superficie_publicacion.svg" alt="Comparación de episodios observados y superficie para exploración, producción y yacimientos."><figcaption><b>Figura 14.</b> Observado frente a superficie disponible.</figcaption></figure>
+        </div>
+        <details class="evidence-more"><summary>Ver cinco figuras complementarias</summary><div class="evidence-grid inside">
+          <figure class="publication-figure"><img loading="lazy" decoding="async" src="assets/figures/svg/ANH/anh_03a_contratos_exploracion_publicacion.svg" alt="Contratos de exploración con más episodios coincidentes."><figcaption><b>Figura 15.</b> Contratos de exploración.</figcaption></figure>
+          <figure class="publication-figure"><img loading="lazy" decoding="async" src="assets/figures/svg/ANH/anh_03b_contratos_produccion_publicacion.svg" alt="Contratos de producción con más episodios coincidentes."><figcaption><b>Figura 16.</b> Contratos de producción.</figcaption></figure>
+          <figure class="publication-figure"><img loading="lazy" decoding="async" src="assets/figures/svg/ANH/anh_04_municipios_directos_publicacion.svg" alt="Municipios con mayor coincidencia directa con la huella ANH."><figcaption><b>Figura 17.</b> Distribución municipal.</figcaption></figure>
+          <figure class="publication-figure"><img loading="lazy" decoding="async" src="assets/figures/svg/ANH/anh_05_coberturas_directas_publicacion.svg" alt="Coberturas de la tierra más frecuentes entre los episodios directos ANH."><figcaption><b>Figura 18.</b> Coberturas de la tierra.</figcaption></figure>
+          <figure class="publication-figure"><img loading="lazy" decoding="async" src="assets/figures/svg/ANH/anh_06_pozos_proximidad_publicacion.svg" alt="Pozos con mayor número de episodios localizados dentro de cinco kilómetros."><figcaption><b>Figura 19.</b> Pozos y proximidad de episodios.</figcaption></figure>
+        </div></details>
+        <p class="chapter-document"><a href="documento.html?file=docs/04_ANH_v2.md&amp;title=Cap%C3%ADtulo%20ANH">Abrir capítulo analítico ANH →</a></p>
+      </section>
+
+      <section class="editorial-section paper-band" id="recurrencia" aria-labelledby="recurrencia-title">
+        <div class="reading-grid"><div class="section-label"><span>06</span> Recurrencia</div><div class="section-copy"><h2 id="recurrencia-title">Dos señales para verificación específica</h2><p class="lede">La recurrencia se calcula aparte de los episodios individuales. Describe repetición temporal en un sitio; no identifica su causa.</p></div></div>
+        <div class="recurrence-comparison">
+          <article><header><span>Alta</span><h3>FT_001 · Ibagué</h3></header><dl><div><dt>Episodios / fechas</dt><dd>7 / 7</dd></div><div><dt>Periodo</dt><dd>24 días</dd></div><div><dt>Hotspots</dt><dd>8</dd></div><div><dt>Cobertura</dt><dd>Zonas industriales o comerciales</dd></div><div><dt>Relación destacada</dt><dd>Coincidencia directa ANH</dd></div></dl></article>
+          <article><header><span>Media</span><h3>FT_002 · Ambalema</h3></header><dl><div><dt>Episodios / fechas</dt><dd>3 / 3</dd></div><div><dt>Periodo</dt><dd>10 días</dd></div><div><dt>Hotspots</dt><dd>7</dd></div><div><dt>Cobertura</dt><dd>Mosaico de pastos con espacios naturales</dd></div><div><dt>Relación destacada</dt><dd>Coincidencia directa ANLA</dd></div></dl></article>
+        </div>
+      </section>
+
+      <section class="editorial-section" id="datos" aria-labelledby="datos-title">
+        <div class="reading-grid"><div class="section-label"><span>07</span> Reproducibilidad</div><div class="section-copy"><h2 id="datos-title">Datos y trazabilidad</h2><p class="lede">Las tablas derivadas, los capítulos analíticos y las decisiones editoriales se conservan junto a la publicación. Los resultados pueden revisarse sin convertir el sitio en un tablero de control.</p></div></div>
+        <nav class="resource-list" aria-label="Recursos de la publicación">
+          <a href="data/index.html"><span>01</span><strong>Tablas de resultados</strong><small>32 archivos CSV por institución y comparación transversal</small><b>→</b></a>
+          <a href="docs/index.html"><span>02</span><strong>Documentación completa</strong><small>Metodología, capítulos institucionales y auditoría editorial</small><b>→</b></a>
+          <a href="https://github.com/jcgomezga/incendios-tolima-2026" target="_blank" rel="noopener noreferrer"><span>03</span><strong>Repositorio GitHub</strong><small>Código, figuras, mapas y registro de cambios</small><b>↗</b></a>
+        </nav>
+      </section>
+
+      <section class="editorial-section references" id="fuentes" aria-labelledby="fuentes-title">
+        <div class="reading-grid"><div class="section-label"><span>08</span> Fuentes</div><div class="section-copy"><h2 id="fuentes-title">Referencias utilizadas</h2><p>Las fuentes externas definen los datos satelitales, las figuras institucionales y la cartografía base. Los resultados numéricos provienen de las tablas auditadas del proyecto.</p></div></div>
+        <ol class="bibliography">
+          <li><a href="https://firms.modaps.eosdis.nasa.gov/active_fire/" target="_blank" rel="noopener noreferrer"><b>[1] NASA FIRMS.</b> Active Fire Data: productos MODIS y VIIRS.</a></li>
+          <li><a href="https://www.anm.gov.co/index.php/sector-minero-colombiano" target="_blank" rel="noopener noreferrer"><b>[2] Agencia Nacional de Minería.</b> Sector minero colombiano.</a></li>
+          <li><a href="https://www.anla.gov.co/seguimiento-de-licencias-ambientales/que-hacemos" target="_blank" rel="noopener noreferrer"><b>[3] ANLA.</b> Subdirección de Seguimiento de Licencias Ambientales.</a></li>
+          <li><a href="https://www.anh.gov.co/es/hidrocarburos/mapa-de-tierras/" target="_blank" rel="noopener noreferrer"><b>[4] Agencia Nacional de Hidrocarburos.</b> Mapa de Tierras, actualización del 6 de agosto de 2026.</a></li>
+          <li><a href="https://www.ideam.gov.co/nuestra-entidad/ecosistemas-e-informacion-ambiental/coberturas-de-la-tierra" target="_blank" rel="noopener noreferrer"><b>[5] IDEAM.</b> Coberturas de la Tierra.</a></li>
+          <li><a href="https://www.igac.gov.co/datos-abiertos/datos-abiertos-geoespaciales" target="_blank" rel="noopener noreferrer"><b>[6] IGAC.</b> Datos abiertos geoespaciales y cartografía básica.</a></li>
+          <li><a href="https://geoportal.dane.gov.co/mparcgis/rest/services/MGN2025/Serv_CapasMGN_2025/FeatureServer" target="_blank" rel="noopener noreferrer"><b>[7] DANE.</b> Marco Geoestadístico Nacional 2025.</a></li>
+        </ol>
+      </section>
+
+      <section class="citation-block" aria-labelledby="citar-title">
+        <div><p class="overline">Cómo citar</p><h2 id="citar-title">Cita sugerida</h2><p id="citation-text">Gómez García, Juan Carlos. 2026. <i>Detecciones térmicas y zonas de posible intervención extractiva en Tolima, agosto de 2026</i>. Publicación cartográfica digital.</p></div>
+        <div><button type="button" class="copy-button" data-copy-citation>Copiar cita</button><span class="copy-status" data-copy-status aria-live="polite"></span></div>
+      </section>
+    </article>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <strong>Detecciones térmicas y zonas de posible intervención extractiva en Tolima</strong>
-        <p>Publicación cartográfica y analítica. Agosto de 2026. Coincidencia espacial ≠ causalidad.</p>
-      </div>
-      <div>
-        <a href="#inicio">Volver arriba</a><br>
-        <a href="docs/index.html">Documentación del repositorio</a>
-      </div>
-    </div>
-  </footer>
-
+  <footer class="site-footer"><div><strong>Térmico &amp; territorio · Tolima 2026</strong><p>Hotspot ≠ incendio confirmado · coincidencia espacial ≠ causalidad</p></div><nav aria-label="Enlaces finales"><a href="#inicio">Volver arriba</a><a href="docs/index.html">Documentación</a><a href="data/index.html">Datos</a></nav></footer>
   <script src="assets/js/site-config.js"></script>
   <script src="assets/js/app.js"></script>
 </body>
