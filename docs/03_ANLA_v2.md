@@ -131,13 +131,11 @@ El capítulo ANLA deja cinco resultados principales:
 4. Ortega, San Luis y Coello reúnen la mayor concentración municipal, mientras que arroz, mosaicos de pastos y pastos limpios encabezan las coberturas.
 5. FT_002 coincide directamente con ANLA, mientras FT_001 se encuentra a 610 m; la recurrencia térmica no equivale a causalidad ni a actividad del proyecto.
 
-### Nota cartográfica pendiente
+### Producto cartográfico publicado
 
-El mapa final se exportará manualmente desde ArcGIS Pro y se insertará posteriormente en:
+El A3 se encuentra en `assets/maps/anla_a3.jpg` y el A0 web en `assets/maps/anla_a0_web.jpg`. La página usa `assets/maps/previews/anla_a3_preview.jpg`; el A0 se sirve mediante una pirámide DZI generada automáticamente.
 
-`03_mapas/finales/ANLA/mapa_anla_licencias_seguimiento_episodios_B_tolima_202608.png`
-
-Debe mostrar áreas de licencia/seguimiento extractivo, episodios B, FT_001 y FT_002, coberturas IDEAM 2024, vías, hidrografía y límites municipales. Las líneas y puntos ANLA podrán representarse cuando la escala permita su lectura sin saturar el mapa.
+El mapa muestra áreas de licencia/seguimiento extractivo, episodios B, FT_001 y FT_002, coberturas IDEAM 2024, vías, hidrografía y límites municipales. Las líneas y puntos ANLA se representan como contexto de proximidad cuando la escala permite su lectura sin saturar el mapa.
 
 ## Fuentes
 
@@ -152,6 +150,6 @@ Debe mostrar áreas de licencia/seguimiento extractivo, episodios B, FT_001 y FT
 - Paquete académico institucional auditado `paquete_academico_instituciones_20260829_123058.zip`.
 
 **Verificación institucional externa**
-- Autoridad Nacional de Licencias Ambientales. *Control y Seguimiento*. Consulta: 29 de agosto de 2026.
-- Autoridad Nacional de Licencias Ambientales. *Subdirección de Seguimiento de Licencias Ambientales: ¿Qué hacemos?*. Consulta: 29 de agosto de 2026.
+- [Autoridad Nacional de Licencias Ambientales. *Control y Seguimiento*](https://www.anla.gov.co/seguimiento-de-licencias-ambientales/que-hacemos). Consulta: 29 de agosto de 2026.
+- [Autoridad Nacional de Licencias Ambientales. *Subdirección de Seguimiento de Licencias Ambientales: ¿Qué hacemos?*](https://www.anla.gov.co/seguimiento-de-licencias-ambientales/que-hacemos). Consulta: 29 de agosto de 2026.
 - ANLA, servicio geográfico público `PROYECTOS_ANLA`, dominio del campo `sector`: 101 Hidrocarburos, 102 Infraestructura, 103 Minería, 104 Energía y 105 Agroquímicos. Consulta: 29 de agosto de 2026.
