@@ -16,7 +16,7 @@ La lectura conjunta muestra que el 57,46 % de los episodios del escenario B se e
 
 El contraste con el escenario A indica estabilidad del resultado general. En A, la coincidencia directa fue 30,56 %, frente a 31,05 % en B: una diferencia de apenas 0,50 puntos porcentuales. La decisión de excluir las observaciones VIIRS Suomi-NPP en el escenario principal no altera, por tanto, la estructura general del patrón ANM.
 
-**[Insertar Figura ANM-1: `figuras/anm_01_proximidad_episodios_publicacion`]**
+![Distribución de episodios según proximidad a figuras ANM.](assets/figures/svg/ANM/anm_01_proximidad_episodios_publicacion.svg)
 
 *Figura ANM-1. Distribución de episodios según proximidad a figuras ANM.*
 
@@ -28,7 +28,7 @@ Se observaron 127. El índice de enriquecimiento fue, por tanto, **1,666**. Esto
 
 El resultado muestra **concentración espacial relativa**, no significancia estadística ni causalidad. El valor esperado utilizado en este ejercicio no es una predicción física del fuego y el índice de enriquecimiento no controla por variables como cobertura vegetal, pendiente, clima, accesibilidad, densidad poblacional, prácticas agrícolas o distribución de infraestructura.
 
-**[Insertar Figura ANM-2: `figuras/anm_02_observado_vs_superficie_publicacion`]**
+![Episodios observados frente a superficie disponible para ANM.](assets/figures/svg/ANM/anm_02_observado_vs_superficie_publicacion.svg)
 
 *Figura ANM-2. Episodios observados frente a superficie disponible.*
 
@@ -70,7 +70,7 @@ Las solicitudes **JIT-09551**, de EL CRUCERO S.O.M., y **511188**, de GOLIAT S.A
 
 La solicitud **KJJ-15041**, asociada a tres titulares individuales, reunió cuatro episodios y 45 hotspots y registra minerales de oro y sus concentrados en Ortega. La solicitud **507186**, de SOCIEDAD DE INVERSIONISTAS Y PROVEEDORES SA, registró tres episodios, aparece en estado “Radicación documentos” y contiene arcillas, arenas, areniscas, gravas y recebo.
 
-**[Insertar Figura ANM-3A: `figuras/anm_03a_solicitudes_principales_publicacion`]**
+![Solicitudes mineras con mayor número de episodios coincidentes.](assets/figures/svg/ANM/anm_03a_solicitudes_principales_publicacion.svg)
 
 *Figura ANM-3A. Solicitudes con mayor número de episodios coincidentes.*
 
@@ -82,7 +82,7 @@ Varios títulos registraron dos episodios cada uno. Entre ellos se encuentran **
 
 Estos ejemplos deben leerse como una priorización de expedientes para investigación posterior. El conteo de episodios no demuestra que los titulares hayan generado las fuentes térmicas.
 
-**[Insertar Figura ANM-3B: `figuras/anm_03b_titulos_principales_publicacion`]**
+![Títulos mineros con mayor número de episodios coincidentes.](assets/figures/svg/ANM/anm_03b_titulos_principales_publicacion.svg)
 
 *Figura ANM-3B. Títulos con mayor número de episodios coincidentes.*
 
@@ -98,7 +98,7 @@ La concentración en Ortega es coherente con la presencia en la base institucion
 
 Tres episodios ANM directos requieren tratamiento intermunicipal: dos corresponden a la categoría **Coello–Espinal** y uno a **Ortega–Rovira**. Se mantienen como episodios intermunicipales y no se asignan artificialmente a uno de los dos municipios. Tampoco se contabilizan como municipios adicionales.
 
-**[Insertar Figura ANM-4: `figuras/anm_04_municipios_directos_publicacion`]**
+![Municipios con mayor coincidencia directa con figuras ANM.](assets/figures/svg/ANM/anm_04_municipios_directos_publicacion.svg)
 
 *Figura ANM-4. Municipios con más episodios en coincidencia directa.*
 
@@ -110,7 +110,7 @@ En conjunto, estas dos coberturas reúnen aproximadamente el **29,92 %** de los 
 
 Las ocho coberturas más frecuentes reúnen 77 episodios, equivalentes al **60,63 %** del total directo. Los otros 50 episodios se distribuyen entre 26 categorías de cobertura. Esta dispersión aconseja evitar explicaciones que asocien la coincidencia ANM con un único tipo de paisaje.
 
-**[Insertar Figura ANM-5: `figuras/anm_05_coberturas_directas_publicacion_v2`]**
+![Coberturas del suelo más frecuentes en episodios directos ANM.](assets/figures/svg/ANM/anm_05_coberturas_directas_publicacion_v2.svg)
 
 *Figura ANM-5. Coberturas del suelo más frecuentes en episodios directos.*
 
@@ -176,19 +176,7 @@ Ortega concentró 35 episodios ANM directos. Las coberturas más frecuentes fuer
 La evidencia describe un patrón espacial que amerita verificación detallada. No demuestra que un título, una solicitud, un titular o una actividad minera concreta haya causado una detección térmica o un incendio.
 
 
-## Fuentes
-
-### Fuentes analíticas del proyecto
-
-- `inventario_fuentes_institucionales.csv`.
-- `relaciones_detalladas_fuentes.csv`.
-- `resumen_fuentes_nombres.csv`.
-- `resumen_proximidad_institucion.csv`.
-- `resumen_directo_figuras.csv`.
-- `distribucion_municipio_cobertura.csv`.
-- `candidatos_recurrentes_institucion.csv`.
-
-### Referencias institucionales para la versión final
+## Referencias institucionales
 
 - [República de Colombia. Ley 685 de 2001](https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=9202), artículo 45.
 - [Agencia Nacional de Minería. Sector minero colombiano](https://www.anm.gov.co/index.php/sector-minero-colombiano): información sobre títulos y acceso al derecho de explorar y explotar.
