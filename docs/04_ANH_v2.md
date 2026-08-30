@@ -6,9 +6,8 @@ Aplicando el diseño metodológico del Capítulo 1, la Agencia Nacional de Hidro
 
 La página oficial de la ANH describe las áreas en exploración como aquellas sobre las cuales se realizan trabajos de exploración y las áreas en explotación como aquellas en las que se adelantan labores de explotación de hidrocarburos. El paquete descargado conserva la terminología de sus atributos: `EXPLORACION`, `PRODUCCION`, `ASIGNADA`, `AREA EN EXPLORACION` y `AREA EN PRODUCCION`. En este capítulo se respeta esa terminología.
 
-Esta información tiene un significado institucional más fuerte que una simple solicitud de área: corresponde a tierras asignadas y a contratos o convenios identificados por la ANH. Aun así, **un bloque, área contractual o estado de producción/exploración no demuestra que una actividad concreta estuviera ocurriendo exactamente en el punto y momento de una detección térmica**. El análisis continúa siendo espacial y no causal.
+A diferencia de una solicitud de área, estas geometrías corresponden a tierras asignadas y a contratos o convenios identificados por la ANH. Aun así, **un bloque, área contractual o estado de producción/exploración no demuestra que una actividad concreta estuviera ocurriendo exactamente en el punto y momento de una detección térmica**. El análisis continúa siendo espacial y no causal.
 
-**Verificación institucional externa:** Agencia Nacional de Hidrocarburos, *Mapa de Tierras*, actualización 6 de agosto de 2026; GeoVisor ANH, servicio `ANH_TIERRAS_EGDB_ATTACH`; y *Relación de Áreas Asignadas*, con estado de contratos y convenios al 31 de julio de 2026. Consulta: 29 de agosto de 2026.
 
 ## 4.2. Fuentes utilizadas: tierras, yacimientos y pozos
 
@@ -30,16 +29,16 @@ El escenario A registra 43,75 % de coincidencia directa y B 45,72 %, una diferen
 
 ## 4.4. Observados, esperados y enriquecimiento
 
-La huella contractual asignada ocupa **5,290.89 km²**, equivalente al **21.93 %** del territorio analizado. Bajo proporcionalidad territorial se esperarían **89.69 episodios**, pero se observan 187. El enriquecimiento es **2.085**.
+La huella contractual asignada ocupa **5.290,89 km²**, equivalente al **21,93 %** del territorio analizado. Bajo proporcionalidad territorial se esperarían **89,69 episodios**, pero se observan 187. El enriquecimiento es **2,085**.
 
 La desagregación interna muestra diferencias:
 
 | Figura | Episodios directos | % observado | % superficie | Esperados | Enriquecimiento |
 |---|---:|---:|---:|---:|---:|
-| Exploración | 103 | 25.18 % | 14.24 % | 58.25 | **1.768** |
-| Producción | 93 | 22.74 % | 7.69 % | 31.43 | **2.959** |
-| Yacimientos | 5 | 1.22 % | 0.25 % | 1.04 | **4.828** |
-| Huella contractual asignada | 187 | 45.72 % | 21.93 % | 89.69 | **2.085** |
+| Exploración | 103 | 25,18 % | 14,24 % | 58,25 | **1,768** |
+| Producción | 93 | 22,74 % | 7,69 % | 31,43 | **2,959** |
+| Yacimientos | 5 | 1,22 % | 0,25 % | 1,04 | **4,828** |
+| Huella contractual asignada | 187 | 45,72 % | 21,93 % | 89,69 | **2,085** |
 
 Los yacimientos presentan el índice más alto, **4,828**, pero sobre una superficie muy pequeña y con únicamente cinco episodios. Por ello, ese valor debe interpretarse con especial cautela: un cociente elevado construido sobre pocos casos no tiene el mismo peso descriptivo que el resultado de la huella contractual completa.
 
@@ -123,18 +122,18 @@ Los **700 pozos** se analizan por distancia. No se registraron coincidencias dir
 
 Los pozos con mayor número de episodios B dentro de ese radio son:
 
-| Pozo | Provincia geológica registrada | Episodios hasta 5 km | Distancia mínima |
+| Pozo | Provincia geológica registrada | Episodios hasta 5 km | Distancia mínima (km) |
 |---|---|---:|---:|
-| CALARMA-1 | VALLE SUPERIOR DEL MAGDALENA | 16 | 1.54 |
-| S-4 (STRAT XD-4) | VALLE SUPERIOR DEL MAGDALENA | 10 | 0.58 |
-| VENTARRON-1 | VALLE SUPERIOR DEL MAGDALENA | 9 | 0.56 |
-| EL SAPO-1ST | VALLE SUPERIOR DEL MAGDALENA | 9 | 0.66 |
-| TOMOGO-1 | VALLE SUPERIOR DEL MAGDALENA | 8 | 0.12 |
-| CHILAPI-1 | VALLE SUPERIOR DEL MAGDALENA | 8 | 1.01 |
-| AMBALEMA-1 | VALLE MEDIO DEL MAGDALENA | 8 | 1.18 |
-| LA SIMA-1 | VALLE MEDIO DEL MAGDALENA | 8 | 1.33 |
-| MARANON-2 | VALLE SUPERIOR DEL MAGDALENA | 7 | 0.30 |
-| ARMERO-1 | VALLE MEDIO DEL MAGDALENA | 7 | 0.57 |
+| CALARMA-1 | VALLE SUPERIOR DEL MAGDALENA | 16 | 1,54 |
+| S-4 (STRAT XD-4) | VALLE SUPERIOR DEL MAGDALENA | 10 | 0,58 |
+| VENTARRON-1 | VALLE SUPERIOR DEL MAGDALENA | 9 | 0,56 |
+| EL SAPO-1ST | VALLE SUPERIOR DEL MAGDALENA | 9 | 0,66 |
+| TOMOGO-1 | VALLE SUPERIOR DEL MAGDALENA | 8 | 0,12 |
+| CHILAPI-1 | VALLE SUPERIOR DEL MAGDALENA | 8 | 1,01 |
+| AMBALEMA-1 | VALLE MEDIO DEL MAGDALENA | 8 | 1,18 |
+| LA SIMA-1 | VALLE MEDIO DEL MAGDALENA | 8 | 1,33 |
+| MARANON-2 | VALLE SUPERIOR DEL MAGDALENA | 7 | 0,30 |
+| ARMERO-1 | VALLE MEDIO DEL MAGDALENA | 7 | 0,57 |
 
 Por número de episodios cercanos destaca **CALARMA-1**, con 16 episodios dentro de cinco kilómetros, aunque su distancia mínima es de aproximadamente 1,54 km. Si se observa estrictamente cercanía mínima, aparecen casos como **TOLDADO-2**, a unos 83 m de una detección relacionada; **ORTEGA-8A**, a unos 86 m; y **TOMOGO-1**, a unos 122 m.
 
@@ -172,11 +171,11 @@ Además, **20 episodios** tienen una etiqueta compuesta porque las detecciones q
 
 Los dos sitios recurrentes presentan comportamientos opuestos frente a ANH.
 
-**FT_001**, la fuente de recurrencia alta ubicada en Ibagué sobre una cobertura industrial o comercial, presenta **coincidencia directa** con la huella ANH. Sin embargo, su pozo identificado como más cercano en la contextualización del proyecto, **ALFA-1**, se encuentra a aproximadamente **7,11 km**. Esto ilustra por qué una coincidencia con una tierra contractual no debe confundirse con proximidad inmediata a un pozo.
+**FT_001**, la fuente de recurrencia alta ubicada en Ibagué sobre una cobertura industrial o comercial, presenta **coincidencia directa** con la huella ANH. Esta coincidencia se refiere a una geometría contractual y no permite inferir proximidad a un pozo ni actividad operacional en el punto.
 
-**FT_002**, en Ambalema, se encuentra a **6,58 km** de la huella ANH y por ello se clasifica sin coincidencia a cinco kilómetros. Su pozo contextual más cercano, **AMBALEMA-1**, está a aproximadamente **1,82 km**.
+**FT_002**, en Ambalema, se encuentra a **6,58 km** de la huella ANH y por ello se clasifica a más de cinco kilómetros.
 
-El contraste es metodológicamente importante: una fuente recurrente puede estar dentro de una tierra contractual pero lejos de un pozo, o fuera de la huella contractual y al mismo tiempo relativamente cerca de un punto de infraestructura. Las diferentes geometrías representan objetos distintos y deben interpretarse por separado.
+El contraste es metodológicamente importante: la recurrencia térmica y la relación con tierras contractuales son dimensiones distintas. La proximidad a pozos se analiza separadamente en la sección 4.9 y no debe deducirse de la coincidencia con una geometría poligonal.
 
 ## 4.13. Discusión
 
@@ -202,12 +201,12 @@ El capítulo ANH permite resumir siete resultados:
 
 ### Producto cartográfico publicado
 
-El A3 se encuentra en `assets/maps/anh_a3.jpg` y el A0 web en `assets/maps/anh_a0_web.jpg`. La página usa `assets/maps/previews/anh_a3_preview.jpg`; el A0 se sirve mediante una pirámide DZI generada automáticamente.
+El A3 se encuentra en `assets/maps/anh_a3.jpg` y el A0 web en `assets/maps/anh_a0_web.jpg`. La página usa `assets/maps/previews/anh_a3_preview.jpg`; el A0 se sirve mediante una pirámide DZI generada durante el despliegue del sitio.
 
 El mapa diferencia exploración y producción, incorpora yacimientos y pozos cuando la escala permite leerlos, representa episodios B y FT_001/FT_002 y conserva como contexto coberturas IDEAM 2024, vías, hidrografía y límites municipales.
 
-## Fuentes institucionales externas verificadas
-- Agencia Nacional de Hidrocarburos. **Mapa de Tierras**, actualización 6 de agosto de 2026. https://www.anh.gov.co/es/hidrocarburos/mapa-de-tierras/
-- Agencia Nacional de Hidrocarburos. **GeoVisor de Tierras / ANH_TIERRAS_EGDB_ATTACH**, actualización 6 de agosto de 2026. https://geovisor.anh.gov.co/server/rest/services/GEOVISOR_v32/ANH_TIERRAS_EGDB_ATTACH/MapServer
-- Agencia Nacional de Hidrocarburos. **Relación de Áreas Asignadas**, estado de contratos y convenios al 31 de julio de 2026. https://www.anh.gov.co/es/hidrocarburos/contratos-y-reglamentaci%C3%B3n/contrataci%C3%B3n-ep-y-teas/
-- Agencia Nacional de Hidrocarburos. **Servicio geográfico de Yacimientos**. https://geovisor.anh.gov.co/server/rest/services/Yacimientos/Yacimientos/MapServer/0
+## Referencias institucionales
+- [Agencia Nacional de Hidrocarburos. **Mapa de Tierras**, actualización 6 de agosto de 2026](https://www.anh.gov.co/es/hidrocarburos/mapa-de-tierras/).
+- [Agencia Nacional de Hidrocarburos. **GeoVisor de Tierras / ANH_TIERRAS_EGDB_ATTACH**, actualización 6 de agosto de 2026](https://geovisor.anh.gov.co/server/rest/services/GEOVISOR_v32/ANH_TIERRAS_EGDB_ATTACH/MapServer).
+- [Agencia Nacional de Hidrocarburos. **Relación de Áreas Asignadas**, estado de contratos y convenios al 31 de julio de 2026](https://www.anh.gov.co/es/hidrocarburos/contratos-y-reglamentaci%C3%B3n/contrataci%C3%B3n-ep-y-teas/).
+- [Agencia Nacional de Hidrocarburos. **Servicio geográfico de Yacimientos**](https://geovisor.anh.gov.co/server/rest/services/Yacimientos/Yacimientos/MapServer/0).
