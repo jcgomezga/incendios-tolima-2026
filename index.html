@@ -35,7 +35,7 @@
         <div class="masthead-inner">
           <p class="overline">Atlas analítico · Tolima · agosto de 2026</p>
           <h1>Detecciones térmicas y zonas de posible intervención extractiva</h1>
-          <p class="standfirst">Un análisis espacial de <strong>409 episodios térmicos</strong> frente a información institucional de minería, licenciamiento ambiental e hidrocarburos. La coincidencia territorial orienta preguntas y verificaciones; <strong>no demuestra causalidad</strong>.</p>
+          <p class="standfirst">Este sitio presenta un análisis espacial de <strong>409 episodios térmicos</strong> registrados en Tolima durante agosto de 2026 y su relación espacial con información institucional de minería, licenciamiento ambiental e hidrocarburos. En cada sección puede ampliar el mapa para explorar el departamento completo y acceder a su versión A0 de máxima resolución; al abrir los capítulos encontrará el análisis detallado, con gráficos y tablas. <strong>En términos sencillos:</strong> los episodios aparecen relativamente concentrados en varias de estas huellas institucionales en comparación con la superficie que ocupan. Este patrón orienta preguntas y verificaciones, pero <strong>no demuestra que esas actividades hayan causado los fuegos o anomalías térmicas</strong>.</p>
           <div class="byline"><span>Elaborado por: <a href="https://www.linkedin.com/in/jcgomezga/" target="_blank" rel="noopener noreferrer"><strong>Juan Carlos Gómez García</strong></a>. Sociólogo. Estudiante de la Maestría en Estudios Socioambientales de la Facultad Latinoamericana de Ciencias Sociales, FLACSO Ecuador. Investigador socioambiental.<br><a href="https://www.researchgate.net/profile/Wilmer-Andres-Martinez-Rodriguez?ev=hdr_xprf" target="_blank" rel="noopener noreferrer"><strong>Wilmer Andrés Martínez Rodríguez</strong></a>. Sociólogo, Maestrante en Desarrollo Rural. Investigador Grupo Yuma ima - UT.</span><span>Escenario principal B · EPSG:9377</span></div>
           <dl class="study-facts" aria-label="Ficha del análisis">
             <div><dt>Detecciones</dt><dd>1.537</dd><span>hotspots del escenario B</span></div>
@@ -67,9 +67,9 @@
           <div class="section-copy"><h2 id="metodo-title">De una detección satelital a un episodio espacial</h2><p class="lede">NASA FIRMS distribuye detecciones de fuego activo y anomalías térmicas derivadas de MODIS y VIIRS <a class="citation" href="https://firms.modaps.eosdis.nasa.gov/active_fire/" target="_blank" rel="noopener noreferrer">[1]</a>. Aquí se agrupan y contrastan con huellas institucionales; no se convierten automáticamente en incendios ni en áreas quemadas.</p></div>
         </div>
         <ol class="method-sequence">
-          <li><span>01</span><div><h3>Observación</h3><p>Hotspots FIRMS de agosto de 2026. El escenario B excluye 597 observaciones VIIRS Suomi-NPP por una decisión específica del proyecto; no invalida ese sensor de forma general.</p></div></li>
+          <li><span>01</span><div><h3>Observación</h3><p>Hotspots FIRMS de agosto de 2026. El escenario B excluye 597 observaciones VIIRS Suomi-NPP porque NASA FIRMS advierte que los datos recibidos desde ese satélite después del 9 de marzo de 2026 pueden no cumplir las especificaciones de misión debido a una anomalía. El escenario A conserva todos los sensores como análisis de sensibilidad; la exclusión no implica una invalidación general de VIIRS Suomi-NPP.</p></div></li>
           <li><span>02</span><div><h3>Agrupación</h3><p>Las detecciones se reúnen en episodios mediante un umbral de 1.000 metros y 12 horas. El escenario principal contiene 409 episodios.</p></div></li>
-          <li><span>03</span><div><h3>Relación espacial</h3><p>Directa si al menos un hotspot intersecta la huella; próxima hasta 1 km; entre 1 y 5 km; y sin coincidencia hasta 5 km.</p></div></li>
+          <li><span>03</span><div><h3>Relación espacial</h3><p>Directa si al menos un hotspot intersecta la huella; próxima hasta 1 km; entre 1 y 5 km; y a más de 5 km.</p></div></li>
           <li><span>04</span><div><h3>Control territorial</h3><p>Las huellas poligonales se normalizan por superficie. Los objetos puntuales y lineales se interpretan por proximidad, no mediante un porcentaje de área.</p></div></li>
         </ol>
         <div class="method-notes">
@@ -149,10 +149,10 @@
       </section>
 
       <section class="editorial-section" id="datos" aria-labelledby="datos-title">
-        <div class="reading-grid"><div class="section-label"><span>07</span> Reproducibilidad</div><div class="section-copy"><h2 id="datos-title">Datos y trazabilidad</h2><p class="lede">Las tablas derivadas, los capítulos analíticos y las decisiones editoriales se conservan junto a la publicación. Los resultados pueden revisarse sin convertir el sitio en un tablero de control.</p></div></div>
+        <div class="reading-grid"><div class="section-label"><span>07</span> Reproducibilidad</div><div class="section-copy"><h2 id="datos-title">Datos y trazabilidad</h2><p class="lede">Las tablas derivadas y los capítulos metodológicos y analíticos se conservan junto a la publicación para facilitar la trazabilidad de cifras, definiciones y resultados.</p></div></div>
         <nav class="resource-list" aria-label="Recursos de la publicación">
           <a href="data/index.html"><span>01</span><strong>Tablas de resultados</strong><small>32 archivos CSV por institución y comparación transversal</small><b>→</b></a>
-          <a href="docs/index.html"><span>02</span><strong>Documentación completa</strong><small>Metodología, capítulos institucionales y auditoría editorial</small><b>→</b></a>
+          <a href="docs/index.html"><span>02</span><strong>Documentación completa</strong><small>Metodología general y capítulos institucionales</small><b>→</b></a>
           <a href="https://github.com/jcgomezga/incendios-tolima-2026" target="_blank" rel="noopener noreferrer"><span>03</span><strong>Repositorio GitHub</strong><small>Código, figuras, mapas y registro de cambios</small><b>↗</b></a>
         </nav>
       </section>
@@ -160,7 +160,7 @@
       <section class="editorial-section references" id="fuentes" aria-labelledby="fuentes-title">
         <div class="reading-grid"><div class="section-label"><span>08</span> Fuentes</div><div class="section-copy"><h2 id="fuentes-title">Referencias utilizadas</h2><p>Las fuentes externas definen los datos satelitales, las figuras institucionales y la cartografía base. Los resultados numéricos provienen de las tablas auditadas del proyecto.</p></div></div>
         <ol class="bibliography">
-          <li><a href="https://firms.modaps.eosdis.nasa.gov/active_fire/" target="_blank" rel="noopener noreferrer"><b>[1] NASA FIRMS.</b> Active Fire Data: productos MODIS y VIIRS.</a></li>
+          <li><b>[1] NASA FIRMS.</b> <a href="https://firms.modaps.eosdis.nasa.gov/active_fire/" target="_blank" rel="noopener noreferrer">Active Fire Data: productos MODIS y VIIRS</a>; <a href="https://firms2.modaps.eosdis.nasa.gov/download/" target="_blank" rel="noopener noreferrer">aviso operativo sobre datos Suomi-NPP posteriores al 9 de marzo de 2026</a>.</li>
           <li><a href="https://www.anm.gov.co/index.php/sector-minero-colombiano" target="_blank" rel="noopener noreferrer"><b>[2] Agencia Nacional de Minería.</b> Sector minero colombiano.</a></li>
           <li><a href="https://www.anla.gov.co/seguimiento-de-licencias-ambientales/que-hacemos" target="_blank" rel="noopener noreferrer"><b>[3] ANLA.</b> Subdirección de Seguimiento de Licencias Ambientales.</a></li>
           <li><a href="https://www.anh.gov.co/es/hidrocarburos/mapa-de-tierras/" target="_blank" rel="noopener noreferrer"><b>[4] Agencia Nacional de Hidrocarburos.</b> Mapa de Tierras, actualización del 6 de agosto de 2026.</a></li>
@@ -171,7 +171,7 @@
       </section>
 
       <section class="citation-block" aria-labelledby="citar-title">
-        <div><p class="overline">Cómo citar</p><h2 id="citar-title">Cita sugerida</h2><p id="citation-text">Gómez García, Juan Carlos. 2026. <i>Detecciones térmicas y zonas de posible intervención extractiva en Tolima, agosto de 2026</i>. Publicación cartográfica digital.</p></div>
+        <div><p class="overline">Cómo citar</p><h2 id="citar-title">Cita sugerida</h2><p id="citation-text">Gómez García, Juan Carlos, y Wilmer Andrés Martínez Rodríguez. 2026. <i>Detecciones térmicas y zonas de posible intervención extractiva en Tolima, agosto de 2026</i>. Publicación cartográfica digital.</p></div>
         <div><button type="button" class="copy-button" data-copy-citation>Copiar cita</button><span class="copy-status" data-copy-status aria-live="polite"></span></div>
       </section>
     </article>
