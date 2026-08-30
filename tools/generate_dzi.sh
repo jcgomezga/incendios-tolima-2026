@@ -29,4 +29,3 @@ for agency in anm anla anh; do
     --depth onepixel \
     --suffix '.jpg[Q=82,optimize_coding,strip]'
 done
-
