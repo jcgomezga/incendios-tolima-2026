@@ -8,18 +8,20 @@ La página oficial de la ANH describe las áreas en exploración como aquellas s
 
 A diferencia de una solicitud de área, estas geometrías corresponden a tierras asignadas y a contratos o convenios identificados por la ANH. Aun así, **un bloque, área contractual o estado de producción/exploración no demuestra que una actividad concreta estuviera ocurriendo exactamente en el punto y momento de una detección térmica**. El análisis continúa siendo espacial y no causal.
 
+> **Cómo leer los términos de este capítulo.** Una **tierra o área contractual** es una zona delimitada por la ANH y asociada con un contrato o convenio de hidrocarburos; no significa que toda su superficie tenga infraestructura u operación. Un **yacimiento** es una acumulación geológica identificada de hidrocarburos y no equivale a un pozo. Un **pozo** es una localización puntual. La **huella ANH** o **huella contractual** es el conjunto de áreas contractuales usado para la comparación espacial. **Hotspot** significa detección térmica satelital. **Coincidencia directa** significa que una detección cae dentro de esas áreas, no que exista actividad petrolera exactamente en ese punto.
+
 
 ## 4.2. Fuentes utilizadas: tierras, yacimientos y pozos
 
 El inventario publicable contiene **32 tierras contractuales**, **26 registros de yacimientos** y **700 pozos**.
 
-Las tierras y los yacimientos son geometrías poligonales y, por tanto, pueden compararse con la proporción de superficie departamental. Los pozos son puntos: se estudian mediante distancia y no se les asigna un porcentaje de superficie.
+Las tierras y los yacimientos se representan como áreas o polígonos y, por tanto, puede compararse cuánto territorio ocupan con cuántos episodios contienen. Los pozos son puntos: se estudian por distancia y no se les asigna un porcentaje del territorio.
 
 Entre las 32 tierras contractuales inventariadas, 14 están clasificadas en exploración y 18 en producción. En el escenario B, **20 contratos diferentes** tienen al menos un episodio en coincidencia directa: 10 en exploración y 10 en producción.
 
-## 4.3. Patrón general de proximidad
+## 4.3. Cuántos episodios están dentro de las áreas y qué tan cerca están los demás
 
-De los 409 episodios del escenario B, **187 presentan coincidencia directa con la huella ANH**, equivalentes al **45,72 %**. Otros 24 episodios (5,87 %) se encuentran hasta un kilómetro de la huella, 63 (15,40 %) entre uno y cinco kilómetros y 135 (33,01 %) a más de cinco kilómetros.
+De los 409 episodios del escenario B, **187 presentan coincidencia directa con las áreas contractuales ANH**, equivalentes al **45,72 %**. Otros 24 episodios (5,87 %) se encuentran hasta un kilómetro de esas áreas, 63 (15,40 %) entre uno y cinco kilómetros y 135 (33,01 %) a más de cinco kilómetros.
 
 El escenario A registra 43,75 % de coincidencia directa y B 45,72 %, una diferencia de **1,97 puntos porcentuales**. El patrón general se mantiene: en ambos escenarios la coincidencia directa es la categoría más numerosa.
 
@@ -27,30 +29,30 @@ El escenario A registra 43,75 % de coincidencia directa y B 45,72 %, una diferen
 
 *Figura ANH-1. Distribución de episodios según proximidad a la huella ANH. B es el escenario principal y A funciona como sensibilidad.*
 
-## 4.4. Observados, esperados y enriquecimiento
+## 4.4. Comparación entre episodios observados y tamaño del área
 
-La huella contractual asignada ocupa **5.290,89 km²**, equivalente al **21,93 %** del territorio analizado. Bajo proporcionalidad territorial se esperarían **89,69 episodios**, pero se observan 187. El enriquecimiento es **2,085**.
+El conjunto de tierras contractuales analizado —la **huella contractual ANH**— ocupa **5.290,89 km²**, equivalente al **21,93 %** del territorio. Si los 409 episodios se repartieran únicamente en proporción al tamaño de esas áreas, la referencia sería **89,69 episodios**; se observaron 187. El **índice de enriquecimiento** es **2,085**: el 45,72 % de los episodios está dentro de áreas que ocupan 21,93 % del territorio, de modo que la proporción observada es aproximadamente 2,09 veces la proporción territorial.
 
 La desagregación interna muestra diferencias:
 
-| Figura | Episodios directos | % observado | % superficie | Esperados | Enriquecimiento |
+| Figura | Episodios dentro del área | % de episodios | % del territorio | Referencia esperada por tamaño | Índice de concentración (enriquecimiento) |
 |---|---:|---:|---:|---:|---:|
 | Exploración | 103 | 25,18 % | 14,24 % | 58,25 | **1,768** |
 | Producción | 93 | 22,74 % | 7,69 % | 31,43 | **2,959** |
 | Yacimientos | 5 | 1,22 % | 0,25 % | 1,04 | **4,828** |
-| Huella contractual asignada | 187 | 45,72 % | 21,93 % | 89,69 | **2,085** |
+| Conjunto de áreas contractuales | 187 | 45,72 % | 21,93 % | 89,69 | **2,085** |
 
-Los yacimientos presentan el índice más alto, **4,828**, pero sobre una superficie muy pequeña y con únicamente cinco episodios. Por ello, ese valor debe interpretarse con especial cautela: un cociente elevado construido sobre pocos casos no tiene el mismo peso descriptivo que el resultado de la huella contractual completa.
+Los yacimientos presentan el índice más alto, **4,828**, pero sobre una superficie muy pequeña y con únicamente cinco episodios. Por ello, ese valor debe interpretarse con especial cautela: un cociente elevado construido sobre pocos casos no tiene el mismo peso descriptivo que el resultado del conjunto completo de áreas contractuales.
 
 ![Episodios observados frente a superficie disponible para ANH.](assets/figures/svg/ANH/anh_02_observado_vs_superficie_publicacion.svg)
 
 *Figura ANH-2. Porcentaje de superficie y porcentaje de episodios observados para las principales figuras poligonales ANH.*
 
-## 4.5. Solapamientos: por qué las cifras no se suman
+## 4.5. Áreas que se superponen: por qué las cifras no se suman
 
-Las categorías ANH se superponen espacialmente. **103 episodios** intersectan al menos un área de exploración y **93** al menos un área de producción. Sin embargo, **9 episodios intersectan ambas**. La unión no es 196 sino **187 episodios**, exactamente el total de la huella contractual asignada.
+Las categorías ANH pueden ocupar parcialmente el mismo lugar en el mapa; a esto se le llama **solapamiento** o superposición espacial. **103 episodios** quedan dentro de al menos un área de exploración y **93** dentro de al menos un área de producción. Sin embargo, **9 episodios quedan dentro de ambas**. Por eso no se suman 103 + 93 como si fueran casos distintos: el total de episodios únicos es **187**.
 
-Los cinco episodios que intersectan yacimientos también están contenidos dentro de la huella contractual. Por tanto, tampoco deben sumarse como cinco casos adicionales.
+Los cinco episodios que quedan dentro de polígonos de yacimientos también están contenidos dentro de las áreas contractuales. Por tanto, tampoco deben sumarse como cinco casos adicionales.
 
 Esta relación puede expresarse así:
 
@@ -64,11 +66,11 @@ Este control evita presentar como fenómenos independientes lo que en realidad s
 
 ## 4.6. Contratos en exploración
 
-El contrato con mayor número de episodios coincidentes es **0554**, cuyo operador registrado es **MAUREL AND PROM COLOMBIA B.V.**. La fuente lo clasifica en exploración, como contrato de Exploración y Producción (E&P), subtipo `MADURA`, asociado al proceso `RONDA COLOMBIA 2021`. Registra **65 episodios y 310 hotspots** en coincidencia directa.
+El contrato con mayor número de episodios coincidentes es **0554**, cuyo operador registrado es **MAUREL AND PROM COLOMBIA B.V.**. La fuente lo clasifica en exploración, como contrato de Exploración y Producción (E&P), subtipo `MADURA`, asociado al proceso `RONDA COLOMBIA 2021`. Registra **65 episodios y 310 detecciones** en coincidencia directa.
 
 Los principales contratos de exploración son:
 
-| Contrato | Operador registrado | Tipo contractual | Proceso | Episodios | Hotspots |
+| Contrato | Operador registrado | Tipo contractual | Proceso | Episodios | Detecciones (hotspots) |
 |---|---|---|---|---:|---:|
 | 0554 | MAUREL AND PROM COLOMBIA B.V. | CONTRATO DE EXPLORACION Y PRODUCCION (E&P) | RONDA COLOMBIA 2021 | 65 | 310 |
 | 0115 | VAROSA ENERGY SOCIEDAD POR ACCIONES SIMPLIFICADAS | CONTRATO DE EXPLORACION Y PRODUCCION (E&P) | CONTRATACION DIRECTA | 10 | 41 |
@@ -77,7 +79,7 @@ Los principales contratos de exploración son:
 | 0254 | TELPICO COLOMBIA LLC | CONTRATO DE EXPLORACION Y PRODUCCION (E&P) | OPEN ROUND 2010 | 5 | 16 |
 | 0704 | HOCOL S.A. | CONTRATO DE EXPLORACION Y PRODUCCION (E&P) | PPAA 2019 CICLO 1 | 3 | 5 |
 
-El contrato 0554 concentra una parte importante del subconjunto de exploración: sus 65 episodios equivalen aproximadamente al 63 % de los 103 episodios que intersectan alguna tierra clasificada en exploración. Esa proporción describe la concentración espacial de los episodios dentro de las geometrías contractuales; no permite atribuirles un origen operacional.
+El contrato 0554 concentra una parte importante del subconjunto de exploración: sus 65 episodios equivalen aproximadamente al 63 % de los 103 episodios que quedan dentro de alguna tierra clasificada en exploración. Esa proporción describe la concentración espacial de los episodios dentro de las geometrías contractuales; no permite atribuirles un origen operacional.
 
 ![Contratos de exploración con mayor número de episodios coincidentes.](assets/figures/svg/ANH/anh_03a_contratos_exploracion_publicacion.svg)
 
@@ -85,9 +87,9 @@ El contrato 0554 concentra una parte importante del subconjunto de exploración:
 
 ## 4.7. Contratos en producción
 
-Entre las áreas clasificadas en producción destaca el **contrato 0039**, registrado a nombre de **FRONTERA ENERGY COLOMBIA CORP.**, con 35 episodios y 113 hotspots. Le siguen el **0038**, de **LAS QUINCHAS RESOURCES CORP**, con 20 episodios y 85 hotspots; el **0042**, de **ECOPETROL S.A.**, con 17 y 83; y el **0034**, también registrado a nombre de Frontera Energy Colombia Corp., con 8 episodios.
+Entre las áreas clasificadas en producción destaca el **contrato 0039**, registrado a nombre de **FRONTERA ENERGY COLOMBIA CORP.**, con 35 episodios y 113 detecciones. Le siguen el **0038**, de **LAS QUINCHAS RESOURCES CORP**, con 20 episodios y 85 detecciones; el **0042**, de **ECOPETROL S.A.**, con 17 y 83; y el **0034**, también registrado a nombre de Frontera Energy Colombia Corp., con 8 episodios.
 
-| Contrato | Operador registrado | Tipo contractual | Proceso | Episodios | Hotspots |
+| Contrato | Operador registrado | Tipo contractual | Proceso | Episodios | Detecciones (hotspots) |
 |---|---|---|---|---:|---:|
 | 0039 | FRONTERA ENERGY COLOMBIA CORP. | CONTRATO DE ASOCIACION CON ECOPETROL | NO APLICA | 35 | 113 |
 | 0038 | LAS QUINCHAS RESOURCES CORP | CONTRATO DE ASOCIACION CON ECOPETROL | NO APLICA | 20 | 85 |
@@ -106,7 +108,7 @@ El paquete distingue diferentes modalidades: contratos de asociación con Ecopet
 
 La capa complementaria de yacimientos identifica tres yacimientos con coincidencia directa y cinco episodios en total:
 
-| Yacimiento | Contrato asociado | Formación | Tipo de hidrocarburo | Estado/vigencia | Episodios | Hotspots |
+| Yacimiento | Contrato asociado | Formación | Tipo de hidrocarburo | Estado/vigencia | Episodios | Detecciones (hotspots) |
 |---|---|---|---|---|---:|---:|
 | TOLDADO | TOLDADO | CABALLOS | PETROLEO-GAS | ACTIVO/VIGENTE | 3 | 8 |
 | ORTEGA | ORTEGA | CABALLOS | PETROLEO-GAS | ACTIVO/VIGENTE | 1 | 3 |
@@ -116,7 +118,7 @@ La capa complementaria de yacimientos identifica tres yacimientos con coincidenc
 
 La estructura del servicio oficial de yacimientos de la ANH confirma que la capa utiliza campos diferenciados para estado del yacimiento, vigencia, formación, resolución y tipo de hidrocarburo. Esto permite contextualizar los polígonos sin convertir su estado administrativo en prueba del origen de la detección térmica.
 
-## 4.9. Pozos: proximidad puntual
+## 4.9. Pozos: qué tan cerca están los episodios
 
 Los **700 pozos** se analizan por distancia. No se registraron coincidencias directas con la geometría puntual de los pozos en el escenario B; las relaciones conservadas corresponden a episodios ubicados hasta cinco kilómetros.
 
@@ -137,7 +139,7 @@ Los pozos con mayor número de episodios B dentro de ese radio son:
 
 Por número de episodios cercanos destaca **CALARMA-1**, con 16 episodios dentro de cinco kilómetros, aunque su distancia mínima es de aproximadamente 1,54 km. Si se observa estrictamente cercanía mínima, aparecen casos como **TOLDADO-2**, a unos 83 m de una detección relacionada; **ORTEGA-8A**, a unos 86 m; y **TOMOGO-1**, a unos 122 m.
 
-Estos valores no convierten al pozo en fuente térmica. Únicamente describen proximidad entre un punto de infraestructura y las detecciones que integran los episodios.
+Estos valores no convierten al pozo en fuente térmica. Únicamente describen distancia entre un punto de infraestructura y las detecciones que integran los episodios.
 
 ![Pozos con mayor número de episodios situados hasta cinco kilómetros.](assets/figures/svg/ANH/anh_06_pozos_proximidad_publicacion.svg)
 
@@ -155,9 +157,9 @@ Se mantienen fuera del ranking municipal cuatro episodios con empate entre munic
 
 *Figura ANH-4. Municipios individuales con mayor número de episodios B en coincidencia directa con la huella ANH.*
 
-## 4.11. Coberturas del suelo
+## 4.11. Coberturas de la tierra: qué tipo de superficie aparece
 
-La categoría individual más frecuente es **mosaico de pastos con espacios naturales**, con 25 episodios. Le siguen **arroz**, con 22; **pastos limpios**, con 18; **bosque de galería y ripario**, con 15; **arbustal abierto**, con 12; y tres categorías con 10 episodios cada una: mosaico de pastos y cultivos, herbazal abierto rocoso y mosaico de cultivos, pastos y espacios naturales.
+La **cobertura de la tierra** describe qué tipo de superficie predomina en el lugar y se utiliza como contexto territorial; no identifica la causa de las señales. La categoría individual más frecuente es **mosaico de pastos con espacios naturales**, con 25 episodios. Le siguen **arroz**, con 22; **pastos limpios**, con 18; **bosque de galería y ripario**, con 15; **arbustal abierto**, con 12; y tres categorías con 10 episodios cada una: mosaico de pastos y cultivos, herbazal abierto rocoso y mosaico de cultivos, pastos y espacios naturales.
 
 Las ocho categorías individuales principales son: 2.4.4. Mosaico de pastos con espacios naturales (25); 2.1.2.1. Arroz (22); 2.3.1. Pastos limpios (18); 3.1.4. Bosque de galería y ripario (15); 3.2.2.2. Arbustal abierto (12); 2.4.2. Mosaico de pastos y cultivos (10); 3.2.1.2.2. Herbazal abierto rocoso (10); 2.4.3. Mosaico de cultivos, pastos y espacios naturales (10).
 
@@ -167,19 +169,19 @@ Además, **20 episodios** tienen una etiqueta compuesta porque las detecciones q
 
 *Figura ANH-5. Coberturas IDEAM 2024 individuales más frecuentes entre episodios directos ANH.*
 
-## 4.12. Fuentes térmicas recurrentes
+## 4.12. Lugares con señales térmicas repetidas (recurrencia)
 
 Los dos sitios recurrentes presentan comportamientos opuestos frente a ANH.
 
-**FT_001**, la fuente de recurrencia alta ubicada en Ibagué sobre una cobertura industrial o comercial, presenta **coincidencia directa** con la huella ANH. Esta coincidencia se refiere a una geometría contractual y no permite inferir proximidad a un pozo ni actividad operacional en el punto.
+**FT_001**, la fuente de recurrencia alta ubicada en Ibagué sobre una cobertura industrial o comercial, presenta **coincidencia directa** con las áreas contractuales ANH. Esta coincidencia se refiere a una geometría contractual y no permite inferir proximidad a un pozo ni actividad operacional en el punto.
 
-**FT_002**, en Ambalema, se encuentra a **6,58 km** de la huella ANH y por ello se clasifica a más de cinco kilómetros.
+**FT_002**, en Ambalema, se encuentra a **6,58 km** del conjunto de áreas contractuales ANH y por ello se clasifica a más de cinco kilómetros.
 
 El contraste es metodológicamente importante: la recurrencia térmica y la relación con tierras contractuales son dimensiones distintas. La proximidad a pozos se analiza separadamente en la sección 4.9 y no debe deducirse de la coincidencia con una geometría poligonal.
 
 ## 4.13. Discusión
 
-ANH presenta la mayor proporción de coincidencia directa entre las tres instituciones evaluadas: 45,72 % de los episodios B. La huella contractual ocupa 21,93 % del territorio analizado y muestra un enriquecimiento de 2,085. Dentro de ella, las áreas de producción presentan un enriquecimiento mayor —2,959— que las de exploración —1,768—, mientras los yacimientos alcanzan 4,828 sobre un número muy pequeño de casos.
+ANH presenta la mayor proporción de coincidencia directa entre las tres instituciones evaluadas: 45,72 % de los episodios B. Las áreas contractuales ocupan 21,93 % del territorio analizado y muestran un índice de enriquecimiento de 2,085. Dentro de ese conjunto, las áreas de producción presentan un enriquecimiento mayor —2,959— que las de exploración —1,768—, mientras los yacimientos alcanzan 4,828 sobre un número muy pequeño de casos.
 
 El patrón se concentra en determinados contratos y municipios. El contrato 0554 domina el subconjunto de exploración, mientras 0039, 0038 y 0042 destacan en producción. Ortega, San Luis, Guamo, Coello e Ibagué agrupan la mayor parte de los episodios directos.
 
@@ -191,11 +193,11 @@ Una investigación causal de episodios concretos requeriría contrastar fechas y
 
 El capítulo ANH permite resumir siete resultados:
 
-1. **187 de 409 episodios B (45,72 %) presentan coincidencia directa** con la huella contractual ANH.
-2. Esa huella representa **21,93 %** de la superficie analizada y genera un enriquecimiento de **2,085**.
+1. **187 de 409 episodios B (45,72 %) presentan coincidencia directa** con las áreas contractuales ANH.
+2. Esas áreas representan **21,93 %** de la superficie analizada y producen un índice de enriquecimiento de **2,085**.
 3. Exploración reúne 103 episodios y producción 93, pero **9 pertenecen a ambas**, por lo que la unión es 187.
 4. Las áreas de producción presentan un enriquecimiento de **2,959**, superior al **1,768** de exploración.
-5. Los cinco episodios en yacimientos están contenidos en la huella contractual y no constituyen casos adicionales.
+5. Los cinco episodios en yacimientos están contenidos en las áreas contractuales y no constituyen casos adicionales.
 6. Los principales contratos por número de episodios son 0554 en exploración y 0039, 0038 y 0042 en producción.
 7. FT_001 coincide directamente con una tierra ANH, mientras FT_002 se encuentra a más de cinco kilómetros; ninguna situación prueba el origen del fenómeno térmico.
 
