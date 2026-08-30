@@ -24,7 +24,7 @@ De los 409 episodios del escenario B, **187 presentan coincidencia directa con l
 
 El escenario A registra 43,75 % de coincidencia directa y B 45,72 %, una diferencia de **1,97 puntos porcentuales**. El patrón general se mantiene: en ambos escenarios la coincidencia directa es la categoría más numerosa.
 
-**[Insertar Figura ANH-1: `figuras/anh_01_proximidad_episodios_publicacion`]**
+![Distribución de episodios según proximidad a la huella ANH.](assets/figures/svg/ANH/anh_01_proximidad_episodios_publicacion.svg)
 
 *Figura ANH-1. Distribución de episodios según proximidad a la huella ANH. B es el escenario principal y A funciona como sensibilidad.*
 
@@ -43,7 +43,7 @@ La desagregación interna muestra diferencias:
 
 Los yacimientos presentan el índice más alto, **4,828**, pero sobre una superficie muy pequeña y con únicamente cinco episodios. Por ello, ese valor debe interpretarse con especial cautela: un cociente elevado construido sobre pocos casos no tiene el mismo peso descriptivo que el resultado de la huella contractual completa.
 
-**[Insertar Figura ANH-2: `figuras/anh_02_observado_vs_superficie_publicacion`]**
+![Episodios observados frente a superficie disponible para ANH.](assets/figures/svg/ANH/anh_02_observado_vs_superficie_publicacion.svg)
 
 *Figura ANH-2. Porcentaje de superficie y porcentaje de episodios observados para las principales figuras poligonales ANH.*
 
@@ -80,7 +80,7 @@ Los principales contratos de exploración son:
 
 El contrato 0554 concentra una parte importante del subconjunto de exploración: sus 65 episodios equivalen aproximadamente al 63 % de los 103 episodios que intersectan alguna tierra clasificada en exploración. Esa proporción describe la concentración espacial de los episodios dentro de las geometrías contractuales; no permite atribuirles un origen operacional.
 
-**[Insertar Figura ANH-3A: `figuras/anh_03a_contratos_exploracion_publicacion`]**
+![Contratos de exploración con mayor número de episodios coincidentes.](assets/figures/svg/ANH/anh_03a_contratos_exploracion_publicacion.svg)
 
 *Figura ANH-3A. Contratos clasificados en exploración con mayor número de episodios B coincidentes.*
 
@@ -99,7 +99,7 @@ Entre las áreas clasificadas en producción destaca el **contrato 0039**, regis
 
 El paquete distingue diferentes modalidades: contratos de asociación con Ecopetrol, convenios de explotación y contratos E&P. El campo `PROCESO` incluye, según el contrato, valores como contratación directa, Minironda 2008, Open Round 2010, PPAA 2019 o Ronda Colombia 2021. Esos atributos se conservan como trazabilidad administrativa, no como indicación de una operación observada por el satélite.
 
-**[Insertar Figura ANH-3B: `figuras/anh_03b_contratos_produccion_publicacion`]**
+![Contratos de producción con mayor número de episodios coincidentes.](assets/figures/svg/ANH/anh_03b_contratos_produccion_publicacion.svg)
 
 *Figura ANH-3B. Contratos clasificados en producción con mayor número de episodios B coincidentes.*
 
@@ -140,7 +140,7 @@ Por número de episodios cercanos destaca **CALARMA-1**, con 16 episodios dentro
 
 Estos valores no convierten al pozo en fuente térmica. Únicamente describen proximidad entre un punto de infraestructura y las detecciones que integran los episodios.
 
-**[Insertar Figura ANH-6: `figuras/anh_06_pozos_proximidad_publicacion`]**
+![Pozos con mayor número de episodios situados hasta cinco kilómetros.](assets/figures/svg/ANH/anh_06_pozos_proximidad_publicacion.svg)
 
 *Figura ANH-6. Pozos con mayor número de episodios B situados hasta cinco kilómetros y distancia mínima registrada.*
 
@@ -152,7 +152,7 @@ Los principales valores son: Ortega (40); San Luis (32); Guamo (23); Coello (20)
 
 Se mantienen fuera del ranking municipal cuatro episodios con empate entre municipios: **Coello– Espinal (2); Guamo– San Luis (1); Ortega– Rovira (1)**. Son episodios intermunicipales, no nuevos municipios.
 
-**[Insertar Figura ANH-4: `figuras/anh_04_municipios_directos_publicacion`]**
+![Municipios con mayor coincidencia directa con la huella ANH.](assets/figures/svg/ANH/anh_04_municipios_directos_publicacion.svg)
 
 *Figura ANH-4. Municipios individuales con mayor número de episodios B en coincidencia directa con la huella ANH.*
 
@@ -164,7 +164,7 @@ Las ocho categorías individuales principales son: 2.4.4. Mosaico de pastos con 
 
 Además, **20 episodios** tienen una etiqueta compuesta porque las detecciones que integran el episodio producen empate entre dos o más coberturas. Esos casos no se redistribuyen arbitrariamente entre las coberturas individuales.
 
-**[Insertar Figura ANH-5: `figuras/anh_05_coberturas_directas_publicacion`]**
+![Coberturas del suelo más frecuentes en episodios directos ANH.](assets/figures/svg/ANH/anh_05_coberturas_directas_publicacion.svg)
 
 *Figura ANH-5. Coberturas IDEAM 2024 individuales más frecuentes entre episodios directos ANH.*
 
@@ -206,19 +206,7 @@ El A3 se encuentra en `assets/maps/anh_a3.jpg` y el A0 web en `assets/maps/anh_a
 
 El mapa diferencia exploración y producción, incorpora yacimientos y pozos cuando la escala permite leerlos, representa episodios B y FT_001/FT_002 y conserva como contexto coberturas IDEAM 2024, vías, hidrografía y límites municipales.
 
-## Fuentes
-
-### Fuentes analíticas del proyecto
-- `inventario_fuentes_institucionales.csv`
-- `relaciones_detalladas_fuentes.csv`
-- `resumen_fuentes_nombres.csv`
-- `resumen_proximidad_institucion.csv`
-- `resumen_directo_figuras.csv`
-- `distribucion_municipio_cobertura.csv`
-- `candidatos_recurrentes_institucion.csv`
-- `paquete_academico_instituciones_20260829_123058.zip`.
-
-### Fuentes institucionales externas verificadas
+## Fuentes institucionales externas verificadas
 - Agencia Nacional de Hidrocarburos. **Mapa de Tierras**, actualización 6 de agosto de 2026. https://www.anh.gov.co/es/hidrocarburos/mapa-de-tierras/
 - Agencia Nacional de Hidrocarburos. **GeoVisor de Tierras / ANH_TIERRAS_EGDB_ATTACH**, actualización 6 de agosto de 2026. https://geovisor.anh.gov.co/server/rest/services/GEOVISOR_v32/ANH_TIERRAS_EGDB_ATTACH/MapServer
 - Agencia Nacional de Hidrocarburos. **Relación de Áreas Asignadas**, estado de contratos y convenios al 31 de julio de 2026. https://www.anh.gov.co/es/hidrocarburos/contratos-y-reglamentaci%C3%B3n/contrataci%C3%B3n-ep-y-teas/
