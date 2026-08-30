@@ -46,7 +46,12 @@ También se revisaron los archivos HTML auxiliares, JavaScript, CSS, tablas CSV 
 ## 4. Correcciones editoriales realizadas
 
 - Se incorporó una introducción de portada orientada a público general que explica cómo explorar los mapas y capítulos y resume los hallazgos sin atribuir causalidad.
-
+- Se incorporó una sección pública **“Cómo leer”** con definiciones en lenguaje no especializado de detección térmica/hotspot, episodio térmico, huella institucional, coincidencia directa, proximidad, superficie y valor esperado, índice de enriquecimiento, escenarios A/B, recurrencia, cobertura de la tierra, geometrías cartográficas y solapamientos.
+- Se sustituyeron en la portada varias etiquetas técnicas por equivalentes más comprensibles —por ejemplo, “episodios dentro del área”, “parte del territorio” y “concentración relativa”—, conservando el nombre científico del indicador en las explicaciones.
+- Se añadieron guías de lectura al inicio de los capítulos ANM, ANLA y ANH para que puedan comprenderse de forma autónoma sin exigir lectura previa de la metodología.
+- Se incorporó en la metodología un glosario tabular y un ejemplo numérico completo del índice de enriquecimiento usando ANM (18,63 % del territorio, 31,05 % de episodios, E = 1,666).
+- Se simplificaron encabezados como “patrón general de proximidad” y “observados, esperados y enriquecimiento” para formular directamente la pregunta que responde cada sección.
+- Se reemplazó el uso innecesario de *hotspot* en la prosa de los capítulos por “detección térmica”, conservando el término técnico entre paréntesis en tablas cuando resulta útil.
 - Se convirtió la sección cartográfica de ANM en texto final: título definitivo, descripción del contenido real del mapa, áreas de detalle, interpretación y advertencia de lectura no causal.
 - Se eliminaron instrucciones al autor, marcadores de producción, formulaciones de “versión final” y tareas futuras del cuerpo científico cuando la información ya podía presentarse como resultado o limitación.
 - Se redujo meta-lenguaje de auditoría y mantenimiento en las páginas visibles al lector.
