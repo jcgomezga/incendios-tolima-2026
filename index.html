@@ -1,205 +1,157 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Publicación científica y cartográfica sobre 409 episodios térmicos y su relación espacial con información institucional de ANM, ANLA y ANH en Tolima, agosto de 2026.">
-  <meta name="theme-color" content="#f3f0e8">
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="Detecciones térmicas y zonas de posible intervención extractiva en Tolima">
-  <meta property="og:description" content="Análisis espacial y atlas cartográfico · agosto de 2026.">
-  <title>Detecciones térmicas y territorio · Tolima 2026</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Publicación científica y cartográfica sobre 409 episodios térmicos y su relación espacial con información institucional de ANM, ANLA y ANH en Tolima, agosto de 2026." name="description"/>
+<meta content="#f3f0e8" name="theme-color"/>
+<meta content="article" property="og:type"/>
+<meta content="Detecciones térmicas y zonas de posible intervención extractiva en Tolima" property="og:title"/>
+<meta content="Análisis espacial y atlas cartográfico · agosto de 2026." property="og:description"/>
+<title>Detecciones térmicas y territorio · Tolima 2026</title>
+<link href="assets/css/styles.css" rel="stylesheet"/>
 </head>
 <body>
-  <a class="skip-link" href="#contenido">Saltar al contenido</a>
-  <div id="reading-progress" aria-hidden="true"></div>
-
-  <header class="site-header">
-    <div class="nav-wrap">
-      <a class="brand" href="#inicio" aria-label="Ir al inicio">
-        <span class="brand-index" aria-hidden="true">TOL·26</span>
-        <span class="brand-name">Térmico &amp; territorio</span>
-      </a>
-      <button class="nav-toggle" type="button" data-mobile-nav aria-expanded="false" aria-controls="site-navigation">Índice</button>
-      <nav class="nav-links" id="site-navigation" aria-label="Índice de la publicación">
-        <a href="#como-leer">Cómo leer</a><a href="#hallazgos">Hallazgos</a><a href="#metodo">Método</a><a href="#anm">ANM</a><a href="#anla">ANLA</a><a href="#anh">ANH</a><a href="#recurrencia">Recurrencia</a><a href="#fuentes">Fuentes</a>
-      </nav>
-      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">Oscuro</button>
-    </div>
-  </header>
-
-  <main id="contenido">
-    <article>
-      <header class="masthead" id="inicio">
-        <div class="masthead-inner">
-          <p class="overline">Atlas analítico · Tolima · agosto de 2026</p>
-          <h1>Detecciones térmicas y zonas de posible intervención extractiva</h1>
-          <p class="standfirst">Este sitio presenta un análisis espacial de <strong>409 episodios térmicos</strong> registrados en Tolima durante agosto de 2026 y compara su ubicación con áreas que aparecen en registros oficiales de minería, licenciamiento ambiental e hidrocarburos. En cada sección puede ampliar el mapa para explorar el departamento completo y acceder a su versión A0 de máxima resolución; al abrir los capítulos encontrará el análisis detallado, con gráficos y tablas. <strong>En términos sencillos:</strong> una proporción relativamente alta de episodios aparece dentro de varias de esas áreas oficiales en comparación con la parte del territorio que ocupan. Esto señala lugares que vale la pena estudiar con más detalle, pero <strong>no demuestra que esas actividades hayan causado los fuegos o anomalías térmicas</strong>.</p>
-          <div class="byline"><span>Elaborado por: <a href="https://www.linkedin.com/in/jcgomezga/" target="_blank" rel="noopener noreferrer"><strong>Juan Carlos Gómez García</strong></a>. Sociólogo. Estudiante de la Maestría en Estudios Socioambientales de la Facultad Latinoamericana de Ciencias Sociales, FLACSO Ecuador. Investigador socioambiental.<br><a href="https://www.researchgate.net/profile/Wilmer-Andres-Martinez-Rodriguez?ev=hdr_xprf" target="_blank" rel="noopener noreferrer"><strong>Wilmer Andrés Martínez Rodríguez</strong></a>. Sociólogo, Maestrante en Desarrollo Rural. Investigador Grupo Yuma ima - UT.</span><span>Análisis principal: escenario B · cartografía: EPSG:9377</span></div>
-          <dl class="study-facts" aria-label="Ficha del análisis">
-            <div><dt>Señales satelitales</dt><dd>1.537</dd><span>detecciones térmicas del análisis principal</span></div>
-            <div><dt>Episodios</dt><dd>409</dd><span>grupos de señales cercanas en espacio y tiempo</span></div>
-            <div><dt>Control alternativo</dt><dd>432</dd><span>episodios al incluir todos los sensores</span></div>
-            <div><dt>Periodo</dt><dd>08·2026</dd><span>Tolima, Colombia</span></div>
-          </dl>
-        </div>
-      </header>
-
-      <section class="editorial-section paper-band" id="como-leer" aria-labelledby="como-leer-title">
-        <div class="reading-grid">
-          <div class="section-label"><span>00</span> Cómo leer</div>
-          <div class="section-copy"><h2 id="como-leer-title">Conceptos clave, explicados sin jerga</h2><p class="lede">El análisis usa algunos términos técnicos para no confundir una señal satelital con un incendio confirmado ni una coincidencia en el mapa con una causa. Estas definiciones permiten leer los resultados sin conocimientos previos de teledetección o sistemas de información geográfica.</p></div>
-        </div>
-        <div class="method-notes">
-          <p><strong>Detección térmica o hotspot</strong><br>Es un punto donde un satélite detectó una temperatura o señal térmica anómala. Puede corresponder a fuego, pero <b>no equivale por sí sola a un incendio confirmado</b>.</p>
-          <p><strong>Episodio térmico</strong><br>Es un grupo de una o más detecciones cercanas entre sí. Aquí se agrupan señales separadas por no más de 1 km y 12 horas para evitar contar varias observaciones del mismo fenómeno como eventos distintos.</p>
-          <p><strong>Huella institucional</strong><br>Es el nombre corto para el conjunto de áreas dibujadas en los datos de una institución: por ejemplo, títulos y solicitudes mineras, áreas ANLA o tierras contractuales ANH. <b>No significa huella ambiental ni demuestra actividad en terreno</b>.</p>
-          <p><strong>Coincidencia directa</strong><br>Significa que al menos una detección de un episodio cayó dentro de una de esas áreas en el mapa. Es una coincidencia de ubicación; <b>no significa que la actividad allí registrada haya causado la señal térmica</b>.</p>
-          <p><strong>Proximidad</strong><br>Cuando el episodio no cae dentro del área, se mide qué tan lejos está: hasta 1 km, entre 1 y 5 km o a más de 5 km. Estar cerca sirve para orientar preguntas, pero no prueba relación causal.</p>
-          <p><strong>Superficie y valor esperado</strong><br>La superficie indica qué porcentaje del territorio ocupa cada conjunto de áreas. El valor esperado pregunta: “si los episodios se repartieran solo en proporción al tamaño de esas áreas, ¿cuántos esperaríamos encontrar dentro?”. Es una referencia descriptiva, no una predicción de incendios.</p>
-          <p><strong>Índice de enriquecimiento</strong><br>Compara el porcentaje de episodios observado con el porcentaje de territorio ocupado. Un valor de 1 indica proporciones parecidas; 2 significa que la proporción de episodios es aproximadamente el doble de la proporción territorial. <b>No es una prueba estadística ni demuestra causalidad</b>.</p>
-          <p><strong>Escenarios A y B</strong><br>B es el análisis principal y excluye observaciones Suomi-NPP posteriores a una advertencia de calidad de NASA. A incluye todos los sensores y se usa como control: si A y B se parecen, el resultado cambia poco al tomar esa decisión.</p>
-          <p><strong>Recurrencia</strong><br>Describe un lugar donde las señales térmicas se repitieron en varias fechas durante el mes. “Recurrente” significa repetición de la señal, no incendio repetido ni una fuente de origen conocida.</p>
-          <p><strong>Cobertura de la tierra</strong><br>Describe el tipo de superficie cartografiada, por ejemplo arroz, pastos, bosque o zona urbana. Sirve para conocer el contexto del lugar, pero no explica por sí sola por qué apareció una señal térmica.</p>
-          <p><strong>Punto, línea y polígono</strong><br>Son formas de representar elementos en un mapa. Un pozo puede ser un punto, un ducto una línea y un área contractual un polígono. Por eso no todos se comparan de la misma manera.</p>
-          <p><strong>Superposición o solapamiento</strong><br>Ocurre cuando dos áreas ocupan parte del mismo espacio. Un episodio puede quedar dentro de ambas; por eso algunos conteos no deben sumarse como si fueran casos diferentes.</p>
-        </div>
-      </section>
-
-      <section class="editorial-section" id="hallazgos" aria-labelledby="hallazgos-title">
-        <div class="reading-grid">
-          <div class="section-label"><span>01</span> Hallazgos</div>
-          <div class="section-copy"><h2 id="hallazgos-title">¿Qué se encontró al comparar episodios y áreas institucionales?</h2><p class="lede">En las tres comparaciones, el porcentaje de episodios que cae dentro de las áreas institucionales es mayor que el porcentaje del territorio ocupado por esas áreas. El índice de enriquecimiento resume esa diferencia en una sola cifra. Se trata de una descripción espacial: no identifica por sí sola una actividad puntual ni el origen de las señales térmicas.</p></div>
-        </div>
-        <div class="result-ledger" role="group" aria-label="Resultados principales del escenario B">
-          <div class="ledger-head"><span>Institución</span><span>Episodios dentro del área</span><span>Parte del territorio</span><span>Concentración relativa</span></div>
-          <a href="#anm"><strong>ANM</strong><span>127 / 409 <small>31,05 %</small></span><span>18,63 %</span><span>1,666 <small>veces</small></span></a>
-          <a href="#anla"><strong>ANLA</strong><span>143 / 409 <small>34,96 %</small></span><span>15,10 %</span><span>2,315 <small>veces</small></span></a>
-          <a href="#anh"><strong>ANH</strong><span>187 / 409 <small>45,72 %</small></span><span>21,93 %</span><span>2,085 <small>veces</small></span></a>
-        </div>
-        <aside class="margin-note wide-note"><strong>Cómo leer estas cifras.</strong> “Concentración relativa” es el índice de enriquecimiento explicado arriba. Por ejemplo, las áreas ANM ocupan 18,63 % del territorio y contienen 31,05 % de los episodios: 31,05 ÷ 18,63 = 1,666. En palabras sencillas, la proporción de episodios es unas 1,67 veces la proporción territorial de esas áreas. Esto <strong>no prueba causalidad</strong>. Además, los conteos de ANM, ANLA y ANH <strong>no se suman</strong>, porque un mismo episodio puede coincidir con más de una institución.</aside>
-        <figure class="publication-figure breakout"><img src="assets/figures/svg/GENERAL/figura_00_comparacion_institucional_B.svg" alt="Comparación del porcentaje de superficie y el porcentaje de episodios observados para ANM, ANLA y ANH en el escenario B." width="1800" height="1000"><figcaption><b>Figura 1.</b> Comparación entre la proporción de episodios observados dentro de cada conjunto de áreas y la proporción del territorio que esas áreas ocupan. Cada institución se analiza por separado.</figcaption></figure>
-      </section>
-
-      <section class="editorial-section paper-band" id="metodo" aria-labelledby="metodo-title">
-        <div class="reading-grid">
-          <div class="section-label"><span>02</span> Método</div>
-          <div class="section-copy"><h2 id="metodo-title">De una detección satelital a un episodio espacial</h2><p class="lede">NASA FIRMS distribuye detecciones satelitales de fuego activo y anomalías térmicas —puntos donde los sensores registran una señal de calor inusual— derivadas de MODIS y VIIRS <a class="citation" href="https://firms.modaps.eosdis.nasa.gov/active_fire/" target="_blank" rel="noopener noreferrer">[1]</a>. Aquí se agrupan y comparan con conjuntos de áreas institucionales; no se convierten automáticamente en incendios ni en áreas quemadas.</p></div>
-        </div>
-        <ol class="method-sequence">
-          <li><span>01</span><div><h3>Observación</h3><p>Detecciones térmicas (hotspots) FIRMS de agosto de 2026. El escenario B excluye 597 observaciones VIIRS Suomi-NPP porque NASA FIRMS advierte que los datos recibidos desde ese satélite después del 9 de marzo de 2026 pueden no cumplir las especificaciones de misión debido a una anomalía. El escenario A conserva todos los sensores como análisis de sensibilidad; la exclusión no implica una invalidación general de VIIRS Suomi-NPP.</p></div></li>
-          <li><span>02</span><div><h3>Agrupación</h3><p>Las detecciones cercanas se reúnen en episodios: si varias señales aparecen dentro de 1.000 metros y una ventana de 12 horas, se tratan como parte de un mismo episodio térmico. El escenario principal contiene 409 episodios.</p></div></li>
-          <li><span>03</span><div><h3>Relación espacial</h3><p>Se llama coincidencia directa cuando al menos una detección cae dentro del área institucional. Si queda por fuera, se mide la distancia mínima: hasta 1 km, entre 1 y 5 km o a más de 5 km.</p></div></li>
-          <li><span>04</span><div><h3>Control territorial</h3><p>Para las áreas dibujadas como polígonos se tiene en cuenta cuánto territorio ocupan, de modo que un conjunto de áreas muy grande no parezca importante solo por su tamaño. Los puntos y las líneas —como pozos o ductos— se estudian por distancia.</p></div></li>
-        </ol>
-        <div class="method-notes">
-          <p><strong>CRS de análisis</strong><br>MAGNA-SIRGAS 2018 / Origen-Nacional, EPSG:9377.</p>
-          <p><strong>Límite cartográfico</strong><br><code>scan × track</code> no equivale a área quemada. Una cicatriz requiere validación independiente con imágenes y criterios espectrales.</p>
-          <p><strong>Lectura causal</strong><br>Coincidencia, cercanía y concentración relativa describen dónde aparecen las señales. No permiten afirmar por qué ocurrieron ni quién las produjo.</p>
-        </div>
-        <p class="text-action"><a href="documento.html?file=docs/01_metodologia_general_v2.md&amp;title=Metodolog%C3%ADa%20general">Leer la metodología completa →</a></p>
-      </section>
-
-      <section class="agency-chapter" id="anm" aria-labelledby="anm-title">
-        <div class="chapter-intro"><div class="chapter-number">03</div><div><p class="overline">Agencia Nacional de Minería</p><h2 id="anm-title">Títulos y solicitudes mineras</h2><p class="lede">El análisis distingue títulos y solicitudes. La ANM señala que el título otorga derechos para explorar y explotar bajo las condiciones del contrato, mientras la propuesta corresponde a un trámite previo <a class="citation" href="https://www.anm.gov.co/index.php/sector-minero-colombiano" target="_blank" rel="noopener noreferrer">[2]</a>. Ninguna figura demuestra por sí sola una operación puntual.</p></div><aside class="chapter-aside"><strong>Lectura institucional</strong><span>Título ≠ operación puntual</span><span>Solicitud ≠ explotación</span></aside></div>
-        <dl class="chapter-metrics"><div><dt>Dentro del área</dt><dd>127</dd></div><div><dt>% de episodios</dt><dd>31,05 %</dd></div><div><dt>% del territorio</dt><dd>18,63 %</dd></div><div><dt>Índice relativo</dt><dd>1,666</dd></div></dl>
-        <figure class="atlas-map" data-map-card="anm">
-          <a class="map-image-link" data-a3-viewer target="_blank" rel="noopener" aria-label="Abrir mapa A3 de ANM en el visor"><img data-map-preview src="assets/maps/previews/anm_a3_preview.jpg" alt="Mapa A3 de Tolima con episodios térmicos, títulos y solicitudes de la Agencia Nacional de Minería, y detalles de Ortega y San Luis." width="2200" height="1556" loading="lazy" decoding="async"><span>Ampliar mapa</span></a>
-          <figcaption><div><b>Mapa 1. ANM.</b> Detecciones térmicas y figuras mineras en Tolima. El mapa integra el marco departamental y dos áreas de detalle; su lectura es espacial y no causal.</div><div class="figure-actions"><a data-a3-viewer target="_blank" rel="noopener">Visor A3</a><a data-a3-download>Descargar A3</a><a data-a0-viewer target="_blank" rel="noopener">Explorar A0</a><a data-a0-download target="_blank" rel="noopener noreferrer">A0 original</a></div></figcaption>
-        </figure>
-        <div class="evidence-grid">
-          <figure class="publication-figure"><img loading="lazy" decoding="async" src="assets/figures/svg/ANM/anm_01_proximidad_episodios_publicacion.svg" alt="Distribución de episodios según distancia respecto a las áreas ANM en los escenarios A y B."><figcaption><b>Figura 2.</b> Distancia de los episodios respecto a las áreas ANM.</figcaption></figure>
-          <figure class="publication-figure"><img loading="lazy" decoding="async" src="assets/figures/svg/ANM/anm_02_observado_vs_superficie_publicacion.svg" alt="Comparación de episodios observados y superficie para títulos y solicitudes mineras."><figcaption><b>Figura 3.</b> Episodios observados frente a la proporción del territorio ocupada por las áreas ANM.</figcaption></figure>
-        </div>
-        <details class="evidence-more"><summary>Ver cuatro figuras complementarias</summary><div class="evidence-grid inside">
-          <figure class="publication-figure"><img loading="lazy" decoding="async" src="assets/figures/svg/ANM/anm_03a_solicitudes_principales_publicacion.svg" alt="Solicitudes mineras con mayor número de episodios coincidentes."><figcaption><b>Figura 4.</b> Solicitudes principales.</figcaption></figure>
-          <figure class="publication-figure"><img loading="lazy" decoding="async" src="assets/figures/svg/ANM/anm_03b_titulos_principales_publicacion.svg" alt="Títulos mineros con mayor número de episodios coincidentes."><figcaption><b>Figura 5.</b> Títulos principales.</figcaption></figure>
-          <figure class="publication-figure"><img loading="lazy" decoding="async" src="assets/figures/svg/ANM/anm_04_municipios_directos_publicacion.svg" alt="Municipios con mayor coincidencia directa con figuras ANM."><figcaption><b>Figura 6.</b> Distribución municipal.</figcaption></figure>
-          <figure class="publication-figure"><img loading="lazy" decoding="async" src="assets/figures/svg/ANM/anm_05_coberturas_directas_publicacion_v2.svg" alt="Coberturas de la tierra más frecuentes entre los episodios directos ANM."><figcaption><b>Figura 7.</b> Coberturas de la tierra.</figcaption></figure>
-        </div></details>
-        <p class="chapter-document"><a href="documento.html?file=docs/02_ANM_v2.md&amp;title=Cap%C3%ADtulo%20ANM">Abrir capítulo analítico ANM →</a></p>
-      </section>
-
-      <section class="agency-chapter chapter-tint" id="anla" aria-labelledby="anla-title">
-        <div class="chapter-intro"><div class="chapter-number">04</div><div><p class="overline">Autoridad Nacional de Licencias Ambientales</p><h2 id="anla-title">Licenciamiento y seguimiento ambiental</h2><p class="lede">La ANLA define el seguimiento como la verificación de obligaciones y medidas aplicables a proyectos, obras o actividades sujetos a instrumentos de manejo <a class="citation" href="https://www.anla.gov.co/seguimiento-de-licencias-ambientales/que-hacemos" target="_blank" rel="noopener noreferrer">[3]</a>. Un expediente o una geometría de seguimiento no identifica el origen de una fuente térmica.</p></div><aside class="chapter-aside"><strong>Lectura institucional</strong><span>Licencia ≠ causalidad</span><span>Seguimiento ≠ origen térmico</span></aside></div>
-        <dl class="chapter-metrics"><div><dt>Dentro del área</dt><dd>143</dd></div><div><dt>% de episodios</dt><dd>34,96 %</dd></div><div><dt>% del territorio</dt><dd>15,10 %</dd></div><div><dt>Índice relativo</dt><dd>2,315</dd></div></dl>
-        <figure class="atlas-map" data-map-card="anla">
-          <a class="map-image-link" data-a3-viewer target="_blank" rel="noopener" aria-label="Abrir mapa A3 de ANLA en el visor"><img data-map-preview src="assets/maps/previews/anla_a3_preview.jpg" alt="Mapa A3 de Tolima con episodios térmicos y áreas, líneas y puntos de la Autoridad Nacional de Licencias Ambientales, con detalles de Ortega y San Luis." width="2200" height="1556" loading="lazy" decoding="async"><span>Ampliar mapa</span></a>
-          <figcaption><div><b>Mapa 2. ANLA.</b> Detecciones térmicas y áreas, líneas o puntos asociados con licenciamiento y seguimiento ambiental. Las líneas y puntos se interpretan por distancia.</div><div class="figure-actions"><a data-a3-viewer target="_blank" rel="noopener">Visor A3</a><a data-a3-download>Descargar A3</a><a data-a0-viewer target="_blank" rel="noopener">Explorar A0</a><a data-a0-download target="_blank" rel="noopener noreferrer">A0 original</a></div></figcaption>
-        </figure>
-        <div class="evidence-grid">
-          <figure class="publication-figure"><img loading="lazy" decoding="async" src="assets/figures/svg/ANLA/anla_01_proximidad_episodios_publicacion.svg" alt="Distribución de episodios según proximidad a áreas ANLA en los escenarios A y B."><figcaption><b>Figura 8.</b> Distancia de los episodios respecto a las áreas ANLA.</figcaption></figure>
-          <figure class="publication-figure"><img loading="lazy" decoding="async" src="assets/figures/svg/ANLA/anla_02_observado_vs_superficie_publicacion.svg" alt="Comparación del porcentaje de episodios observados y la proporción del territorio ocupada por áreas ANLA."><figcaption><b>Figura 9.</b> Episodios observados frente a la proporción del territorio ocupada por las áreas ANLA.</figcaption></figure>
-        </div>
-        <details class="evidence-more"><summary>Ver tres figuras complementarias</summary><div class="evidence-grid inside">
-          <figure class="publication-figure"><img loading="lazy" decoding="async" src="assets/figures/svg/ANLA/anla_03_expedientes_principales_publicacion.svg" alt="Expedientes ANLA con mayor número de episodios coincidentes."><figcaption><b>Figura 10.</b> Expedientes principales.</figcaption></figure>
-          <figure class="publication-figure"><img loading="lazy" decoding="async" src="assets/figures/svg/ANLA/anla_04_municipios_directos_publicacion.svg" alt="Municipios con mayor coincidencia directa con áreas ANLA."><figcaption><b>Figura 11.</b> Distribución municipal.</figcaption></figure>
-          <figure class="publication-figure"><img loading="lazy" decoding="async" src="assets/figures/svg/ANLA/anla_05_coberturas_directas_publicacion.svg" alt="Coberturas de la tierra más frecuentes entre los episodios directos ANLA."><figcaption><b>Figura 12.</b> Coberturas de la tierra.</figcaption></figure>
-        </div></details>
-        <p class="chapter-document"><a href="documento.html?file=docs/03_ANLA_v2.md&amp;title=Cap%C3%ADtulo%20ANLA">Abrir capítulo analítico ANLA →</a></p>
-      </section>
-
-      <section class="agency-chapter" id="anh" aria-labelledby="anh-title">
-        <div class="chapter-intro"><div class="chapter-number">05</div><div><p class="overline">Agencia Nacional de Hidrocarburos</p><h2 id="anh-title">Tierras contractuales, yacimientos y pozos</h2><p class="lede">El Mapa de Tierras de la ANH representa la distribución, delimitación y clasificación de áreas hidrocarburíferas para exploración y producción; la actualización usada corresponde al 6 de agosto de 2026 <a class="citation" href="https://www.anh.gov.co/es/hidrocarburos/mapa-de-tierras/" target="_blank" rel="noopener noreferrer">[4]</a>. Bloques, yacimientos y pozos son objetos distintos.</p></div><aside class="chapter-aside"><strong>Lectura institucional</strong><span>Bloque ≠ actividad puntual</span><span>Yacimiento ≠ pozo</span></aside></div>
-        <dl class="chapter-metrics"><div><dt>Dentro del área</dt><dd>187</dd></div><div><dt>% de episodios</dt><dd>45,72 %</dd></div><div><dt>% del territorio</dt><dd>21,93 %</dd></div><div><dt>Índice relativo</dt><dd>2,085</dd></div></dl>
-        <figure class="atlas-map" data-map-card="anh">
-          <a class="map-image-link" data-a3-viewer target="_blank" rel="noopener" aria-label="Abrir mapa A3 de ANH en el visor"><img data-map-preview src="assets/maps/previews/anh_a3_preview.jpg" alt="Mapa A3 de Tolima con episodios térmicos, áreas contractuales, yacimientos y pozos de la Agencia Nacional de Hidrocarburos, con detalles de Ortega y San Luis." width="2200" height="1556" loading="lazy" decoding="async"><span>Ampliar mapa</span></a>
-          <figcaption><div><b>Mapa 3. ANH.</b> Detecciones térmicas, tierras contractuales, yacimientos y pozos. Como los pozos son puntos, se analiza qué tan cerca están de los episodios, no qué superficie ocupan.</div><div class="figure-actions"><a data-a3-viewer target="_blank" rel="noopener">Visor A3</a><a data-a3-download>Descargar A3</a><a data-a0-viewer target="_blank" rel="noopener">Explorar A0</a><a data-a0-download target="_blank" rel="noopener noreferrer">A0 original</a></div></figcaption>
-        </figure>
-        <div class="evidence-grid">
-          <figure class="publication-figure"><img loading="lazy" decoding="async" src="assets/figures/svg/ANH/anh_01_proximidad_episodios_publicacion.svg" alt="Distribución de episodios según distancia respecto a las áreas ANH en los escenarios A y B."><figcaption><b>Figura 13.</b> Distancia de los episodios respecto a las áreas ANH.</figcaption></figure>
-          <figure class="publication-figure"><img loading="lazy" decoding="async" src="assets/figures/svg/ANH/anh_02_observado_vs_superficie_publicacion.svg" alt="Comparación de episodios observados y superficie para exploración, producción y yacimientos."><figcaption><b>Figura 14.</b> Episodios observados frente a la proporción del territorio ocupada por las áreas ANH.</figcaption></figure>
-        </div>
-        <details class="evidence-more"><summary>Ver cinco figuras complementarias</summary><div class="evidence-grid inside">
-          <figure class="publication-figure"><img loading="lazy" decoding="async" src="assets/figures/svg/ANH/anh_03a_contratos_exploracion_publicacion.svg" alt="Contratos de exploración con más episodios coincidentes."><figcaption><b>Figura 15.</b> Contratos de exploración.</figcaption></figure>
-          <figure class="publication-figure"><img loading="lazy" decoding="async" src="assets/figures/svg/ANH/anh_03b_contratos_produccion_publicacion.svg" alt="Contratos de producción con más episodios coincidentes."><figcaption><b>Figura 16.</b> Contratos de producción.</figcaption></figure>
-          <figure class="publication-figure"><img loading="lazy" decoding="async" src="assets/figures/svg/ANH/anh_04_municipios_directos_publicacion.svg" alt="Municipios con mayor número de episodios ubicados dentro de áreas ANH."><figcaption><b>Figura 17.</b> Distribución municipal.</figcaption></figure>
-          <figure class="publication-figure"><img loading="lazy" decoding="async" src="assets/figures/svg/ANH/anh_05_coberturas_directas_publicacion.svg" alt="Coberturas de la tierra más frecuentes entre los episodios directos ANH."><figcaption><b>Figura 18.</b> Coberturas de la tierra.</figcaption></figure>
-          <figure class="publication-figure"><img loading="lazy" decoding="async" src="assets/figures/svg/ANH/anh_06_pozos_proximidad_publicacion.svg" alt="Pozos con mayor número de episodios localizados dentro de cinco kilómetros."><figcaption><b>Figura 19.</b> Pozos y distancia de los episodios.</figcaption></figure>
-        </div></details>
-        <p class="chapter-document"><a href="documento.html?file=docs/04_ANH_v2.md&amp;title=Cap%C3%ADtulo%20ANH">Abrir capítulo analítico ANH →</a></p>
-      </section>
-
-      <section class="editorial-section paper-band" id="recurrencia" aria-labelledby="recurrencia-title">
-        <div class="reading-grid"><div class="section-label"><span>06</span> Recurrencia</div><div class="section-copy"><h2 id="recurrencia-title">Dos lugares donde la señal se repitió</h2><p class="lede">La recurrencia indica que en un mismo sector aparecieron señales térmicas en varias fechas del mes. Se calcula aparte de los episodios individuales y no identifica qué produjo esas señales.</p></div></div>
-        <div class="recurrence-comparison">
-          <article><header><span>Alta</span><h3>FT_001 · Ibagué</h3></header><dl><div><dt>Episodios / fechas</dt><dd>7 / 7</dd></div><div><dt>Periodo</dt><dd>24 días</dd></div><div><dt>Detecciones</dt><dd>8</dd></div><div><dt>Tipo de superficie</dt><dd>Zonas industriales o comerciales</dd></div><div><dt>Relación destacada</dt><dd>Coincidencia directa ANH</dd></div></dl></article>
-          <article><header><span>Media</span><h3>FT_002 · Ambalema</h3></header><dl><div><dt>Episodios / fechas</dt><dd>3 / 3</dd></div><div><dt>Periodo</dt><dd>10 días</dd></div><div><dt>Detecciones</dt><dd>7</dd></div><div><dt>Tipo de superficie</dt><dd>Mosaico de pastos con espacios naturales</dd></div><div><dt>Relación destacada</dt><dd>Coincidencia directa ANLA</dd></div></dl></article>
-        </div>
-      </section>
-
-      <section class="editorial-section" id="datos" aria-labelledby="datos-title">
-        <div class="reading-grid"><div class="section-label"><span>07</span> Reproducibilidad</div><div class="section-copy"><h2 id="datos-title">Datos y trazabilidad</h2><p class="lede">Las tablas derivadas y los capítulos metodológicos y analíticos se conservan junto a la publicación para facilitar la trazabilidad de cifras, definiciones y resultados.</p></div></div>
-        <nav class="resource-list" aria-label="Recursos de la publicación">
-          <a href="data/index.html"><span>01</span><strong>Tablas de resultados</strong><small>32 archivos CSV por institución y comparación transversal</small><b>→</b></a>
-          <a href="docs/index.html"><span>02</span><strong>Documentación completa</strong><small>Metodología general y capítulos institucionales</small><b>→</b></a>
-          <a href="https://github.com/jcgomezga/incendios-tolima-2026" target="_blank" rel="noopener noreferrer"><span>03</span><strong>Repositorio GitHub</strong><small>Código, figuras, mapas y registro de cambios</small><b>↗</b></a>
-        </nav>
-      </section>
-
-      <section class="editorial-section references" id="fuentes" aria-labelledby="fuentes-title">
-        <div class="reading-grid"><div class="section-label"><span>08</span> Fuentes</div><div class="section-copy"><h2 id="fuentes-title">Referencias utilizadas</h2><p>Las fuentes externas definen los datos satelitales, las figuras institucionales y la cartografía base. Los resultados numéricos provienen de las tablas auditadas del proyecto.</p></div></div>
-        <ol class="bibliography">
-          <li><b>[1] NASA FIRMS.</b> <a href="https://firms.modaps.eosdis.nasa.gov/active_fire/" target="_blank" rel="noopener noreferrer">Active Fire Data: productos MODIS y VIIRS</a>; <a href="https://firms2.modaps.eosdis.nasa.gov/download/" target="_blank" rel="noopener noreferrer">aviso operativo sobre datos Suomi-NPP posteriores al 9 de marzo de 2026</a>.</li>
-          <li><a href="https://www.anm.gov.co/index.php/sector-minero-colombiano" target="_blank" rel="noopener noreferrer"><b>[2] Agencia Nacional de Minería.</b> Sector minero colombiano.</a></li>
-          <li><a href="https://www.anla.gov.co/seguimiento-de-licencias-ambientales/que-hacemos" target="_blank" rel="noopener noreferrer"><b>[3] ANLA.</b> Subdirección de Seguimiento de Licencias Ambientales.</a></li>
-          <li><a href="https://www.anh.gov.co/es/hidrocarburos/mapa-de-tierras/" target="_blank" rel="noopener noreferrer"><b>[4] Agencia Nacional de Hidrocarburos.</b> Mapa de Tierras, actualización del 6 de agosto de 2026.</a></li>
-          <li><a href="https://www.ideam.gov.co/nuestra-entidad/ecosistemas-e-informacion-ambiental/coberturas-de-la-tierra" target="_blank" rel="noopener noreferrer"><b>[5] IDEAM.</b> Coberturas de la Tierra.</a></li>
-          <li><a href="https://www.igac.gov.co/datos-abiertos/datos-abiertos-geoespaciales" target="_blank" rel="noopener noreferrer"><b>[6] IGAC.</b> Datos abiertos geoespaciales y cartografía básica.</a></li>
-          <li><a href="https://geoportal.dane.gov.co/mparcgis/rest/services/MGN2025/Serv_CapasMGN_2025/FeatureServer" target="_blank" rel="noopener noreferrer"><b>[7] DANE.</b> Marco Geoestadístico Nacional 2025.</a></li>
-        </ol>
-      </section>
-
-      <section class="citation-block" aria-labelledby="citar-title">
-        <div><p class="overline">Cómo citar</p><h2 id="citar-title">Cita sugerida</h2><p id="citation-text">Gómez García, Juan Carlos, y Wilmer Andrés Martínez Rodríguez. 2026. <i>Detecciones térmicas y zonas de posible intervención extractiva en Tolima, agosto de 2026</i>. Publicación cartográfica digital.</p></div>
-        <div><button type="button" class="copy-button" data-copy-citation>Copiar cita</button><span class="copy-status" data-copy-status aria-live="polite"></span></div>
-      </section>
-    </article>
-  </main>
-
-  <footer class="site-footer"><div><strong>Térmico &amp; territorio · Tolima 2026</strong><p>Detección térmica ≠ incendio confirmado · coincidencia espacial ≠ causalidad</p></div><nav aria-label="Enlaces finales"><a href="#inicio">Volver arriba</a><a href="docs/index.html">Documentación</a><a href="data/index.html">Datos</a></nav></footer>
-  <script src="assets/js/site-config.js"></script>
-  <script src="assets/js/app.js"></script>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<div aria-hidden="true" id="reading-progress"></div>
+<header class="site-header">
+<div class="nav-wrap">
+<a aria-label="Ir al inicio" class="brand" href="#inicio">
+<span aria-hidden="true" class="brand-index">TOL·26</span>
+<span class="brand-name">Térmico &amp; territorio</span>
+</a>
+<button aria-controls="site-navigation" aria-expanded="false" class="nav-toggle" data-mobile-nav="" type="button">Índice</button>
+<nav aria-label="Índice de la publicación" class="nav-links" id="site-navigation"><a href="#hallazgos">Hallazgos</a><a href="#anm">ANM</a><a href="#anla">ANLA</a><a href="#anh">ANH</a><a href="#como-leer">Cómo leer</a><a href="#metodo">Método</a><a href="#recurrencia">Recurrencia</a><a href="#fuentes">Fuentes</a></nav>
+<button aria-pressed="false" class="theme-toggle" data-theme-toggle="" type="button">Oscuro</button>
+</div>
+</header>
+<main id="contenido">
+<article>
+<header class="masthead" id="inicio">
+<div class="masthead-inner">
+<p class="overline">Atlas analítico · Tolima · agosto de 2026</p>
+<h1>Detecciones térmicas y zonas de posible intervención extractiva</h1>
+<p class="standfirst">Durante agosto de 2026 se identificaron <strong>409 episodios térmicos</strong> en Tolima. Los mapas muestran dónde aparecen estas señales y cómo coinciden con áreas registradas oficialmente para minería, licenciamiento ambiental e hidrocarburos. Puede ampliar cada mapa para recorrer el departamento en máxima resolución; los capítulos reúnen los gráficos, tablas y análisis detallados.</p>
+<p class="text-action"><a href="#hallazgos">Ver hallazgos →</a>&nbsp;&nbsp;&nbsp;<a href="#anm">Ir a los mapas ↓</a></p><div class="byline"><span>Elaborado por: <a href="https://www.linkedin.com/in/jcgomezga/" rel="noopener noreferrer" target="_blank"><strong>Juan Carlos Gómez García</strong></a>. Sociólogo. Estudiante de la Maestría en Estudios Socioambientales de la Facultad Latinoamericana de Ciencias Sociales, FLACSO Ecuador. Investigador socioambiental.<br/><a href="https://www.researchgate.net/profile/Wilmer-Andres-Martinez-Rodriguez?ev=hdr_xprf" rel="noopener noreferrer" target="_blank"><strong>Wilmer Andrés Martínez Rodríguez</strong></a>. Sociólogo, Maestrante en Desarrollo Rural. Investigador Grupo Yuma ima - UT.</span><span>Análisis principal: escenario B · cartografía: EPSG:9377</span></div>
+</div>
+</header>
+<section aria-labelledby="hallazgos-title" class="editorial-section" id="hallazgos">
+<div class="reading-grid">
+<div class="section-label"><span>01</span> Hallazgos</div>
+<div class="section-copy"><h2 id="hallazgos-title">Lo principal, de un vistazo</h2><p class="lede">De los 409 episodios analizados, <strong>31 % coincidió con áreas ANM</strong>, 35 % con áreas ANLA y <strong>46 % con áreas ANH</strong>. En los tres casos, la proporción de episodios dentro de estas zonas fue mayor que la proporción del territorio que ocupan.</p></div>
+</div>
+<div aria-label="Resultados principales del escenario B" class="result-ledger" role="group">
+<div class="ledger-head"><span>Registro oficial</span><span>Episodios que coinciden</span><span>Parte del territorio</span><span>Concentración relativa</span></div>
+<a href="#anm"><strong>ANM</strong><span>127 / 409 <small>31,05 %</small></span><span>18,63 %</span><span>1,666 <small>veces</small></span></a>
+<a href="#anla"><strong>ANLA</strong><span>143 / 409 <small>34,96 %</small></span><span>15,10 %</span><span>2,315 <small>veces</small></span></a>
+<a href="#anh"><strong>ANH</strong><span>187 / 409 <small>45,72 %</small></span><span>21,93 %</span><span>2,085 <small>veces</small></span></a>
+</div>
+<figure class="publication-figure breakout"><img alt="Comparación del porcentaje de superficie y el porcentaje de episodios observados para ANM, ANLA y ANH en el escenario B." height="1000" src="assets/figures/svg/GENERAL/figura_00_comparacion_institucional_B.svg" width="1800"/><figcaption><b>Figura 1.</b> Comparación entre la proporción de episodios observados dentro de cada conjunto de áreas y la proporción del territorio que esas áreas ocupan. Cada institución se analiza por separado.</figcaption></figure>
+<aside class="margin-note wide-note"><strong>Cómo interpretar la coincidencia.</strong> Estos patrones muestran una asociación espacial y ayudan a identificar zonas de interés para análisis posteriores. Por sí solos no determinan el origen de una detección térmica. Además, ANM, ANLA y ANH se analizan por separado: un mismo episodio puede aparecer en más de una comparación.</aside>
+</section>
+<section aria-labelledby="anm-title" class="agency-chapter" id="anm">
+<div class="chapter-intro"><div class="chapter-number">02</div><div><p class="overline">Agencia Nacional de Minería</p><h2 id="anm-title">Títulos y solicitudes mineras</h2><p class="lede">En el registro de la Agencia Nacional de Minería, 127 de los 409 episodios (31,05 %) coincidieron con títulos o solicitudes mineras. Estas áreas ocupan 18,63 % del territorio evaluado.</p></div></div>
+<dl class="chapter-metrics"><div><dt>Episodios que coinciden</dt><dd>127</dd></div><div><dt>% de episodios</dt><dd>31,05 %</dd></div><div><dt>% del territorio</dt><dd>18,63 %</dd></div><div><dt>Concentración relativa</dt><dd>1,666 ×</dd></div></dl>
+<figure class="atlas-map" data-map-card="anm">
+<a aria-label="Abrir mapa A3 de ANM en el visor" class="map-image-link" data-a3-viewer="" rel="noopener" target="_blank"><img alt="Mapa A3 de Tolima con episodios térmicos, títulos y solicitudes de la Agencia Nacional de Minería, y detalles de Ortega y San Luis." data-map-preview="" decoding="async" height="1556" loading="lazy" src="assets/maps/previews/anm_a3_preview.jpg" width="2200"/><span>Ampliar mapa</span></a>
+<figcaption><div><b>Mapa 1. ANM.</b> Detecciones térmicas frente a títulos y solicitudes mineras en Tolima. Amplíe el mapa para recorrer el departamento y consultar los detalles cartográficos.</div><div class="figure-actions"><a data-a3-viewer="" rel="noopener" target="_blank">Visor A3</a><a data-a3-download="">Descargar A3</a><a data-a0-viewer="" rel="noopener" target="_blank">Explorar A0</a><a data-a0-download="" rel="noopener noreferrer" target="_blank">A0 original</a></div></figcaption>
+</figure>
+<p class="chapter-document"><a href="documento.html?file=docs/02_ANM_v2.md&amp;title=Cap%C3%ADtulo%20ANM">Abrir capítulo analítico ANM →</a></p>
+<details class="evidence-more"><summary>Ver gráficos complementarios ANM</summary><div class="evidence-grid inside"><figure class="publication-figure"><img alt="Distribución de episodios según distancia respecto a las áreas ANM en los escenarios A y B." decoding="async" loading="lazy" src="assets/figures/svg/ANM/anm_01_proximidad_episodios_publicacion.svg"/><figcaption><b>Figura 2.</b> Distancia de los episodios respecto a las áreas ANM.</figcaption></figure><figure class="publication-figure"><img alt="Comparación de episodios observados y superficie para títulos y solicitudes mineras." decoding="async" loading="lazy" src="assets/figures/svg/ANM/anm_02_observado_vs_superficie_publicacion.svg"/><figcaption><b>Figura 3.</b> Episodios observados frente a la proporción del territorio ocupada por las áreas ANM.</figcaption></figure><figure class="publication-figure"><img alt="Solicitudes mineras con mayor número de episodios coincidentes." decoding="async" loading="lazy" src="assets/figures/svg/ANM/anm_03a_solicitudes_principales_publicacion.svg"/><figcaption><b>Figura 4.</b> Solicitudes principales.</figcaption></figure><figure class="publication-figure"><img alt="Títulos mineros con mayor número de episodios coincidentes." decoding="async" loading="lazy" src="assets/figures/svg/ANM/anm_03b_titulos_principales_publicacion.svg"/><figcaption><b>Figura 5.</b> Títulos principales.</figcaption></figure><figure class="publication-figure"><img alt="Municipios con mayor coincidencia directa con figuras ANM." decoding="async" loading="lazy" src="assets/figures/svg/ANM/anm_04_municipios_directos_publicacion.svg"/><figcaption><b>Figura 6.</b> Distribución municipal.</figcaption></figure><figure class="publication-figure"><img alt="Coberturas de la tierra más frecuentes entre los episodios directos ANM." decoding="async" loading="lazy" src="assets/figures/svg/ANM/anm_05_coberturas_directas_publicacion_v2.svg"/><figcaption><b>Figura 7.</b> Coberturas de la tierra.</figcaption></figure></div></details>
+</section>
+<section aria-labelledby="anla-title" class="agency-chapter chapter-tint" id="anla">
+<div class="chapter-intro"><div class="chapter-number">03</div><div><p class="overline">Autoridad Nacional de Licencias Ambientales</p><h2 id="anla-title">Licenciamiento y seguimiento ambiental</h2><p class="lede">En las áreas registradas por la Autoridad Nacional de Licencias Ambientales, coincidieron 143 de los 409 episodios (34,96 %). Estas áreas representan 15,10 % del territorio evaluado.</p></div></div>
+<dl class="chapter-metrics"><div><dt>Episodios que coinciden</dt><dd>143</dd></div><div><dt>% de episodios</dt><dd>34,96 %</dd></div><div><dt>% del territorio</dt><dd>15,10 %</dd></div><div><dt>Concentración relativa</dt><dd>2,315 ×</dd></div></dl>
+<figure class="atlas-map" data-map-card="anla">
+<a aria-label="Abrir mapa A3 de ANLA en el visor" class="map-image-link" data-a3-viewer="" rel="noopener" target="_blank"><img alt="Mapa A3 de Tolima con episodios térmicos y áreas, líneas y puntos de la Autoridad Nacional de Licencias Ambientales, con detalles de Ortega y San Luis." data-map-preview="" decoding="async" height="1556" loading="lazy" src="assets/maps/previews/anla_a3_preview.jpg" width="2200"/><span>Ampliar mapa</span></a>
+<figcaption><div><b>Mapa 2. ANLA.</b> Detecciones térmicas frente a áreas, líneas y puntos de licenciamiento y seguimiento ambiental en Tolima. Amplíe el mapa para revisar el detalle territorial.</div><div class="figure-actions"><a data-a3-viewer="" rel="noopener" target="_blank">Visor A3</a><a data-a3-download="">Descargar A3</a><a data-a0-viewer="" rel="noopener" target="_blank">Explorar A0</a><a data-a0-download="" rel="noopener noreferrer" target="_blank">A0 original</a></div></figcaption>
+</figure>
+<p class="chapter-document"><a href="documento.html?file=docs/03_ANLA_v2.md&amp;title=Cap%C3%ADtulo%20ANLA">Abrir capítulo analítico ANLA →</a></p>
+<details class="evidence-more"><summary>Ver gráficos complementarios ANLA</summary><div class="evidence-grid inside"><figure class="publication-figure"><img alt="Distribución de episodios según proximidad a áreas ANLA en los escenarios A y B." decoding="async" loading="lazy" src="assets/figures/svg/ANLA/anla_01_proximidad_episodios_publicacion.svg"/><figcaption><b>Figura 8.</b> Distancia de los episodios respecto a las áreas ANLA.</figcaption></figure><figure class="publication-figure"><img alt="Comparación del porcentaje de episodios observados y la proporción del territorio ocupada por áreas ANLA." decoding="async" loading="lazy" src="assets/figures/svg/ANLA/anla_02_observado_vs_superficie_publicacion.svg"/><figcaption><b>Figura 9.</b> Episodios observados frente a la proporción del territorio ocupada por las áreas ANLA.</figcaption></figure><figure class="publication-figure"><img alt="Expedientes ANLA con mayor número de episodios coincidentes." decoding="async" loading="lazy" src="assets/figures/svg/ANLA/anla_03_expedientes_principales_publicacion.svg"/><figcaption><b>Figura 10.</b> Expedientes principales.</figcaption></figure><figure class="publication-figure"><img alt="Municipios con mayor coincidencia directa con áreas ANLA." decoding="async" loading="lazy" src="assets/figures/svg/ANLA/anla_04_municipios_directos_publicacion.svg"/><figcaption><b>Figura 11.</b> Distribución municipal.</figcaption></figure><figure class="publication-figure"><img alt="Coberturas de la tierra más frecuentes entre los episodios directos ANLA." decoding="async" loading="lazy" src="assets/figures/svg/ANLA/anla_05_coberturas_directas_publicacion.svg"/><figcaption><b>Figura 12.</b> Coberturas de la tierra.</figcaption></figure></div></details>
+</section>
+<section aria-labelledby="anh-title" class="agency-chapter" id="anh">
+<div class="chapter-intro"><div class="chapter-number">04</div><div><p class="overline">Agencia Nacional de Hidrocarburos</p><h2 id="anh-title">Tierras contractuales, yacimientos y pozos</h2><p class="lede">En las áreas de hidrocarburos consideradas para el análisis coincidieron 187 de los 409 episodios (45,72 %). Estas áreas ocupan 21,93 % del territorio evaluado.</p></div></div>
+<dl class="chapter-metrics"><div><dt>Episodios que coinciden</dt><dd>187</dd></div><div><dt>% de episodios</dt><dd>45,72 %</dd></div><div><dt>% del territorio</dt><dd>21,93 %</dd></div><div><dt>Concentración relativa</dt><dd>2,085 ×</dd></div></dl>
+<figure class="atlas-map" data-map-card="anh">
+<a aria-label="Abrir mapa A3 de ANH en el visor" class="map-image-link" data-a3-viewer="" rel="noopener" target="_blank"><img alt="Mapa A3 de Tolima con episodios térmicos, áreas contractuales, yacimientos y pozos de la Agencia Nacional de Hidrocarburos, con detalles de Ortega y San Luis." data-map-preview="" decoding="async" height="1556" loading="lazy" src="assets/maps/previews/anh_a3_preview.jpg" width="2200"/><span>Ampliar mapa</span></a>
+<figcaption><div><b>Mapa 3. ANH.</b> Detecciones térmicas frente a tierras contractuales, yacimientos y pozos de hidrocarburos en Tolima. Amplíe el mapa para revisar el detalle territorial.</div><div class="figure-actions"><a data-a3-viewer="" rel="noopener" target="_blank">Visor A3</a><a data-a3-download="">Descargar A3</a><a data-a0-viewer="" rel="noopener" target="_blank">Explorar A0</a><a data-a0-download="" rel="noopener noreferrer" target="_blank">A0 original</a></div></figcaption>
+</figure>
+<p class="chapter-document"><a href="documento.html?file=docs/04_ANH_v2.md&amp;title=Cap%C3%ADtulo%20ANH">Abrir capítulo analítico ANH →</a></p>
+<details class="evidence-more"><summary>Ver gráficos complementarios ANH</summary><div class="evidence-grid inside"><figure class="publication-figure"><img alt="Distribución de episodios según distancia respecto a las áreas ANH en los escenarios A y B." decoding="async" loading="lazy" src="assets/figures/svg/ANH/anh_01_proximidad_episodios_publicacion.svg"/><figcaption><b>Figura 13.</b> Distancia de los episodios respecto a las áreas ANH.</figcaption></figure><figure class="publication-figure"><img alt="Comparación de episodios observados y superficie para exploración, producción y yacimientos." decoding="async" loading="lazy" src="assets/figures/svg/ANH/anh_02_observado_vs_superficie_publicacion.svg"/><figcaption><b>Figura 14.</b> Episodios observados frente a la proporción del territorio ocupada por las áreas ANH.</figcaption></figure><figure class="publication-figure"><img alt="Contratos de exploración con más episodios coincidentes." decoding="async" loading="lazy" src="assets/figures/svg/ANH/anh_03a_contratos_exploracion_publicacion.svg"/><figcaption><b>Figura 15.</b> Contratos de exploración.</figcaption></figure><figure class="publication-figure"><img alt="Contratos de producción con más episodios coincidentes." decoding="async" loading="lazy" src="assets/figures/svg/ANH/anh_03b_contratos_produccion_publicacion.svg"/><figcaption><b>Figura 16.</b> Contratos de producción.</figcaption></figure><figure class="publication-figure"><img alt="Municipios con mayor número de episodios ubicados dentro de áreas ANH." decoding="async" loading="lazy" src="assets/figures/svg/ANH/anh_04_municipios_directos_publicacion.svg"/><figcaption><b>Figura 17.</b> Distribución municipal.</figcaption></figure><figure class="publication-figure"><img alt="Coberturas de la tierra más frecuentes entre los episodios directos ANH." decoding="async" loading="lazy" src="assets/figures/svg/ANH/anh_05_coberturas_directas_publicacion.svg"/><figcaption><b>Figura 18.</b> Coberturas de la tierra.</figcaption></figure><figure class="publication-figure"><img alt="Pozos con mayor número de episodios localizados dentro de cinco kilómetros." decoding="async" loading="lazy" src="assets/figures/svg/ANH/anh_06_pozos_proximidad_publicacion.svg"/><figcaption><b>Figura 19.</b> Pozos y distancia de los episodios.</figcaption></figure></div></details>
+</section>
+<section aria-labelledby="como-leer-title" class="editorial-section paper-band" id="como-leer">
+<div class="reading-grid">
+<div class="section-label"><span>05</span> Entender</div>
+<div class="section-copy"><h2 id="como-leer-title">¿Qué significan las coincidencias y las cifras?</h2><p class="lede">Si quiere ir más allá de los mapas, estas definiciones explican de manera sencilla cómo se construyeron los resultados y qué significa cada concepto.</p></div>
+</div>
+<div class="method-notes">
+<p><strong>Detección térmica (foco de calor)</strong><br/>Es un punto donde un satélite detectó una temperatura o señal térmica anómala. Puede corresponder a fuego, pero <b>no equivale por sí sola a un incendio confirmado</b>.</p>
+<p><strong>Episodio térmico</strong><br/>Es un grupo de una o más detecciones cercanas entre sí. Aquí se agrupan señales separadas por no más de 1 km y 12 horas para evitar contar varias observaciones del mismo fenómeno como eventos distintos.</p>
+<p><strong>Área institucional</strong><br/>Es el conjunto de zonas que aparece en los registros oficiales utilizados: por ejemplo, títulos y solicitudes mineras, áreas ANLA o tierras contractuales ANH.</p>
+<p><strong>Coincidencia directa</strong><br/>Ocurre cuando al menos una detección de un episodio cae dentro de una de esas áreas en el mapa. Es una coincidencia de ubicación.</p>
+<p><strong>Proximidad</strong><br/>Cuando el episodio queda por fuera del área, se mide qué tan lejos está: hasta 1 km, entre 1 y 5 km o a más de 5 km.</p>
+<p><strong>Superficie y valor esperado</strong><br/>La superficie indica qué porcentaje del territorio ocupa cada conjunto de áreas. El valor esperado pregunta: “si los episodios se repartieran solo en proporción al tamaño de esas áreas, ¿cuántos esperaríamos encontrar dentro?”. Es una referencia descriptiva, no una predicción de incendios.</p>
+<p><strong>Concentración relativa (índice de enriquecimiento)</strong><br/>Compara el porcentaje de episodios observado con el porcentaje de territorio ocupado. Un valor de 1 indica proporciones parecidas; 2 significa que la proporción de episodios es aproximadamente el doble de la proporción territorial.</p>
+<p><strong>Escenarios A y B</strong><br/>B es el análisis principal y excluye observaciones Suomi-NPP posteriores a una advertencia de calidad de NASA. A incluye todos los sensores y se usa como control: si A y B se parecen, el resultado cambia poco al tomar esa decisión.</p>
+<p><strong>Recurrencia</strong><br/>Describe un lugar donde las señales térmicas se repitieron en varias fechas durante el mes. “Recurrente” significa repetición de la señal, no incendio repetido ni una fuente de origen conocida.</p>
+<p><strong>Cobertura de la tierra</strong><br/>Describe el tipo de superficie cartografiada, por ejemplo arroz, pastos, bosque o zona urbana. Sirve para conocer el contexto del lugar, pero no explica por sí sola por qué apareció una señal térmica.</p>
+<p><strong>Punto, línea y polígono</strong><br/>Son formas de representar elementos en un mapa. Un pozo puede ser un punto, un ducto una línea y un área contractual un polígono. Por eso no todos se comparan de la misma manera.</p>
+<p><strong>Superposición o solapamiento</strong><br/>Ocurre cuando dos áreas ocupan parte del mismo espacio. Un episodio puede quedar dentro de ambas; por eso algunos conteos no deben sumarse como si fueran casos diferentes.</p>
+</div>
+</section>
+<section aria-labelledby="metodo-title" class="editorial-section paper-band" id="metodo">
+<div class="reading-grid">
+<div class="section-label"><span>06</span> Método</div>
+<div class="section-copy"><h2 id="metodo-title">De una detección satelital a un episodio espacial</h2><p class="lede">NASA FIRMS distribuye detecciones satelitales de fuego activo y anomalías térmicas —puntos donde los sensores registran una señal de calor inusual— derivadas de MODIS y VIIRS <a class="citation" href="https://firms.modaps.eosdis.nasa.gov/active_fire/" rel="noopener noreferrer" target="_blank">[1]</a>. Aquí se agrupan y comparan con conjuntos de áreas institucionales; no se convierten automáticamente en incendios ni en áreas quemadas.</p></div>
+</div>
+<ol class="method-sequence">
+<li><span>01</span><div><h3>Observación</h3><p>Detecciones térmicas (hotspots) FIRMS de agosto de 2026. El escenario B excluye 597 observaciones VIIRS Suomi-NPP porque NASA FIRMS advierte que los datos recibidos desde ese satélite después del 9 de marzo de 2026 pueden no cumplir las especificaciones de misión debido a una anomalía. El escenario A conserva todos los sensores como análisis de sensibilidad; la exclusión no implica una invalidación general de VIIRS Suomi-NPP.</p></div></li>
+<li><span>02</span><div><h3>Agrupación</h3><p>Las detecciones cercanas se reúnen en episodios: si varias señales aparecen dentro de 1.000 metros y una ventana de 12 horas, se tratan como parte de un mismo episodio térmico. El escenario principal contiene 409 episodios.</p></div></li>
+<li><span>03</span><div><h3>Relación espacial</h3><p>Se llama coincidencia directa cuando al menos una detección cae dentro del área institucional. Si queda por fuera, se mide la distancia mínima: hasta 1 km, entre 1 y 5 km o a más de 5 km.</p></div></li>
+<li><span>04</span><div><h3>Control territorial</h3><p>Para las áreas dibujadas como polígonos se tiene en cuenta cuánto territorio ocupan, de modo que un conjunto de áreas muy grande no parezca importante solo por su tamaño. Los puntos y las líneas —como pozos o ductos— se estudian por distancia.</p></div></li>
+</ol>
+<div class="method-notes">
+<p><strong>CRS de análisis</strong><br/>MAGNA-SIRGAS 2018 / Origen-Nacional, EPSG:9377.</p>
+<p><strong>Límite cartográfico</strong><br/><code>scan × track</code> no equivale a área quemada. Una cicatriz requiere validación independiente con imágenes y criterios espectrales.</p>
+</div>
+<p class="text-action"><a href="documento.html?file=docs/01_metodologia_general_v2.md&amp;title=Metodolog%C3%ADa%20general">Leer la metodología completa →</a></p>
+</section>
+<section aria-labelledby="recurrencia-title" class="editorial-section paper-band" id="recurrencia">
+<div class="reading-grid"><div class="section-label"><span>07</span> Recurrencia</div><div class="section-copy"><h2 id="recurrencia-title">Dos lugares donde la señal se repitió</h2><p class="lede">La recurrencia indica que en un mismo sector aparecieron señales térmicas en varias fechas del mes. Se calcula aparte de los episodios individuales y no identifica qué produjo esas señales.</p></div></div>
+<div class="recurrence-comparison">
+<article><header><span>Alta</span><h3>FT_001 · Ibagué</h3></header><dl><div><dt>Episodios / fechas</dt><dd>7 / 7</dd></div><div><dt>Periodo</dt><dd>24 días</dd></div><div><dt>Detecciones</dt><dd>8</dd></div><div><dt>Tipo de superficie</dt><dd>Zonas industriales o comerciales</dd></div><div><dt>Relación destacada</dt><dd>Coincidencia directa ANH</dd></div></dl></article>
+<article><header><span>Media</span><h3>FT_002 · Ambalema</h3></header><dl><div><dt>Episodios / fechas</dt><dd>3 / 3</dd></div><div><dt>Periodo</dt><dd>10 días</dd></div><div><dt>Detecciones</dt><dd>7</dd></div><div><dt>Tipo de superficie</dt><dd>Mosaico de pastos con espacios naturales</dd></div><div><dt>Relación destacada</dt><dd>Coincidencia directa ANLA</dd></div></dl></article>
+</div>
+</section>
+<section aria-labelledby="datos-title" class="editorial-section" id="datos">
+<div class="reading-grid"><div class="section-label"><span>08</span> Reproducibilidad</div><div class="section-copy"><h2 id="datos-title">Datos y trazabilidad</h2><p class="lede">Las tablas derivadas y los capítulos metodológicos y analíticos se conservan junto a la publicación para facilitar la trazabilidad de cifras, definiciones y resultados.</p></div></div>
+<nav aria-label="Recursos de la publicación" class="resource-list">
+<a href="data/index.html"><span>01</span><strong>Tablas de resultados</strong><small>32 archivos CSV por institución y comparación transversal</small><b>→</b></a>
+<a href="docs/index.html"><span>02</span><strong>Documentación completa</strong><small>Metodología general y capítulos institucionales</small><b>→</b></a>
+<a href="https://github.com/jcgomezga/incendios-tolima-2026" rel="noopener noreferrer" target="_blank"><span>03</span><strong>Repositorio GitHub</strong><small>Código, figuras, mapas y registro de cambios</small><b>↗</b></a>
+</nav>
+</section>
+<section aria-labelledby="fuentes-title" class="editorial-section references" id="fuentes">
+<div class="reading-grid"><div class="section-label"><span>09</span> Fuentes</div><div class="section-copy"><h2 id="fuentes-title">Referencias utilizadas</h2><p>Las fuentes externas definen los datos satelitales, las figuras institucionales y la cartografía base. Los resultados numéricos provienen de las tablas auditadas del proyecto.</p></div></div>
+<ol class="bibliography">
+<li><b>[1] NASA FIRMS.</b> <a href="https://firms.modaps.eosdis.nasa.gov/active_fire/" rel="noopener noreferrer" target="_blank">Active Fire Data: productos MODIS y VIIRS</a>; <a href="https://firms2.modaps.eosdis.nasa.gov/download/" rel="noopener noreferrer" target="_blank">aviso operativo sobre datos Suomi-NPP posteriores al 9 de marzo de 2026</a>.</li>
+<li><a href="https://www.anm.gov.co/index.php/sector-minero-colombiano" rel="noopener noreferrer" target="_blank"><b>[2] Agencia Nacional de Minería.</b> Sector minero colombiano.</a></li>
+<li><a href="https://www.anla.gov.co/seguimiento-de-licencias-ambientales/que-hacemos" rel="noopener noreferrer" target="_blank"><b>[3] ANLA.</b> Subdirección de Seguimiento de Licencias Ambientales.</a></li>
+<li><a href="https://www.anh.gov.co/es/hidrocarburos/mapa-de-tierras/" rel="noopener noreferrer" target="_blank"><b>[4] Agencia Nacional de Hidrocarburos.</b> Mapa de Tierras, actualización del 6 de agosto de 2026.</a></li>
+<li><a href="https://www.ideam.gov.co/nuestra-entidad/ecosistemas-e-informacion-ambiental/coberturas-de-la-tierra" rel="noopener noreferrer" target="_blank"><b>[5] IDEAM.</b> Coberturas de la Tierra.</a></li>
+<li><a href="https://www.igac.gov.co/datos-abiertos/datos-abiertos-geoespaciales" rel="noopener noreferrer" target="_blank"><b>[6] IGAC.</b> Datos abiertos geoespaciales y cartografía básica.</a></li>
+<li><a href="https://geoportal.dane.gov.co/mparcgis/rest/services/MGN2025/Serv_CapasMGN_2025/FeatureServer" rel="noopener noreferrer" target="_blank"><b>[7] DANE.</b> Marco Geoestadístico Nacional 2025.</a></li>
+</ol>
+</section>
+<section aria-labelledby="citar-title" class="citation-block">
+<div><p class="overline">Cómo citar</p><h2 id="citar-title">Cita sugerida</h2><p id="citation-text">Gómez García, Juan Carlos, y Wilmer Andrés Martínez Rodríguez. 2026. <i>Detecciones térmicas y zonas de posible intervención extractiva en Tolima, agosto de 2026</i>. Publicación cartográfica digital.</p></div>
+<div><button class="copy-button" data-copy-citation="" type="button">Copiar cita</button><span aria-live="polite" class="copy-status" data-copy-status=""></span></div>
+</section>
+</article>
+</main>
+<footer class="site-footer"><div><strong>Térmico &amp; territorio · Tolima 2026</strong><p>Mapas, datos y análisis espacial sobre las detecciones térmicas de agosto de 2026 en Tolima.</p></div><nav aria-label="Enlaces finales"><a href="#inicio">Volver arriba</a><a href="docs/index.html">Documentación</a><a href="data/index.html">Datos</a></nav></footer>
+<script src="assets/js/site-config.js"></script>
+<script src="assets/js/app.js"></script>
 </body>
 </html>
