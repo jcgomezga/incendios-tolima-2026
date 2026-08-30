@@ -21,6 +21,10 @@ rsync -a \
   --exclude 'REVISION_CIENTIFICA.md' \
   "$ROOT/" "$SITE/"
 
+# Instala la etiqueta de Google Analytics en todas las páginas HTML publicadas
+# y enlaza el seguimiento de eventos de mapas, capítulos y descargas.
+python "$ROOT/tools/inject_analytics.py" "$SITE"
+
 bash "$ROOT/tools/generate_dzi.sh" "$ROOT/assets/maps" "$SITE/assets/maps/dzi"
 python "$ROOT/tools/check_site.py" "$SITE"
 
