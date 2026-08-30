@@ -126,3 +126,18 @@ No se agregaron DOI, autores, fechas, títulos o referencias no verificadas.
 - `bash -n` en los dos scripts de construcción: correcto después de normalizar finales de línea.
 - `tools/check_maps.py`: resultado `LISTO`, con advertencias de tamaño >50 MiB para mapas principales.
 - `tools/check_site.py` sobre el árbol fuente: únicamente tres errores DZI esperados por tratarse de recursos generados durante el despliegue.
+
+## 10. Reorganización narrativa para lectura web
+
+Se realizó una segunda reorganización de la página principal orientada a lectura rápida y divulgación pública, sin alterar cifras, datos, mapas ni resultados científicos:
+
+- El recorrido principal pasó a ser: **introducción breve → hallazgo comparativo → gráfica general → mapa ANM → mapa ANLA → mapa ANH → explicación conceptual → metodología**.
+- Se retiró de la apertura la ficha extensa de indicadores para reducir el tiempo hasta el primer resultado y el primer mapa.
+- Los tres mapas institucionales se convirtieron en el núcleo visual de la página; cada uno conserva únicamente un resumen cuantitativo breve y el acceso al capítulo analítico completo.
+- Las 18 figuras institucionales complementarias permanecen disponibles, pero ahora están plegadas bajo controles “Ver gráficos complementarios”, para no interrumpir el recorrido cartográfico principal.
+- El glosario de conceptos se desplazó después de los mapas y se presenta como material para profundizar, no como requisito previo para comprender los hallazgos.
+- Se concentró la cautela causal en una advertencia interpretativa general, evitando repetir la misma salvedad en cada bloque de la página principal. Los capítulos metodológicos conservan las precisiones científicas completas.
+- Se simplificaron expresiones visibles como “huella institucional” en favor de “área institucional” cuando el término técnico no era indispensable.
+- Se mantuvieron intactas las cifras centrales: ANM 127/409; ANLA 143/409; ANH 187/409, así como sus porcentajes territoriales e índices relativos.
+
+La finalidad de este cambio es que una persona pueda comprender el mensaje central y acceder a los mapas en los primeros momentos de navegación, mientras la explicación metodológica y la trazabilidad permanecen disponibles para quienes deseen profundizar.
