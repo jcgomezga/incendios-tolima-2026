@@ -136,7 +136,7 @@ En B, la coincidencia directa es:
 | ANLA | 143 | 34,96 % | 15,10 % | 61,76 | 2,315 |
 | ANH | 187 | 45,72 % | 21,93 % | 89,69 | 2,085 |
 
-**[Insertar Figura GENERAL-1: `../02_figuras/GENERAL/figura_00_comparacion_institucional_B`]**
+![Comparación institucional entre ANM, ANLA y ANH en el escenario B.](assets/figures/svg/GENERAL/figura_00_comparacion_institucional_B.svg)
 
 Estas cifras **no son aditivas**. Un mismo episodio puede coincidir con huellas de más de una institución. La comparación sirve para describir patrones institucionales diferentes, no para construir un total de episodios “extractivos”.
 
@@ -146,21 +146,7 @@ El diseño permite responder dónde se concentran las anomalías térmicas respe
 
 No permite determinar por sí solo la causa de un episodio. Una investigación causal de casos específicos requeriría combinar fechas y coordenadas con imágenes de mayor resolución, cicatrices espectrales, registros operativos, información de quemas, reportes oficiales de incendios, registros administrativos detallados y, cuando sea posible, verificación de campo.
 
-## Fuentes metodológicas e institucionales
-
-### Fuentes del proyecto
-
-- `00_LEER_PRIMERO_CONTINUIDAD.md`.
-- `02_AUDITORIA_PAQUETE_123058.md`.
-- `resumen_proximidad_institucion.csv`.
-- `resumen_directo_figuras.csv`.
-- `distribucion_municipio_cobertura.csv`.
-- `candidatos_recurrentes_institucion.csv`.
-- `inventario_fuentes_institucionales.csv`.
-- `relaciones_detalladas_fuentes.csv`.
-- `resumen_fuentes_nombres.csv`.
-
-### Referencias institucionales y técnicas para la versión final
+## Referencias institucionales y técnicas
 
 - [NASA FIRMS. *Active Fire Data*](https://firms.modaps.eosdis.nasa.gov/active_fire/) y documentación de detecciones de fuego activo/anomalías térmicas.
 - [República de Colombia. Ley 685 de 2001](https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=9202), artículo 45.
