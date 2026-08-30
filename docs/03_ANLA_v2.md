@@ -1,6 +1,6 @@
 # Capítulo 3. ANLA: detecciones térmicas frente a áreas de licenciamiento y seguimiento ambiental en Tolima
 
-## 3.1. ¿Qué representa la información de la ANLA?
+## 3.1. Qué representa la información de la ANLA
 
 La Autoridad Nacional de Licencias Ambientales (ANLA) administra información sobre proyectos, obras y actividades sometidos a evaluación, licenciamiento, instrumentos de manejo y control y seguimiento ambiental. En términos sencillos, que un proyecto aparezca en las capas de la ANLA significa que existe una relación administrativa y ambiental documentada con ese proyecto; no significa, por sí sola, que el proyecto estuviera operando en el lugar y momento de una detección térmica.
 
@@ -12,7 +12,7 @@ Aplicando el diseño metodológico del Capítulo 1, el paquete académico contie
 
 El servicio geográfico oficial de ANLA utiliza códigos sectoriales. La verificación contra el Feature Service público permite traducir los códigos presentes en el paquete: 101 corresponde a **Hidrocarburos** y 103 a **Minería**. Entre los 29 expedientes de área que presentan al menos una coincidencia directa con episodios B, 28 corresponden al sector Hidrocarburos y 1 al sector Minería. El expediente minero es LAM1499, asociado en la fuente a explotación de calizas en Payandé–La Esmeralda.
 
-El campo normalizado `source_status` no contiene valores para los 192 registros ANLA del paquete (0 valores no nulos). Por esa razón, este capítulo **no asigna estados actuales como “activo” o “inactivo”**. Algunos registros originales incluyen descripciones administrativas —por ejemplo, `ARCHIVADO`—, pero esas descripciones no se transforman aquí en un estado general del expediente. Si la versión final requiere afirmar el estado jurídico o administrativo actual de un expediente específico, deberá verificarse individualmente en ANLA.
+El campo normalizado `source_status` no contiene valores para los 192 registros ANLA del paquete (0 valores no nulos). Por esa razón, este capítulo **no asigna estados actuales como “activo” o “inactivo”**. Algunos registros originales incluyen descripciones administrativas —por ejemplo, `ARCHIVADO`—, pero esas descripciones no se transforman aquí en un estado general del expediente. El estado jurídico o administrativo vigente de un expediente solo puede establecerse mediante una verificación individual en la fuente oficial de la ANLA y no se infiere de las geometrías analizadas.
 
 ## 3.3. Patrón general de proximidad
 
@@ -81,7 +81,7 @@ Entre las líneas con mayor número de episodios B ubicados a menos de cinco kil
 
 Entre los puntos, el **Pozo Productor de Gas Montañuelo 1 (LAM0966)** presenta 24 episodios a menos de cinco kilómetros y una distancia mínima aproximada de 194 m; la **reactivación de cuatro pozos en el Bloque La Pola (LAM3842)**, 10 episodios; y la **Perforación Pozo Don Pedro (LAM3387)**, 8.
 
-Estas cifras son contextuales y no deben sumarse a los 143 episodios directos de áreas: las mismas unidades térmicas pueden aparecer simultáneamente próximas a varias líneas, puntos y polígonos. La tabla suplementaria `ANLA_tabla_07_lineas_puntos_contexto.csv` conserva el detalle.
+Estas cifras son contextuales y no deben sumarse a los 143 episodios directos de áreas: las mismas unidades térmicas pueden aparecer simultáneamente próximas a varias líneas, puntos y polígonos. La tabla suplementaria `data/tables/ANLA/ANLA_tabla_07_lineas_puntos_contexto.csv` conserva el detalle.
 
 ## 3.8. Distribución municipal
 
@@ -119,7 +119,7 @@ El resultado ANLA presenta una concentración espacial clara: 34,96 % de los epi
 
 La distribución no es uniforme entre expedientes. LAM2537 y LAM4750 reúnen los mayores conteos de episodios, y varios de los principales registros corresponden, según los nombres y códigos oficiales de ANLA, al sector de hidrocarburos. Al mismo tiempo, la distribución municipal y de coberturas muestra que las coincidencias se insertan en territorios con actividades agropecuarias, infraestructura, vegetación natural y usos diversos.
 
-Por ello, el enriquecimiento de 2,315 debe entenderse como una señal para profundizar la investigación, no como una prueba de causalidad. Para evaluar un episodio concreto sería necesario contrastar su fecha, localización y evolución con el expediente administrativo, imágenes satelitales de mayor resolución, registros operativos, reportes de incendios o quemas, cicatrices espectrales y, cuando sea posible, verificación de campo.
+Por ello, el enriquecimiento de 2,315 describe una concentración relativa que requiere evidencia independiente para cualquier interpretación causal; no constituye una prueba de causalidad. Para evaluar un episodio concreto sería necesario contrastar su fecha, localización y evolución con el expediente administrativo, imágenes satelitales de mayor resolución, registros operativos, reportes de incendios o quemas, cicatrices espectrales y, cuando sea posible, verificación de campo.
 
 ## 3.12. Síntesis
 
@@ -133,11 +133,10 @@ El capítulo ANLA deja cinco resultados principales:
 
 ### Producto cartográfico publicado
 
-El A3 se encuentra en `assets/maps/anla_a3.jpg` y el A0 web en `assets/maps/anla_a0_web.jpg`. La página usa `assets/maps/previews/anla_a3_preview.jpg`; el A0 se sirve mediante una pirámide DZI generada automáticamente.
+El A3 se encuentra en `assets/maps/anla_a3.jpg` y el A0 web en `assets/maps/anla_a0_web.jpg`. La página usa `assets/maps/previews/anla_a3_preview.jpg`; el A0 se sirve mediante una pirámide DZI generada durante el despliegue del sitio.
 
 El mapa muestra áreas de licencia/seguimiento extractivo, episodios B, FT_001 y FT_002, coberturas IDEAM 2024, vías, hidrografía y límites municipales. Las líneas y puntos ANLA se representan como contexto de proximidad cuando la escala permite su lectura sin saturar el mapa.
 
-## Verificación institucional externa
+## Referencias institucionales
 - [Autoridad Nacional de Licencias Ambientales. *Control y Seguimiento*](https://www.anla.gov.co/seguimiento-de-licencias-ambientales/que-hacemos). Consulta: 29 de agosto de 2026.
-- [Autoridad Nacional de Licencias Ambientales. *Subdirección de Seguimiento de Licencias Ambientales: ¿Qué hacemos?*](https://www.anla.gov.co/seguimiento-de-licencias-ambientales/que-hacemos). Consulta: 29 de agosto de 2026.
-- ANLA, servicio geográfico público `PROYECTOS_ANLA`, dominio del campo `sector`: 101 Hidrocarburos, 102 Infraestructura, 103 Minería, 104 Energía y 105 Agroquímicos. Consulta: 29 de agosto de 2026.
+- [ANLA. Servicio geográfico público `PROYECTOS_ANLA`](https://portalsig.anla.gov.co/publico/rest/services/PROYECTOS_ANLA/ProyectosANLA/MapServer/layers), dominio del campo `sector`: 101 Hidrocarburos, 102 Infraestructura, 103 Minería, 104 Energía y 105 Agroquímicos. Consulta: 29 de agosto de 2026.
