@@ -11,6 +11,7 @@
   const missing = document.getElementById("viewer-missing");
   const osdEl = document.getElementById("osd-viewer");
   const compactDevice = window.matchMedia("(max-width: 760px)").matches || /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  const isMediumMap = /mapa mediano/i.test(title);
 
   document.title = title + " · Visor";
   if (titleEl) titleEl.textContent = title;
@@ -30,10 +31,12 @@
     originalLink.href = original;
     originalLink.target = "_blank";
     originalLink.rel = "noopener noreferrer";
+    originalLink.textContent = isMediumMap ? "Abrir mapa mediano original" : "Abrir mapa completo";
   }
 
   if (download && original) {
     download.href = original;
+    download.textContent = isMediumMap ? "Descargar mapa mediano" : "Descargar alta resolución";
     if (!/^https?:\/\//i.test(original)) download.download = "";
     else {
       download.target = "_blank";
@@ -42,7 +45,7 @@
   }
 
   if (!window.OpenSeadragon) {
-    showError("El componente interactivo no se cargó. Usa “Abrir mapa completo”.");
+    showError("El componente interactivo no se cargó. Usa el enlace al archivo original.");
     return;
   }
 
@@ -81,8 +84,8 @@
 
   viewer.addHandler("open-failed", function () {
     showError(isDzi
-      ? "No fue posible cargar las teselas del mapa. Comprueba la conexión o usa “Abrir mapa completo” para acceder al archivo original."
-      : "El archivo no se encontró o el navegador no pudo decodificarlo. Usa “Abrir mapa completo”.");
+      ? "No fue posible cargar las teselas del mapa. Comprueba la conexión o abre el archivo original."
+      : "El archivo no se encontró o el navegador no pudo decodificarlo. Abre el archivo original.");
   });
 
   document.querySelector("[data-zoom-in]")?.addEventListener("click", function () { viewer.viewport.zoomBy(1.45); });
