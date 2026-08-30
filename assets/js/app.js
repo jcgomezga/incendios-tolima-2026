@@ -94,6 +94,29 @@
     return link;
   }
 
+  function addQualityNote(card) {
+    const caption = card.querySelector("figcaption");
+    if (!caption || caption.querySelector("[data-map-quality-note]")) return;
+
+    const note = document.createElement("p");
+    note.dataset.mapQualityNote = "";
+    note.innerHTML = "<strong>Nota:</strong> Para obtener la mejor calidad y resolución, se recomienda descargar el mapa.";
+    note.style.gridColumn = "1 / -1";
+    note.style.margin = "0";
+    note.style.padding = "10px 12px";
+    note.style.borderLeft = "3px solid var(--accent)";
+    note.style.background = "var(--paper-deep)";
+    note.style.color = "var(--muted)";
+    note.style.fontSize = ".78rem";
+    note.style.lineHeight = "1.45";
+    note.style.borderRadius = "2px";
+
+    const strong = note.querySelector("strong");
+    if (strong) strong.style.color = "var(--ink)";
+
+    caption.appendChild(note);
+  }
+
   document.querySelectorAll("[data-map-card]").forEach(function (card) {
     const map = cfg.maps[card.dataset.mapCard];
     if (!map) return;
@@ -138,6 +161,8 @@
         )
       );
     }
+
+    addQualityNote(card);
   });
 
   const copyButton = document.querySelector("[data-copy-citation]");
