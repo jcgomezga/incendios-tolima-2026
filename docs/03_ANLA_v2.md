@@ -20,7 +20,7 @@ En el escenario B, 143 de los 409 episodios térmicos presentan coincidencia dir
 
 La comparación con el escenario A muestra una estabilidad notable: A registra 34,95 % de coincidencia directa y B 34,96 %. La diferencia es de aproximadamente **0,01 puntos porcentuales**. En otras palabras, la exclusión de las observaciones Suomi-NPP que define el escenario principal B prácticamente no cambia la proporción de episodios coincidentes con áreas ANLA.
 
-**[Insertar Figura ANLA-1: `figuras/anla_01_proximidad_episodios_publicacion`]**
+![Distribución de episodios según proximidad a la huella ANLA.](assets/figures/svg/ANLA/anla_01_proximidad_episodios_publicacion.svg)
 
 *Figura ANLA-1. Distribución de episodios según proximidad a áreas ANLA. El escenario B se presenta como principal y A como sensibilidad.*
 
@@ -30,7 +30,7 @@ Las áreas ANLA consideradas en la huella exclusiva de coincidencia directa ocup
 
 El índice de enriquecimiento es, por tanto, **2,315**. Esto significa que la proporción de episodios observados dentro de las áreas ANLA es aproximadamente 2,3 veces la proporción territorial que esas áreas representan. El resultado describe una **concentración espacial relativa**; no demuestra que los proyectos licenciados o seguidos hayan originado las señales térmicas.
 
-**[Insertar Figura ANLA-2: `figuras/anla_02_observado_vs_superficie_publicacion`]**
+![Episodios observados frente a superficie disponible para ANLA.](assets/figures/svg/ANLA/anla_02_observado_vs_superficie_publicacion.svg)
 
 *Figura ANLA-2. Comparación entre porcentaje territorial y porcentaje de episodios B en coincidencia directa con áreas ANLA.*
 
@@ -59,7 +59,7 @@ Le sigue **LAM4750**, Bloque de Desarrollo Buganviles, con 33 episodios y 101 ho
 
 En LAM0140 el paquete contiene distintas geometrías con operadores y contratos diferentes y fechas administrativas que no son completamente homogéneas; algunas filas incluyen `1899-12-30`, una fecha que se trata como posible valor de sistema o dato no confiable y no se utiliza para construir una cronología. Esta decisión evita convertir un atributo dudoso en una afirmación histórica.
 
-**[Insertar Figura ANLA-3: `figuras/anla_03_expedientes_principales_publicacion`]**
+![Expedientes ANLA con mayor número de episodios coincidentes.](assets/figures/svg/ANLA/anla_03_expedientes_principales_publicacion.svg)
 
 *Figura ANLA-3. Expedientes ANLA con mayor número de episodios B en coincidencia directa, consolidados por identificador oficial.*
 
@@ -91,7 +91,7 @@ Los principales municipios son: San Luis (25); Ortega (25); Coello (22); Armero 
 
 Los episodios con empate municipal se mantienen separados. Para ANLA existen coincidencias directas en Coello– Espinal (2); Ambalema– Venadillo (1); Guamo– San Luis (1). Estas etiquetas no se incorporan al número de municipios ni se asignan arbitrariamente a una sola jurisdicción.
 
-**[Insertar Figura ANLA-4: `figuras/anla_04_municipios_directos_publicacion`]**
+![Municipios con mayor coincidencia directa con áreas ANLA.](assets/figures/svg/ANLA/anla_04_municipios_directos_publicacion.svg)
 
 *Figura ANLA-4. Municipios individuales con mayor número de episodios B en coincidencia directa con áreas ANLA.*
 
@@ -103,7 +103,7 @@ Las categorías principales son: 2.1.2.1. Arroz (22); 2.4.4. Mosaico de pastos c
 
 La presencia de arroz como categoría más frecuente diferencia el patrón ANLA del observado en ANM. Sin embargo, la cobertura funciona aquí como contexto territorial y no como explicación automática del origen térmico. Un episodio sobre arroz dentro de un área ANLA puede responder a procesos ajenos al expediente ambiental, incluida la dinámica agropecuaria del territorio.
 
-**[Insertar Figura ANLA-5: `figuras/anla_05_coberturas_directas_publicacion`]**
+![Coberturas del suelo más frecuentes en episodios directos ANLA.](assets/figures/svg/ANLA/anla_05_coberturas_directas_publicacion.svg)
 
 *Figura ANLA-5. Coberturas IDEAM 2024 más frecuentes entre los episodios B con coincidencia directa ANLA.*
 
@@ -137,19 +137,7 @@ El A3 se encuentra en `assets/maps/anla_a3.jpg` y el A0 web en `assets/maps/anla
 
 El mapa muestra áreas de licencia/seguimiento extractivo, episodios B, FT_001 y FT_002, coberturas IDEAM 2024, vías, hidrografía y límites municipales. Las líneas y puntos ANLA se representan como contexto de proximidad cuando la escala permite su lectura sin saturar el mapa.
 
-## Fuentes
-
-**Fuentes analíticas del proyecto**
-- `inventario_fuentes_institucionales.csv`
-- `relaciones_detalladas_fuentes.csv`
-- `resumen_fuentes_nombres.csv`
-- `resumen_proximidad_institucion.csv`
-- `resumen_directo_figuras.csv`
-- `distribucion_municipio_cobertura.csv`
-- `candidatos_recurrentes_institucion.csv`
-- Paquete académico institucional auditado `paquete_academico_instituciones_20260829_123058.zip`.
-
-**Verificación institucional externa**
+## Verificación institucional externa
 - [Autoridad Nacional de Licencias Ambientales. *Control y Seguimiento*](https://www.anla.gov.co/seguimiento-de-licencias-ambientales/que-hacemos). Consulta: 29 de agosto de 2026.
 - [Autoridad Nacional de Licencias Ambientales. *Subdirección de Seguimiento de Licencias Ambientales: ¿Qué hacemos?*](https://www.anla.gov.co/seguimiento-de-licencias-ambientales/que-hacemos). Consulta: 29 de agosto de 2026.
 - ANLA, servicio geográfico público `PROYECTOS_ANLA`, dominio del campo `sector`: 101 Hidrocarburos, 102 Infraestructura, 103 Minería, 104 Energía y 105 Agroquímicos. Consulta: 29 de agosto de 2026.
