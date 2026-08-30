@@ -10,6 +10,7 @@
   const originalLink = document.querySelector("[data-viewer-original]");
   const missing = document.getElementById("viewer-missing");
   const osdEl = document.getElementById("osd-viewer");
+  const compactDevice = window.matchMedia("(max-width: 760px)").matches || /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
   document.title = title + " · Visor";
   if (titleEl) titleEl.textContent = title;
@@ -41,7 +42,7 @@
   }
 
   if (!window.OpenSeadragon) {
-    showError("El componente interactivo no se cargó. Usa “Abrir original”.");
+    showError("El componente interactivo no se cargó. Usa “Abrir mapa completo”.");
     return;
   }
 
@@ -52,7 +53,7 @@
     id: "osd-viewer",
     prefixUrl: "https://cdn.jsdelivr.net/npm/openseadragon@5.0.1/build/openseadragon/images/",
     tileSources: tileSources,
-    showNavigator: true,
+    showNavigator: !compactDevice,
     navigatorPosition: "BOTTOM_RIGHT",
     showHomeControl: false,
     showZoomControl: false,
@@ -65,7 +66,12 @@
     constrainDuringPan: true,
     animationTime: 0.7,
     blendTime: 0.08,
-    timeout: 30000
+    timeout: 30000,
+    imageLoaderLimit: compactDevice ? 2 : 4,
+    maxImageCacheCount: compactDevice ? 24 : 120,
+    minPixelRatio: compactDevice ? 1.2 : 0.5,
+    tileRetryMax: 2,
+    tileRetryDelay: 800
   });
 
   viewer.addHandler("open", function () {
@@ -75,8 +81,8 @@
 
   viewer.addHandler("open-failed", function () {
     showError(isDzi
-      ? "La pirámide de teselas todavía no está disponible. Revisa el último despliegue o usa “Abrir original”."
-      : "El archivo no se encontró o el navegador no pudo decodificarlo. Usa “Abrir original”.");
+      ? "No fue posible cargar las teselas del mapa. Comprueba la conexión o usa “Abrir mapa completo” para acceder al archivo original."
+      : "El archivo no se encontró o el navegador no pudo decodificarlo. Usa “Abrir mapa completo”.");
   });
 
   document.querySelector("[data-zoom-in]")?.addEventListener("click", function () { viewer.viewport.zoomBy(1.45); });
